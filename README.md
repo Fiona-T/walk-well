@@ -15,7 +15,7 @@ The events and group walks add a community feel and help people further their kn
 
 The target audience therefore is quite wide, but broadly speaking is people with an interest in health, mental wellbeing, mindfulness, meditation, yoga; as well as people who are curious about meditation and mindfulness but maybe have never tried it. The target audience is located in Ireland since the events and group walks are based in and around Dublin.
 
-Screenprint of website on devices to be added.
+*Screenprint of website on devices to be added.*
 
 ## User Experience (UX)
 
@@ -37,3 +37,47 @@ Note: the website is static and as such does not have a login for registered use
 
 - #### Footer (on all pages)
     1. As a visiting user, I want to sign up for the newsletter so that I am emailed a round up on new articles that were added to the website, and information on upcoming events.
+
+- ### Design
+To be added
+- ### Wireframes
+To be added
+
+## Features
+
+### Existing Features
+- #### Navigation Bar
+    - Navigation bar at the top of each page, fixed. Name of site and logo on left; menu items on the right. Three menu options: Home, Events, Contact Us. Different styling for the active page, and for hover and focus.
+    - When viewed on a mobile phone, the logo and site name remains on the left but the menu items are collapsed into a hamburger menu which expands when clicked, to show the three menu items below the nav bar.
+
+- #### Footer
+    - Fixed *tbc if it should be fixed, maybe not fixed on mobile view, for space?* at the bottom of each page and contains social media links on the left (facebook, twitter, instagram and tripadvisor); and sign up to the newsletter on the right
+    - Newsletter sign up consists of one field for email address with corresponding label and Sign Up button. Email address field has placeholder text and validation to ensure an email address is entered. Leads to confirmation page after submitting.
+    - Layout may change to two rows on mobile view
+- #### Home page
+    - Nav bar and footer as above. 
+    - Hero image at top of the page, with three boxes overlaid. What; Walk and Why. Each box is a link to the below three sections on the page.
+    - What: introductory section - basic information with accompanying video.
+    - Walk: steps for the user to follow, along with the option to download the steps?
+    - Why: further information in the form of articles. These are shown as summary boxes in a rows of three across, with a link to click to read the full article. 
+    - on mobile view the columns collapse into one vertically aligned column.
+
+-   #### Events/Walks page
+    - Nav bar and footer as above. 
+    - Table showing upcoming events and walks, including event name, date, duration, short explanation
+    - User reviews shown in summary boxes. User name, comment and star rating. 
+    - Image gallery from previous events.
+    
+- #### Contact Us page
+    - Nav bar and footer as above. 
+    - Contact form consists of the following fields and validations:
+        - First Name: text, mandatory
+        - Surname: text, mandatory
+        - Email address: must be valid format for email address, mandatory
+        - Mobile phone number: restricted to begin with one of the mobile phone operator prefixes, i.e. 087, 086, etc. Optional
+        - Event/walk of interest: list of valid options, user can select more than one
+        - Message: text, optional 
+    - Button to submit
+    - Success page is displayed after submitting.
+
+### Future Features
