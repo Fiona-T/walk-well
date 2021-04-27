@@ -81,3 +81,13 @@ To be added
     - Success page is displayed after submitting.
 
 ### Future Features
+- option for users to book onto walks/events directly and make payment on the website
+- option to register as a user of the website
+- personalised content for registered users:
+    - see upcoming events that they are registered for
+    - review events that they attended
+    - upload images for events that they attended
+- integrate trip advisor event reviews into the website?
+- a new page for Community where registered users can:
+    - map out a new walk
+    - invite others/plan a meetup to do the walk together (this is distinct from the guided mindfulness walks as it just a group meeting rather than being guided)
