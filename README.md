@@ -50,9 +50,24 @@ These colours help promote the feeling of calmness, connection with nature, whil
 - #### Typography
     - Nunito Sans - Light is used for the main body copy throughout the website. This is a clean, readable, sans serif font. The fallback option is 'sans serif'
     - Ubuntu - Bold is used for the headings to add a touch of personality and warmth.
-    
+
 - ### Wireframes
-To be added
+    - Desktop wireframes:
+        - home page, landing page: [View](docs/wireframes/home-page-landing.png)
+        - home page, introductory section: [View](docs/wireframes/home-page-intro.png)
+        - home page, get started walking section: [View](docs/wireframes/home-page-walk.png)
+        - home page, more reading section: [View](docs/wireframes/home-page-more-info.png)
+        - events page, upcoming events section (top of page): [View](docs/wireframes/events-page-section-one.png)
+        - events page, user reviews and image gallery (scroll down): [View](docs/wireframes/events-page-scroll.png)
+        - contact page: [View](docs/wireframes/contact-page.png)
+
+    - Mobile wireframes:
+        - home page, landing page: [View](docs/wireframes/mobile-home-page-landing.png)
+        - home page, introductory section: [View](docs/wireframes/mobile-home-page-intro.png)
+        - home page, get started walking section: [View](docs/wireframes/mobile-home-page-walk.png)
+        - home page, more reading section: [View](docs/wireframes/mobile-home-page-more.png)
+        - events page: [View](docs/wireframes/mobile-event-page.png)
+        - contact page: [View](docs/wireframes/mobile-contact-page.png)
 
 ## Features
 
