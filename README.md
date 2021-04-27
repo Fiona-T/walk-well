@@ -16,3 +16,24 @@ The events and group walks add a community feel and help people further their kn
 The target audience therefore is quite wide, but broadly speaking is people with an interest in health, mental wellbeing, mindfulness, meditation, yoga; as well as people who are curious about meditation and mindfulness but maybe have never tried it. The target audience is located in Ireland since the events and group walks are based in and around Dublin.
 
 Screenprint of website on devices to be added.
+
+## User Experience (UX)
+
+- ### User stories
+Note: the website is static and as such does not have a login for registered users. Therefore all user stories are in the context of a visiting user.
+
+- #### Home page
+    1. As a visiting user, I want to find out what mindful walking is and its benefits, so that I can decide if it is something I want to do
+    2. As a visiting user, I want to find the mindful walking guide, so that I can start my mindful walking practice.
+    3. As a visiting user, I want to check for any new articles on walking/mindfulness/meditation, so that I am informed on this area.
+
+-   #### Events/Walks page
+    1. As a visiting user, I want to view the upcoming events and their dates, so that I can plan if I want to attend any events.
+    2. As a visiting user, I want to register my interest for an upcoming event, so that I can be contacted with more information by the website owner.
+    3. As a visiting user, I want to read the user reviews of previous events, so that I can make a decision on which event, if any, to attend.
+
+- #### Contact Us page
+    1. As a visiting user, I want to register my interest for an upcoming event, so that I can be contacted with more information by the website owner.
+
+- #### Footer (on all pages)
+    1. As a visiting user, I want to sign up for the newsletter so that I am emailed a round up on new articles that were added to the website, and information on upcoming events.
