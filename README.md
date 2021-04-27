@@ -39,7 +39,18 @@ Note: the website is static and as such does not have a login for registered use
     1. As a visiting user, I want to sign up for the newsletter so that I am emailed a round up on new articles that were added to the website, and information on upcoming events.
 
 - ### Design
-To be added
+The look and feel of the website is modern, minimal clean design, in keeping with the purpose of the website which is to promote mindfulness and also references the outdoors and nature.
+- #### Colour Scheme
+    - the main colour used is #00AAA0 a shade of green, to reflect the theme of nature
+    - a dark grey #334B49 is used for the text
+    - and a dark orange #F26945 is the accent color
+
+These colours help promote the feeling of calmness, connection with nature, while still being fresh. And the accent provides a pop of colour.
+
+- #### Typography
+    - Nunito Sans - Light is used for the main body copy throughout the website. This is a clean, readable, sans serif font. The fallback option is 'sans serif'
+    - Ubuntu - Bold is used for the headings to add a touch of personality and warmth.
+    
 - ### Wireframes
 To be added
 
@@ -85,7 +96,7 @@ To be added
 - option to register as a user of the website
 - personalised content for registered users:
     - see upcoming events that they are registered for
-    - review events that they attended
+    - post reviews for events that they attended
     - upload images for events that they attended
 - integrate trip advisor event reviews into the website?
 - a new page for Community where registered users can:
