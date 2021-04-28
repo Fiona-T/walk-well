@@ -68,9 +68,10 @@ h1, h2 {
 
 #logo {
 	font-size: 2rem;
+	margin: 1rem; /*equal margin on logo and nav in header*/
 	/*line-height: 10%;*/
 	/*margin: 7% 0 0 2%;*/
-	margin-left: 1rem;
+	/*margin-left: 1rem; removed on mobile view?*/
 }
 
 header {
@@ -83,23 +84,29 @@ header {
 	/*height: 10%;*/
 	padding: 1rem;
 	z-index: 3; /*to keep content on top of scrolling content*/
+	display: flex; /*set header as flex container*/
+	align-items: center; /*vertically align logo and nav within header*/
+	justify-content: space-between; /*aligns logo to left and nav to right*/
+	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
 }
 
 header a {
 	text-decoration: none;
 	color: #fff;
 }
-nav {
+/*nav {
 	float: right;
 	margin-right: 2rem;
-}
+}*/
 
 nav li {
 	display: inline;
 	margin-right: 1rem;
 }
 
-
+nav {
+	margin: 1rem;
+}
 
 #main-page-wrapper {
 	width: 90%;
