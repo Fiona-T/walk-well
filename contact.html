@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="mindful walking practice guidance, curated events and guided walks, based in Dublin, Ireland">
+    <meta name="keywords" content="mindful, meditation, walking, mindful walking, walks, guided walks, ireland, dublin">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Walk Well</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1 id="logo">Walk Well</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main-page-wrapper"> <!--so can set a top margin on this, so that it will show below the header-->
+        <section>
+            <h2>Get in touch</h2>
+            <p>Interested in joining one of our walks or attending one of our events? Just fill in your details 
+                below and we'll get back to you!</p>
+            <p>Fields marked with * are required.</p>
+            <form method="POST" action="">
+                <label for="first-name">First name*</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="surname">Surname*</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="email">Email address*</label>
+                <input type="email" id="email" name="email" required placeholder="name@email.com">
+
+                <label for="phone-number">Mobile phone number (optional). In the format: 08X 1234567</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder ="in the format 08X 1234567" maxlength="11" pattern="[0-9]{3} [0-9]{7}">
+                <!--type=tel does not validate but brings up a relevant keyboard on mobile phones for input
+                pattern attribute for mobile phone number
+                -->
+
+                <p>Event(s) you are interested in*. Choose as many as you like.</p>
+                <label for="walk-a">Walk A</label>
+                <input type="checkbox" id="walk-a" name="events" value="walk-a" checked> 
+                <label for="walk-b">Walk B</label>
+                <input type="checkbox" id="walk-b" name="events" value="walk-b"> 
+                <label for="walk-c">Walk C</label>
+                <input type="checkbox" id="walk-c" name="events" value="walk-c"> 
+
+                <label for="message">Any other thoughts or questions for us?</label>
+                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                <input type="submit" value ="Send Enquiry">
+            </form>
+        </section>
+        <footer>
+            social links and sign up button
+        </footer>
+    </div>
+</body>
+</html>

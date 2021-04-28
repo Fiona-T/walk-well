@@ -51,7 +51,7 @@ table {
 	border-spacing: 0;
 }
 
-/*end of Meyer CSS Reset*/
+/* ===================== end of Meyer CSS Reset ============================================*/
 
 body {
     font-family: 'Nunito Sans', sans-serif;
@@ -69,9 +69,6 @@ h1, h2 {
 #logo {
 	font-size: 2rem;
 	margin: 1rem; /*equal margin on logo and nav in header*/
-	/*line-height: 10%;*/
-	/*margin: 7% 0 0 2%;*/
-	/*margin-left: 1rem; removed on mobile view?*/
 }
 
 header {
@@ -94,10 +91,6 @@ header a {
 	text-decoration: none;
 	color: #fff;
 }
-/*nav {
-	float: right;
-	margin-right: 2rem;
-}*/
 
 nav li {
 	display: inline;
@@ -113,4 +106,5 @@ nav {
 	margin: 0 auto; /*centre page content*/
 	padding-top: 6rem;
 	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
+	
 }
