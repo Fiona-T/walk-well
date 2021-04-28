@@ -92,6 +92,7 @@ header a {
 	color: #fff;
 }
 
+/*header nav*/
 nav li {
 	display: inline;
 	margin-right: 1rem;
@@ -106,5 +107,25 @@ nav {
 	margin: 0 auto; /*centre page content*/
 	padding-top: 6rem;
 	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
-	
+}
+
+footer {
+	position: fixed; /*to fix to bottom of browser*/
+	width: 100%; /*full width*/
+	bottom: 0;
+	right: 0;
+	left: 0; /*offsets to fix to bottom*/
+	height: 10vh; /*temp*/
+	background-color: red; /*temp for positioning*/
+}
+
+/*for the social media icons (li) to display in a line*/
+.social-media-links li {
+	display: inline;
+}
+
+/*to increase the size of the icons used for social media links*/
+.social-media-links i {
+	font-size: 1.2rem; /*to increase the size of the icons used for social media links*/
+	color:#334B49;
 }
