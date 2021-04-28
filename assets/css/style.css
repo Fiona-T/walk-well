@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Ubuntu:wght@700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   to re-set element styles across browsers
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end of Meyer CSS Reset*/
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #334B49;
+	font-size: 1rem;
+	line-height: 1.4rem;
+}
+
+h1, h2 {
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.05rem;
+	text-transform: uppercase;
+}
+
+#logo {
+	font-size: 2rem;
+	/*line-height: 10%;*/
+	/*margin: 7% 0 0 2%;*/
+	margin-left: 1rem;
+}
+
+header {
+    background-color: #00AAA0;
+	position: fixed; /*to fix to top of browser*/
+	width: 100%; /*to keep full width*/
+	top: 0; 
+	left: 0;
+	right: 0; /*these offsets to keep at top of page*/
+	/*height: 10%;*/
+	padding: 1rem;
+	z-index: 3; /*to keep content on top of scrolling content*/
+}
+
+header a {
+	text-decoration: none;
+	color: #fff;
+}
+nav {
+	float: right;
+	margin-right: 2rem;
+}
+
+nav li {
+	display: inline;
+	margin-right: 1rem;
+}
+
+
+
+#main-page-wrapper {
+	width: 90%;
+	margin: 0 auto; /*centre page content*/
+	padding-top: 6rem;
+	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
+}
