@@ -73,7 +73,7 @@ h1, h2 {
 
 header {
     background-color: #00AAA0;
-	position: sticky; /*to fix to top of browser - tbc if use sticky or fixed*/
+	position: fixed; /*to fix to top of browser - tbc if use sticky or fixed*/
 	width: 100%; /*to keep full width*/
 	top: 0; 
 	left: 0;
@@ -105,18 +105,22 @@ nav {
 
 /*hero image*/
 
-#hero-image {
-	background: url(../images/hero-image.jpg) no-repeat center center;
-	height: 80vh;
-}
-
-/*temp colours to see layout*/
-
 #landing-section {
 	background-color: blue;
 	/*margin-top: 10vh;*/
 	width: 100%;
+	overflow: hidden;
 }
+
+#hero-image {
+	background: url(../images/hero-image.jpg) no-repeat center center;
+	height: 80vh;
+	width: 100%;
+}
+
+/*temp colours to see layout*/
+
+
 
 #intro-section {
 	background-color: blueviolet;
@@ -131,6 +135,8 @@ nav {
 	margin: 0 auto; /*centre page content*/
 	/*padding-top: 6rem;*/
 	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
+	/*width: 100%;
+	overflow: hidden;*/
 }
 
 footer {
