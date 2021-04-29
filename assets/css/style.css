@@ -58,13 +58,18 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     color: #334B49;
 	font-size: 1rem;
-	line-height: 1.4rem;
+	line-height: 1.6rem;
 }
 
 h1, h2 {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.05rem;
 	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 2.2rem;
 }
 
 #logo {
@@ -94,12 +99,13 @@ header a {
 	color: #fff;
 }
 
+/*increase font size, change colour and show underline on hover, tab (focus) or active, 
+also for active class on page*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
 	color: #FF9C81;
 	border-bottom: 0.5rem solid #FF9C81;
 	font-size: 1.1rem;
 }
-
 
 
 /*header nav*/
@@ -115,16 +121,76 @@ nav {
 /*hero image*/
 /*this is the parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
 #landing-section {
-	background-color: blue;
+	/*background-color: blue; temp colour to see positioning*/
 	/*margin-top: 10vh;*/
 	width: 100%;
 	overflow: hidden; 
+	position: relative; /*so that the landing-box and landing-text divs can be positioned against this*/
 }
 
+#landing-text {
+	position: absolute;
+	top: 12rem;
+    right: 0;
+    left: 0;
+    color: #fff;
+	text-align: center; /*centre text within the div*/
+}
+
+#landing-text p {
+	font-size: .8rem;
+}
+
+#landing-text h2 {
+	font-size: 2.2rem;
+}
+
+/*hero image centred, no repeat and full width and height*/
 #hero-image {
 	background: url(../images/hero-image.jpg) no-repeat center center;
-	height: 80vh;
+	height: 100vh; 
 	width: 100%;
+}
+
+/*pseudo element being used to set opacity overlay on hero-image, since cannot be set directly on background-image*/
+#hero-image::before {
+    content: ""; /*content must be specified for it to show up*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+#landing-box-container {
+	display: flex; /*set parent element as flex container*/
+	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
+	position: absolute; /*position this against the parent landing-section so that overlays the hero image*/
+	bottom: 1rem; /*positioning from bottom of parent landing-section*/
+	width: 100%; /*needs to be set so that justify content works*/
+	justify-content: center; /*to centre the boxes within this container*/
+	
+}
+
+.landing-box {
+	/* display: inline-block; this will only be for larger sizes*/
+	background-color: rgba(255,156,129,.9);
+	padding: 1rem;
+    margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
+    text-align: center;/*centre the text within the boxes*/
+}
+
+/*font size and style for h3 inside landing box*/
+.landing-box h3 {
+	padding: 0.5rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.landing-box p {
+	font-size: .9rem;
 }
 
 /*temp colours to see layout*/
@@ -146,7 +212,7 @@ nav {
 }
 
 footer {
-	position: fixed; /*to fix to bottom of browser*/
+	/*position: fixed; to fix to bottom of browser - removed for now*/
 	width: 100%; /*full width*/
 	bottom: 0;
 	right: 0;
