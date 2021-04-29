@@ -73,7 +73,7 @@ h1, h2 {
 
 header {
     background-color: #00AAA0;
-	position: fixed; /*to fix to top of browser*/
+	position: sticky; /*to fix to top of browser - tbc if use sticky or fixed*/
 	width: 100%; /*to keep full width*/
 	top: 0; 
 	left: 0;
@@ -85,6 +85,7 @@ header {
 	align-items: center; /*vertically align logo and nav within header*/
 	justify-content: space-between; /*aligns logo to left and nav to right*/
 	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
+	/*height: 10vh; /*set same on top margin of page wrapper*/
 }
 
 header a {
@@ -102,10 +103,33 @@ nav {
 	margin: 1rem;
 }
 
+/*hero image*/
+
+#hero-image {
+	background: url(../images/hero-image.jpg) no-repeat center center;
+	height: 80vh;
+}
+
+/*temp colours to see layout*/
+
+#landing-section {
+	background-color: blue;
+	/*margin-top: 10vh;*/
+	width: 100%;
+}
+
+#intro-section {
+	background-color: blueviolet;
+}
+
+#more-info-section {
+	background-color: cadetblue;
+}
+
 #main-page-wrapper {
-	width: 90%;
+	/*width: 90%;*/
 	margin: 0 auto; /*centre page content*/
-	padding-top: 6rem;
+	/*padding-top: 6rem;*/
 	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
 }
 
