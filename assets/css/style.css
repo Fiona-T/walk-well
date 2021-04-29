@@ -53,6 +53,7 @@ table {
 
 /* ===================== end of Meyer CSS Reset ============================================*/
 
+/*using rem for font styles throughout, so that they are responsive */
 body {
     font-family: 'Nunito Sans', sans-serif;
     color: #334B49;
@@ -72,7 +73,7 @@ h1, h2 {
 }
 
 header {
-    background-color: #00AAA0;
+    background-color: #00B597;
 	position: fixed; /*to fix to top of browser - tbc if use sticky or fixed*/
 	width: 100%; /*to keep full width*/
 	top: 0; 
@@ -93,6 +94,14 @@ header a {
 	color: #fff;
 }
 
+.nav-item:hover, .nav-item:focus, .nav-item:active, .active {
+	color: #FF9C81;
+	border-bottom: 0.5rem solid #FF9C81;
+	font-size: 1.1rem;
+}
+
+
+
 /*header nav*/
 nav li {
 	display: inline;
@@ -104,12 +113,12 @@ nav {
 }
 
 /*hero image*/
-
+/*this is the parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
 #landing-section {
 	background-color: blue;
 	/*margin-top: 10vh;*/
 	width: 100%;
-	overflow: hidden;
+	overflow: hidden; 
 }
 
 #hero-image {
@@ -119,9 +128,6 @@ nav {
 }
 
 /*temp colours to see layout*/
-
-
-
 #intro-section {
 	background-color: blueviolet;
 }
