@@ -125,24 +125,7 @@ nav {
 	/*margin-top: 10vh;*/
 	width: 100%;
 	overflow: hidden; 
-	position: relative; /*so that the landing-box and landing-text divs can be positioned against this*/
-}
-
-#landing-text {
-	position: absolute;
-	top: 12rem;
-    right: 0;
-    left: 0;
-    color: #fff;
-	text-align: center; /*centre text within the div*/
-}
-
-#landing-text p {
-	font-size: .8rem;
-}
-
-#landing-text h2 {
-	font-size: 2.2rem;
+	position: relative; /*so that the landing-box div can be positioned against this*/
 }
 
 /*hero image centred, no repeat and full width and height*/
@@ -171,6 +154,20 @@ nav {
 	width: 100%; /*needs to be set so that justify content works*/
 	justify-content: center; /*to centre the boxes within this container*/
 	
+}
+
+/*text box - first div inside landing-box-container*/
+#landing-text {
+    color: #fff;
+	text-align: center; /*centre text within the div*/
+}
+
+#landing-text p {
+	font-size: .8rem;
+}
+
+#landing-text h2 {
+	font-size: 2.2rem;
 }
 
 .landing-box {
