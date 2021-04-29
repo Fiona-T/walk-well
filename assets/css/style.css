@@ -72,6 +72,15 @@ h2 {
 	line-height: 2.2rem;
 }
 
+p {
+	line-height: 1.8rem;
+	padding-bottom: 1rem;
+}
+
+/*for all a elements - text dec none plus add accent colour on hover? 
+then the more specific styles below will overwrite e..g. for nav etc.? 
+and remove text dec specified below. come back to*/
+
 #logo {
 	font-size: 2rem;
 	margin: 1rem; /*equal margin on logo and nav in header*/
@@ -190,10 +199,23 @@ nav {
 	font-size: .9rem;
 }
 
+.landing-box a {
+	text-decoration: none;
+}
+
+
+
 /*temp colours to see layout*/
 #intro-section {
-	background-color: blueviolet;
+	display: flex;
 }
+
+#intro-text {
+	width: 90%;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
 
 #more-info-section {
 	background-color: cadetblue;
