@@ -208,14 +208,18 @@ nav {
 /*temp colours to see layout*/
 #intro-section {
 	display: flex;
+	flex-direction: column;
 }
 
-#intro-text {
+.intro-box {
 	width: 90%;
 	margin: 0 auto;
 	padding: 2rem;
 }
 
+.intro-box video {
+	margin: 0 auto;
+}
 
 #more-info-section {
 	background-color: cadetblue;
