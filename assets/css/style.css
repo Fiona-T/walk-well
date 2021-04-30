@@ -72,6 +72,12 @@ h2 {
 	line-height: 2.2rem;
 }
 
+h3 {
+	font-size: 1.2rem;
+	line-height: 2rem;
+	font-weight: 600;
+}
+
 p {
 	line-height: 1.8rem;
 	padding-bottom: 1rem;
@@ -206,12 +212,12 @@ nav {
 
 
 /*temp colours to see layout*/
-#intro-section {
+#intro-section, #get-started-section {
 	display: flex;
 	flex-direction: column;
 }
 
-.intro-box {
+.intro-box, .get-started-box {
 	width: 90%;
 	margin: 0 auto;
 	padding: 2rem;
