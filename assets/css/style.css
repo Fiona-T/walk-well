@@ -59,6 +59,8 @@ body {
     color: #334B49;
 	font-size: 1rem;
 	line-height: 1.6rem;
+	
+	
 }
 
 h1, h2 {
@@ -213,8 +215,10 @@ nav {
 
 /*temp colours to see layout*/
 #intro-section, #get-started-section {
+	width: 90%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
+	padding-top: 8rem; /*so that when click on link to this section the heading is in view (needed re fixed header). Adjust for larger*/
 }
 
 .intro-box, .get-started-box {
@@ -238,25 +242,62 @@ nav {
 	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
 	/*width: 100%;
 	overflow: hidden;*/
+	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
+	/*the above is okay on mobile, but entire page has right margin on larger view - need to figure this out*/
 }
 
+/**============================footer=========================================**/
 footer {
-	/*position: fixed; to fix to bottom of browser - removed for now*/
-	width: 100%; /*full width*/
+	/*position: fixed; to fix to bottom of browser - removed for now
 	bottom: 0;
 	right: 0;
 	left: 0; /*offsets to fix to bottom*/
-	height: 10vh; /*temp*/
-	background-color: red; /*temp for positioning*/
+	width: 100%; /*full width*/
+	display: flex; /*footer is flex container for two divs - social media and form*/
+	/*height: 10vh; temp*/
+	background-color: #334B49;
+	flex-direction: column; /*for mobile view, so displays in row*/
+	padding: 1rem 0; /*padding top and bottom of footer*/
+	color: #fff
 }
 
+
+
 /*for the social media icons (li) to display in a line*/
-.social-media-links li {
-	display: inline;
+.social-media-links {
+	display: flex; /*flex container for li inside, displays them inline*/
+	justify-content: center;
+	margin: 1rem 0;
+	
 }
 
 /*to increase the size of the icons used for social media links*/
 .social-media-links i {
-	font-size: 1.2rem; /*to increase the size of the icons used for social media links*/
-	color:#334B49;
+	font-size: 1.4rem; /*to increase the size of the icons used for social media links*/
+	color:#fff;
+	padding:0 1rem; /*padding on each icon to add space between*/
+}
+
+/*need to add the hover and focus styles on these links also*/
+
+
+footer form {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+footer p {
+	padding-bottom: 0; /*remove padding from p so closer to form boxes*/
+	text-align: center;
+}
+
+footer input {
+	padding: 0.5rem; /*increase size of boxes?*/
+	margin-right: 0.5rem;
+}
+
+/*sign up button color*/
+footer input[type="submit"] {
+	background-color:#FF9C81; 
+	color: #334B49;
 }
