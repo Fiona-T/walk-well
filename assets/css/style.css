@@ -60,7 +60,6 @@ body {
 	font-size: 1rem;
 	line-height: 1.6rem;
 	
-	
 }
 
 h1, h2 {
@@ -89,13 +88,9 @@ p {
 then the more specific styles below will overwrite e..g. for nav etc.? 
 and remove text dec specified below. come back to*/
 
-#logo {
-	font-size: 2rem;
-	margin: 1rem; /*equal margin on logo and nav in header*/
-}
 
 header {
-    background-color: #00B597;
+    background-color: #fff;
 	position: fixed; /*to fix to top of browser - tbc if use sticky or fixed*/
 	width: 100%; /*to keep full width*/
 	top: 0; 
@@ -109,11 +104,23 @@ header {
 	justify-content: space-between; /*aligns logo to left and nav to right*/
 	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
 	/*height: 10vh; /*set same on top margin of page wrapper*/
+	border-bottom: 0.1rem solid #eeeeee;
+}
+
+#logo {
+	font-size: 2rem;
+	margin: 1rem; /*equal margin on logo and nav in header*/
+	color: #00B597;
+}
+
+#logo:hover, #logo:focus {
+	color: #334B49;
 }
 
 header a {
 	text-decoration: none;
-	color: #fff;
+	color: #334B49;
+	font-size: 1.4rem;
 }
 
 /*increase font size, change colour and show underline on hover, tab (focus) or active, 
@@ -121,8 +128,8 @@ also for active class on page*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
 	color: #FF9C81;
 	border-bottom: 0.5rem solid #FF9C81;
-	font-size: 1.1rem;
 }
+/*add increase to font-size on hover*/
 
 
 /*header nav*/
@@ -189,7 +196,7 @@ nav {
 
 .landing-box {
 	/* display: inline-block; this will only be for larger sizes*/
-	background-color: rgba(255,156,129,.9);
+	background-color: #00B597;
 	padding: 1rem;
     margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
     text-align: center;/*centre the text within the boxes*/
@@ -209,6 +216,7 @@ nav {
 
 .landing-box a {
 	text-decoration: none;
+	color: #fff;
 }
 
 
