@@ -144,6 +144,7 @@ nav {
 
 #main-page-wrapper {
 	/*width: 90%;*/
+	/*padding-top: 25vh;*/
 	margin: 0 auto; /*centre page content*/
 	/*padding-top: 6rem;*/
 	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
@@ -233,11 +234,13 @@ nav {
 
 
 /*sections 90% of body. **need to fix - right margin?* **/
-#intro-section, #get-started-section, #more-info-section {
+#intro-section, #get-started-section, #more-info-section, .long-article {
 	width: 90%;
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
-	padding-top: 8rem; /*so that when click on link to this section the heading is in view (needed re fixed header). Adjust for larger*/
+	padding-top: 8rem; /*so that when click on link to this section the heading is in view 
+	(needed re fixed header). Adjust for larger*/
+	margin: 0 auto;
 }
 
 .intro-box, .get-started-box, .more-info-box {
@@ -250,7 +253,7 @@ nav {
 	margin: 0 auto;
 }
 
-.more-info-box img {
+.more-info-box img, .long-article img {
 	width: 100%;
 }
 
