@@ -142,6 +142,17 @@ nav {
 	margin: 1rem;
 }
 
+#main-page-wrapper {
+	/*width: 90%;*/
+	margin: 0 auto; /*centre page content*/
+	/*padding-top: 6rem;*/
+	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
+	/*width: 100%;
+	overflow: hidden;*/
+	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
+	/*the above is okay on mobile, but entire page has right margin on larger view - need to figure this out*/
+}
+
 /*hero image*/
 /*this is the parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
 #landing-section {
@@ -221,15 +232,15 @@ nav {
 
 
 
-/*temp colours to see layout*/
-#intro-section, #get-started-section {
+/*sections 90% of body. **need to fix - right margin?* **/
+#intro-section, #get-started-section, #more-info-section {
 	width: 90%;
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
 	padding-top: 8rem; /*so that when click on link to this section the heading is in view (needed re fixed header). Adjust for larger*/
 }
 
-.intro-box, .get-started-box {
+.intro-box, .get-started-box, .more-info-box {
 	width: 90%;
 	margin: 0 auto;
 	padding: 2rem;
@@ -239,20 +250,28 @@ nav {
 	margin: 0 auto;
 }
 
-#more-info-section {
-	background-color: cadetblue;
+.more-info-box img {
+	width: 100%;
 }
 
-#main-page-wrapper {
-	/*width: 90%;*/
-	margin: 0 auto; /*centre page content*/
-	/*padding-top: 6rem;*/
-	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
-	/*width: 100%;
-	overflow: hidden;*/
-	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
-	/*the above is okay on mobile, but entire page has right margin on larger view - need to figure this out*/
+/*font styles for article date in more info section index.html*/
+.article-date {
+	font-weight: 500;
+	font-size: 0.9rem;
+    color: #7f7f88;
+	padding-bottom: 0.2rem;
 }
+
+.article-summary {
+	font-style: italic;
+}
+
+/*increase space between read more and arrow*/
+.more-info-summary i {
+	padding-left: 0.5rem;
+}
+
+
 
 /**============================footer=========================================**/
 footer {
