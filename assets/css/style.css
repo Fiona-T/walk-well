@@ -307,6 +307,21 @@ nav {
 margin-bottom: 2rem;
 }
 
+.article-arrows-container {
+	/*display: flex;
+	justify-content: space-between;*/
+    padding: 1rem 2rem;
+	margin-bottom: 2rem;
+}
+
+.article-previous {
+	float: left;
+}
+
+.article-next {
+	float: right;
+}
+
 /**============================footer=========================================**/
 footer {
 	/*position: fixed; to fix to bottom of browser - removed for now
