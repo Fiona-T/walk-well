@@ -332,6 +332,32 @@ margin-bottom: 2rem;
 	float: right;
 }
 
+/*============================events page==============================================*/
+
+.review-box {
+	border: 0.1rem solid #eeeeee;
+	margin: 1rem; /*separate boxes from each other*/
+	padding: 1rem;
+	font-size: 0.8rem;
+}
+
+.stars {
+	color: #FF9C81;
+}
+
+.review-summary {
+	font-weight:900;
+	font-size: 0.9rem;
+	padding-bottom: 0;
+}
+
+.review-user-date {
+	color: #7f7f88;
+	font-style: italic;
+	font-weight: 500;
+	padding-bottom: 0.5rem;
+}
+
 /**============================footer=========================================**/
 footer {
 	/*position: fixed; to fix to bottom of browser - removed for now
