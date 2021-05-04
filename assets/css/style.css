@@ -53,10 +53,22 @@ table {
 
 /* ===================== end of Meyer CSS Reset ============================================*/
 
+/*======set variables for colors =============*/
+:root {
+	--green: #04E5AE; /*accent color*/
+	--orange: #F25F5C;
+	--dark-grey: #334B49; /*text color and footer*/
+	--white: #fff;
+	--light-grey: #7f7f88; /*lighter text color*/
+	--extra-light-grey: #eeeeee /*borders*/
+}
+
+
+
 /*using rem for font styles throughout, so that they are responsive */
 body {
     font-family: 'Nunito Sans', sans-serif;
-    color: #334B49;
+    color: var(--dark-grey);
 	font-size: 1rem;
 	line-height: 1.6rem;
 	
@@ -84,17 +96,20 @@ p {
 	padding-bottom: 1rem;
 }
 
-/*a {
+a {
 	text-decoration: none;
-	color: #F25F5C;
-}*/
+	color: var(--green);
+}
 /*for all a elements - text dec none plus add accent colour on hover? 
 then the more specific styles below will overwrite e..g. for nav etc.? 
 and remove text dec specified below. come back to*/
 
+p > a {
+	font-weight: 900; /*to make green stand out more for links in paragraphs*/
+}
 
 header {
-    background-color: #fff;
+    background-color: var(--white);
 	position: fixed; /*to fix to top of browser - tbc if use sticky or fixed*/
 	width: 100%; /*to keep full width*/
 	top: 0; 
@@ -108,30 +123,30 @@ header {
 	justify-content: space-between; /*aligns logo to left and nav to right*/
 	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
 	/*height: 10vh; /*set same on top margin of page wrapper*/
-	border-bottom: 0.1rem solid #eeeeee;
+	border-bottom: 0.1rem solid var(--extra-light-grey);
 }
 
 #logo {
 	font-size: 2rem;
 	margin: 1rem; /*equal margin on logo and nav in header*/
-	color: #00B597;
+	color: var(--green);
 }
 
 #logo:hover, #logo:focus {
-	color: #334B49;
+	color: var(--dark-grey);
 }
 
 header a {
-	text-decoration: none;
-	color: #334B49;
-	font-size: 1.4rem;
+	text-transform: uppercase;
+	color: var(--dark-grey);
+	font-size: 1.1rem;
 }
 
 /*increase font size, change colour and show underline on hover, tab (focus) or active, 
 also for active class on page*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
-	color: #FF9C81;
-	border-bottom: 0.5rem solid #FF9C81;
+	color: var(--green);
+	border-bottom: 0.5rem solid var(--green);
 }
 /*add increase to font-size on hover*/
 
@@ -198,7 +213,7 @@ nav {
 
 /*text box - first div inside landing-box-container*/
 #landing-text {
-    color: #fff;
+    color: var(--white);
 	text-align: center; /*centre text within the div*/
 }
 
@@ -211,13 +226,12 @@ nav {
 }
 
 .landing-box a {
-	text-decoration: none;
-	color: #fff;
+	color: var(--white);
 }
 
 .landing-box {
 	/* display: inline-block; this will only be for larger sizes*/
-	background-color: #00B597;
+	background-color: var(--green);
 	padding: 1rem;
     margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
     text-align: center;/*centre the text within the boxes*/
@@ -230,7 +244,7 @@ nav {
 /*need to look at interaction for focus. Also change focus box styles*/
 
 .landing-box a:hover, .landing-box a:focus, .landing-box a:active {
-	color: #334B49;
+	color: var(--dark-grey);
 }
 
 /*font size and style for h3 inside landing box*/
@@ -278,7 +292,7 @@ nav {
 .article-date {
 	font-weight: 500;
 	font-size: 0.9rem;
-    color: #7f7f88;
+    color: var(--light-grey);
 	padding-bottom: 0.2rem;
 }
 
@@ -339,7 +353,7 @@ margin-bottom: 2rem;
 /*============================events page==============================================*/
 
 .review-box {
-	border: 0.1rem solid #eeeeee;
+	border: 0.1rem solid var(--extra-light-grey);
 	margin: 1rem; /*separate boxes from each other*/
 	padding: 1rem;
 	font-size: 0.8rem;
@@ -347,7 +361,7 @@ margin-bottom: 2rem;
 }
 
 .stars {
-	color: #FF9C81;
+	color: var(--green);
 }
 
 .review-summary {
@@ -357,7 +371,7 @@ margin-bottom: 2rem;
 }
 
 .review-user-date {
-	color: #7f7f88;
+	color: var(--light-grey);
 	font-style: italic;
 	font-weight: 500;
 	padding-bottom: 0.5rem;
@@ -372,10 +386,10 @@ footer {
 	width: 100%; /*full width*/
 	display: flex; /*footer is flex container for two divs - social media and form*/
 	/*height: 10vh; temp*/
-	background-color: #334B49;
+	background-color: var(--dark-grey);
 	flex-direction: column; /*for mobile view, so displays in row*/
 	padding: 1rem 0; /*padding top and bottom of footer*/
-	color: #fff
+	color: var(--white);
 }
 
 
@@ -391,17 +405,17 @@ footer {
 /*to increase the size of the icons used for social media links*/
 .social-media-links i {
 	font-size: 1.4rem; /*to increase the size of the icons used for social media links*/
-	color:#fff;
+	color: var(--white);
 	padding:0 1rem; /*padding on each icon to add space between*/
 }
 
 /*need to add the hover and focus styles on these links also*/
 .social-media-links i:hover {
-	color: #FF9C81;
+	color: var(--green);
 }
 
 .social-media-links a:focus {
-	color: #FF9C81;
+	color: var(--green);
 }
 
 footer form {
@@ -424,7 +438,7 @@ footer input {
 
 /*sign up button color*/
 footer input[type="submit"] {
-	background-color:#FF9C81; 
-	color: #334B49;
+	background-color: var(--green); 
+	color: var(--dark-grey);
 }
 
