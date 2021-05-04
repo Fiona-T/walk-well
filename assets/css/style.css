@@ -293,6 +293,10 @@ nav {
 	margin-bottom: 1rem;
 }
 
+.long-article {
+	clear: both; /*to clear the previous and next arrows at top of page*/
+}
+
 /*subheading*/
 .long-article h4 {
 	font-style: italic; 
@@ -307,6 +311,12 @@ nav {
 margin-bottom: 2rem;
 }
 
+.article-arrows-container-top {
+	margin-top: 10rem; /*so it shows below the header - adjust later when wrapper position corrected*/
+	padding: 0 2rem;
+}
+
+/*container for arrows at bottom. did not use flexbox to position because some pages only have one arrow either right or left*/
 .article-arrows-container {
 	/*display: flex;
 	justify-content: space-between;*/
