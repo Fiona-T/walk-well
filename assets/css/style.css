@@ -247,7 +247,7 @@ nav {
 
 
 /*sections 90% of body. **need to fix - right margin?* **/
-#intro-section, #get-started-section, #more-info-section, .long-article {
+#intro-section, #get-started-section, #more-info-section, .long-article, #events-section {
 	width: 90%;
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
