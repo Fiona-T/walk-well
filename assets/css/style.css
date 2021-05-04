@@ -84,6 +84,10 @@ p {
 	padding-bottom: 1rem;
 }
 
+/*a {
+	text-decoration: none;
+	color: #F25F5C;
+}*/
 /*for all a elements - text dec none plus add accent colour on hover? 
 then the more specific styles below will overwrite e..g. for nav etc.? 
 and remove text dec specified below. come back to*/
@@ -339,6 +343,7 @@ margin-bottom: 2rem;
 	margin: 1rem; /*separate boxes from each other*/
 	padding: 1rem;
 	font-size: 0.8rem;
+	line-height: 0.8rem;
 }
 
 .stars {
@@ -391,7 +396,13 @@ footer {
 }
 
 /*need to add the hover and focus styles on these links also*/
+.social-media-links i:hover {
+	color: #FF9C81;
+}
 
+.social-media-links a:focus {
+	color: #FF9C81;
+}
 
 footer form {
 	margin-bottom: 2rem;
@@ -405,7 +416,10 @@ footer p {
 
 footer input {
 	padding: 0.5rem; /*increase size of boxes?*/
-	margin-right: 0.5rem;
+	/*margin-right: 0.5rem;*/
+	border: none; /*remove default border around*/
+	margin-left: -0.3rem; /*to bring button beside input field with no gap*/
+	border-radius: 0.05rem;
 }
 
 /*sign up button color*/
@@ -413,3 +427,4 @@ footer input[type="submit"] {
 	background-color:#FF9C81; 
 	color: #334B49;
 }
+
