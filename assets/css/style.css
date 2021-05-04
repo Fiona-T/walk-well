@@ -206,12 +206,27 @@ nav {
 	font-size: 2.2rem;
 }
 
+.landing-box a {
+	text-decoration: none;
+	color: #fff;
+}
+
 .landing-box {
 	/* display: inline-block; this will only be for larger sizes*/
 	background-color: #00B597;
 	padding: 1rem;
     margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
     text-align: center;/*centre the text within the boxes*/
+	transition: transform 250ms; /*to set time for the transform on hover below*/
+}
+
+.landing-box:hover {
+	transform: scale(1.02); /*increase size of box on hover*/ /*could change opacity also*/
+}
+/*need to look at interaction for focus. Also change focus box styles*/
+
+.landing-box a:hover, .landing-box a:focus, .landing-box a:active {
+	color: #334B49;
 }
 
 /*font size and style for h3 inside landing box*/
@@ -226,10 +241,8 @@ nav {
 	font-size: .9rem;
 }
 
-.landing-box a {
-	text-decoration: none;
-	color: #fff;
-}
+
+
 
 
 
