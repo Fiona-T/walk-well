@@ -56,9 +56,9 @@ table {
 /*======set variables for colors =============*/
 :root {
 	--green: #04E5AE; /*accent color*/
-	--orange: #F25F5C;
+	--orange: #F25F5C; /*was accent color but don't think works re contrast, also re color-blindness - amended to use green*/
 	--dark-grey: #334B49; /*text color and footer*/
-	--white: #fff;
+	--white: #fff; /*header and footer text color*/
 	--light-grey: #7f7f88; /*lighter text color*/
 	--extra-light-grey: #eeeeee /*borders*/
 }
@@ -106,6 +106,11 @@ and remove text dec specified below. come back to*/
 
 p > a {
 	font-weight: 900; /*to make green stand out more for links in paragraphs*/
+}
+
+/*so that placeholder text and text on form buttons inherit font*/
+input {
+	font-family: inherit; 
 }
 
 header {
@@ -265,7 +270,7 @@ nav {
 
 
 /*sections 90% of body. **need to fix - right margin?* **/
-#intro-section, #get-started-section, #more-info-section, .long-article, #events-section {
+#intro-section, #get-started-section, #more-info-section, .long-article, #events-section, #contact-section {
 	width: 90%;
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
@@ -377,6 +382,50 @@ margin-bottom: 2rem;
 	padding-bottom: 0.5rem;
 }
 
+/**============================contact us page=========================================**/
+
+.required {
+	color: var(--green);
+}
+
+#contact-section form {
+	/*display: flex;*/
+	max-width: 90%;
+	box-sizing: border-box;
+}
+
+
+#contact-section input, #contact-section textarea {
+	display: block;
+	border: 0.05rem solid var(--light-grey);
+	border-radius: 0.05rem;
+	width: 100%;
+	padding: 0.5rem;
+    margin-bottom: 0.5rem;
+	box-sizing: border-box;
+}
+
+#contact-section input[type="checkbox"] {
+	display: inline-block;
+	width: 10%;
+}
+
+#contact-section input:hover, #contact-section input:focus #contact-section input:active {
+	border-color: var(--green);
+}
+
+#contact-section input[type="submit"] {
+	background-color: var(--green); 
+	color: var(--dark-grey);
+	border: none; /*remove default border around*/
+}
+
+#contact-section input[type="submit"]:hover {
+	background-color: var(--dark-grey); 
+	color: var(--white);
+}
+
+
 /**============================footer=========================================**/
 footer {
 	/*position: fixed; to fix to bottom of browser - removed for now
@@ -414,9 +463,11 @@ footer {
 	color: var(--green);
 }
 
+/*this is currently not working?*/
 .social-media-links a:focus {
 	color: var(--green);
 }
+
 
 footer form {
 	margin-bottom: 2rem;
