@@ -76,15 +76,13 @@ body {
 	line-height: 1.6rem;
 	min-height: 100vh;
 	overflow: hidden;
-	/*grid seetings*/
+	/*grid settings*/
 	display: grid;
   	grid-template-columns: 1fr;
   	grid-template-rows: auto 1fr;
   	grid-template-areas: 
 						'header'
-						'main'
-						/* 'footer'; */
-	
+						'main';
 }
 
 h1, h2 {
@@ -113,27 +111,14 @@ a {
 	text-decoration: none;
 	color: var(--green);
 }
-/*for all a elements - text dec none plus add accent colour on hover? 
-then the more specific styles below will overwrite e..g. for nav etc.? 
-and remove text dec specified below. come back to*/
 
 p > a {
 	font-weight: 900; /*to make green stand out more for links in paragraphs*/
 }
 
-/*so that placeholder text and text on form buttons inherit font*/
-input {
-	font-family: inherit; 
-}
-
 header {
     background-color: var(--white);
-	/* position: fixed; to fix to top of browser - tbc if use sticky or fixed */
 	width: 100%; /*to keep full width*/
-	/* top: 0; 
-	left: 0;
-	right: 0; these offsets to keep at top of page */
-	/*height: 10%;*/
 	padding: 1rem;
 	z-index: 3; /*to keep content on top of scrolling content*/
 	display: flex; /*set header as flex container*/
@@ -162,14 +147,12 @@ header a {
 	font-size: 1.1rem;
 }
 
-/*increase font size, change colour and show underline on hover, tab (focus) or active, 
+/*change colour and show underline on hover, tab (focus) or active, 
 also for active class on page*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
 	color: var(--green);
 	border-bottom: 0.5rem solid var(--green);
 }
-/*add increase to font-size on hover*/
-
 
 /*header nav*/
 nav li {
@@ -185,18 +168,16 @@ nav {
 	width: 100%;
 	margin: 0 auto; /*centre page content*/
 	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
-	/*the above is okay on mobile, but entire page has right margin on larger view - need to figure this out*/
 	overflow-y:	auto;
-
 	/*grid setting*/
 	grid-area: main;
 	grid-template-rows: 1fr auto; /*two rows - main content plus footer*/
+	
 }
 
 /*hero image*/
 /*this is the parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
 #landing-section {
-	/*margin-top: 10vh;*/
 	width: 100%;
 	overflow: hidden; 
 	/*position: relative; /*so that the landing-box div can be positioned against this*/
@@ -206,8 +187,6 @@ nav {
 #hero-image {
 	/*background image and with linear gradient to darken it so text stands out*/
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/walking-nature-hero-image.jpg);
-
-	/*background: url(../images/hero-image.jpg) no-repeat center center;*/
 	height: 100vh; 
 	/*width: 100%;*/
 	/* centre the image, not repeated, ensure it covers the container*/
@@ -216,17 +195,6 @@ nav {
 	background-size: cover;
 	position: relative;
 }
-
-/*pseudo element being used to set opacity overlay on hero-image, since cannot be set directly on background-image*/
-/*#hero-image::before {
-    content: ""; /*content must be specified for it to show up*/
-    /*position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.6);
-}*/
 
 #landing-box-container {
 	display: flex; /*set parent element as flex container*/
@@ -302,13 +270,6 @@ nav {
 	justify-content: center;
 }
 
-/*removed as this was inside the sections above - not needed*/
-/* .intro-box, .get-started-box, .more-info-box {
-	width: 90%; 
-	margin: 0 auto;
-	padding: 2rem; 
-} */
-
 .intro-box video {
 	margin: 0 auto;
 }
@@ -340,6 +301,7 @@ nav {
 	margin-bottom: 1rem;
 }
 
+/*check if this is still needed after correcting the fixed header*/
 .long-article {
 	clear: both; /*to clear the previous and next arrows at top of page*/
 }
@@ -358,15 +320,9 @@ nav {
 margin-bottom: 2rem;
 }
 
-/* .article-arrows-container-top {
-	margin-top: 10rem; 
-	padding: 0 2rem;
-} */
-
-/*container for arrows at bottom. did not use flexbox to position because some pages only have one arrow either right or left*/
+/*container for arrows. did not use flexbox to position because some pages only have one arrow either right or left*/
+/*consider using same class for both of these - need to check to ensure no impact*/
 .article-arrows-container, .article-arrows-container-top {
-	/*display: flex;
-	justify-content: space-between;*/
     padding: 1rem 2rem;
 	margin-bottom: 2rem;
 }
@@ -406,6 +362,21 @@ margin-bottom: 2rem;
 	padding-bottom: 0.5rem;
 }
 
+/**===========================general form styles=================================**/
+
+/*for contact form button and foooter button*/
+input[type="submit"] {
+	text-transform: uppercase;
+	background-color: var(--green); 
+	color: var(--dark-grey);
+	border: none; /*remove default border around*/
+}
+
+form input {
+	border-radius: 0.05rem;
+	font-family: inherit; /*so that placeholder text and text on form buttons inherit font*/
+}
+
 /**============================contact us page=========================================**/
 
 .required {
@@ -418,11 +389,9 @@ margin-bottom: 2rem;
 	box-sizing: border-box;
 }
 
-
 #contact-section input, #contact-section textarea {
 	display: block;
 	border: 0.05rem solid var(--light-grey);
-	border-radius: 0.05rem;
 	width: 100%;
 	padding: 0.5rem;
     margin-bottom: 0.5rem;
@@ -439,9 +408,7 @@ margin-bottom: 2rem;
 }
 
 #contact-section input[type="submit"] {
-	background-color: var(--green); 
-	color: var(--dark-grey);
-	border: none; /*remove default border around*/
+	border: none; 
 }
 
 #contact-section input[type="submit"]:hover {
@@ -452,13 +419,8 @@ margin-bottom: 2rem;
 
 /**============================footer=========================================**/
 footer {
-	/*position: fixed; to fix to bottom of browser - removed for now
-	bottom: 0;
-	right: 0;
-	left: 0; /*offsets to fix to bottom*/
 	width: 100%; /*full width*/
 	display: flex; /*footer is flex container for two divs - social media and form*/
-	/*height: 10vh; temp*/
 	background-color: var(--dark-grey);
 	flex-direction: column; /*for mobile view, so displays in row*/
 	padding: 1rem 0; /*padding top and bottom of footer*/
@@ -467,14 +429,11 @@ footer {
 	grid-row: 2 / 3;
 }
 
-
-
 /*for the social media icons (li) to display in a line*/
 .social-media-links {
 	display: flex; /*flex container for li inside, displays them inline*/
 	justify-content: center;
 	margin: 1rem 0;
-	
 }
 
 /*to increase the size of the icons used for social media links*/
@@ -484,7 +443,7 @@ footer {
 	padding:0 1rem; /*padding on each icon to add space between*/
 }
 
-/*need to add the hover and focus styles on these links also*/
+/*need to add the focus styles on these links also*/
 .social-media-links i:hover {
 	color: var(--green);
 }
@@ -493,7 +452,6 @@ footer {
 .social-media-links a:focus {
 	color: var(--green);
 }
-
 
 footer form {
 	margin-bottom: 2rem;
@@ -506,16 +464,10 @@ footer p {
 }
 
 footer input {
-	padding: 0.5rem; /*increase size of boxes?*/
-	/*margin-right: 0.5rem;*/
+	padding: 0.6rem; /*increase size of boxes*/
 	border: none; /*remove default border around*/
 	margin-left: -0.3rem; /*to bring button beside input field with no gap*/
-	border-radius: 0.05rem;
 }
 
-/*sign up button color*/
-footer input[type="submit"] {
-	background-color: var(--green); 
-	color: var(--dark-grey);
-}
+
 
