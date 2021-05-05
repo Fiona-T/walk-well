@@ -181,30 +181,37 @@ nav {
 /*hero image*/
 /*this is the parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
 #landing-section {
-	/*background-color: blue; temp colour to see positioning*/
 	/*margin-top: 10vh;*/
 	width: 100%;
 	overflow: hidden; 
-	position: relative; /*so that the landing-box div can be positioned against this*/
+	/*position: relative; /*so that the landing-box div can be positioned against this*/
 }
 
 /*hero image centred, no repeat and full width and height*/
 #hero-image {
-	background: url(../images/hero-image.jpg) no-repeat center center;
+	/*background image and with linear gradient to darken it so text stands out*/
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/walking-nature-hero-image.jpg);
+
+	/*background: url(../images/hero-image.jpg) no-repeat center center;*/
 	height: 100vh; 
-	width: 100%;
+	/*width: 100%;*/
+	/* centre the image, not repeated, ensure it covers the container*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
 
 /*pseudo element being used to set opacity overlay on hero-image, since cannot be set directly on background-image*/
-#hero-image::before {
+/*#hero-image::before {
     content: ""; /*content must be specified for it to show up*/
-    position: absolute;
+    /*position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0,0,0,0.6);
-}
+}*/
 
 #landing-box-container {
 	display: flex; /*set parent element as flex container*/
@@ -220,6 +227,10 @@ nav {
 #landing-text {
     color: var(--white);
 	text-align: center; /*centre text within the div*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #landing-text p {
@@ -241,6 +252,7 @@ nav {
     margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
     text-align: center;/*centre the text within the boxes*/
 	transition: transform 250ms; /*to set time for the transform on hover below*/
+	display: none; /*temp to get positioning of text*/
 }
 
 .landing-box:hover {
