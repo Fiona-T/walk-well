@@ -292,11 +292,7 @@ nav {
 }
 
 
-
-
-
-
-/*sections 90% of body. **need to fix - right margin?* **/
+/*sections for all pages **/
 #intro-section, #get-started-section, #more-info-section, .long-article, #events-section, #contact-section {
 	/* width: 100%; */
 	display: flex;
@@ -306,11 +302,12 @@ nav {
 	justify-content: center;
 }
 
-.intro-box, .get-started-box, .more-info-box {
-	/* width: 90%; */
-	/* margin: 0 auto;
-	padding: 2rem; */
-}
+/*removed as this was inside the sections above - not needed*/
+/* .intro-box, .get-started-box, .more-info-box {
+	width: 90%; 
+	margin: 0 auto;
+	padding: 2rem; 
+} */
 
 .intro-box video {
 	margin: 0 auto;
@@ -361,13 +358,13 @@ nav {
 margin-bottom: 2rem;
 }
 
-.article-arrows-container-top {
-	margin-top: 10rem; /*so it shows below the header - adjust later when wrapper position corrected*/
+/* .article-arrows-container-top {
+	margin-top: 10rem; 
 	padding: 0 2rem;
-}
+} */
 
 /*container for arrows at bottom. did not use flexbox to position because some pages only have one arrow either right or left*/
-.article-arrows-container {
+.article-arrows-container, .article-arrows-container-top {
 	/*display: flex;
 	justify-content: space-between;*/
     padding: 1rem 2rem;
