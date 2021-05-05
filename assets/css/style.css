@@ -63,7 +63,10 @@ table {
 	--extra-light-grey: #eeeeee /*borders*/
 }
 
-
+/*explicitly set height for grid use*/
+html, body {
+	height: 100%;
+}
 
 /*using rem for font styles throughout, so that they are responsive */
 body {
@@ -71,6 +74,16 @@ body {
     color: var(--dark-grey);
 	font-size: 1rem;
 	line-height: 1.6rem;
+	min-height: 100vh;
+	margin: 0;
+	/*grid seetings*/
+	display: grid;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: auto 1fr;
+  	grid-template-areas: 
+						'header'
+						'main'
+						/* 'footer'; */
 	
 }
 
@@ -115,11 +128,11 @@ input {
 
 header {
     background-color: var(--white);
-	position: fixed; /*to fix to top of browser - tbc if use sticky or fixed*/
+	/* position: fixed; to fix to top of browser - tbc if use sticky or fixed */
 	width: 100%; /*to keep full width*/
-	top: 0; 
+	/* top: 0; 
 	left: 0;
-	right: 0; /*these offsets to keep at top of page*/
+	right: 0; these offsets to keep at top of page */
 	/*height: 10%;*/
 	padding: 1rem;
 	z-index: 3; /*to keep content on top of scrolling content*/
@@ -129,6 +142,8 @@ header {
 	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
 	/*height: 10vh; /*set same on top margin of page wrapper*/
 	border-bottom: 0.1rem solid var(--extra-light-grey);
+	/*grid setting*/
+	grid-area: header;
 }
 
 #logo {
@@ -167,15 +182,15 @@ nav {
 }
 
 #main-page-wrapper {
-	/*width: 90%;*/
-	/*padding-top: 25vh;*/
+	width: 100%;
 	margin: 0 auto; /*centre page content*/
-	/*padding-top: 6rem;*/
-	/*margin-top: 7rem; /*to keep rest of page below fixed header*/
-	/*width: 100%;
-	overflow: hidden;*/
 	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
 	/*the above is okay on mobile, but entire page has right margin on larger view - need to figure this out*/
+	overflow-y:	auto;
+
+	/*grid setting*/
+	grid-area: main;
+	grid-template-rows: 1fr auto; /*two rows - main content plus footer*/
 }
 
 /*hero image*/
@@ -451,6 +466,8 @@ footer {
 	flex-direction: column; /*for mobile view, so displays in row*/
 	padding: 1rem 0; /*padding top and bottom of footer*/
 	color: var(--white);
+	/*grid setting*/
+	grid-row: 2 / 3;
 }
 
 
