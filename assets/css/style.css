@@ -96,7 +96,7 @@ h2 {
 	line-height: 2.2rem;
 }
 
-.subtitle {
+.subtitle, h3 {
 	font-size: 1.2rem;
 	line-height: 2rem;
 	font-weight: 600;
@@ -114,6 +114,9 @@ a {
 
 p > a {
 	font-weight: 900; /*to make green stand out more for links in paragraphs*/
+	text-decoration: none;
+	color: var(--dark-grey);
+	border-bottom: 0.1rem solid var(--green);
 }
 
 #page-header {
