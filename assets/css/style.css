@@ -123,6 +123,7 @@ em {
 	font-style: italic;
 }
 
+/*=================================header and nav==============================================*/
 #page-header {
     background-color: var(--white);
 	width: 100%; /*to keep full width*/
@@ -132,7 +133,6 @@ em {
 	align-items: center; /*vertically align logo and nav within header*/
 	justify-content: space-between; /*aligns logo to left and nav to right*/
 	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
-	/*height: 10vh; /*set same on top margin of page wrapper*/
 	border-bottom: 0.1rem solid var(--extra-light-grey);
 	/*grid setting*/
 	grid-area: header;
@@ -170,6 +170,34 @@ nav li {
 nav {
 	margin: 1rem;
 }
+
+/*to centre the icon vertically within the header*/
+.topnav {
+	display: flex;
+	align-items: center;
+}
+
+/* for other nav items at mobile size */
+.topnav a {
+	display: none;
+  }
+
+  /* for the icon to display at mobile size */
+.topnav a.icon {
+    display: block;
+	
+  }
+
+.topnav.open a {
+	display: block;
+}
+
+.topnav.open a.icon {
+position: absolute;
+right: 2rem;
+top: 2rem;
+}
+
 
 #main-page-wrapper {
 	width: 100%;
