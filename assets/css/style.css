@@ -531,7 +531,7 @@ footer input {
 
 /*===========================media queries=================================================*/
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 480px) {
 	/* for other nav items to display at larger size */
 .topnav a {
 	display: inline-flex;
