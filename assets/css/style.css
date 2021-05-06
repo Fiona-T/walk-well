@@ -544,3 +544,17 @@ footer input {
   }
 
 }
+
+
+@media screen and (min-width: 768px) {
+	footer {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;	
+	}
+
+	.footer-box {
+		flex: 0 1 auto;
+		width: 90%;
+	}
+}
