@@ -175,6 +175,7 @@ nav {
 .topnav {
 	display: flex;
 	align-items: center;
+	flex-direction: row;
 }
 
 /* for other nav items at mobile size */
@@ -185,7 +186,6 @@ nav {
   /* for the icon to display at mobile size */
 .topnav a.icon {
     display: block;
-	
   }
 
 .topnav.open a {
@@ -529,4 +529,18 @@ footer input {
 }
 
 
+/*===========================media queries=================================================*/
 
+@media screen and (min-width: 420px) {
+	/* for other nav items to display at larger size */
+.topnav a {
+	display: inline-flex;
+	margin: 0 1rem;
+  }
+
+  /* for the icon to be hidden at larger size */
+.topnav a.icon {
+    display: none;
+  }
+
+}
