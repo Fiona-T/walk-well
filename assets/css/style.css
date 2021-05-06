@@ -112,11 +112,15 @@ a {
 	color: var(--green);
 }
 
+/*to make stand out more for links in paragraphs*/
 p > a {
-	font-weight: 900; /*to make green stand out more for links in paragraphs*/
-	text-decoration: none;
+	font-weight: 900; 
 	color: var(--dark-grey);
 	border-bottom: 0.1rem solid var(--green);
+}
+
+em {
+	font-style: italic;
 }
 
 #page-header {
@@ -250,8 +254,8 @@ nav {
 	color: var(--dark-grey);
 }
 
-/*font size and style for h3 inside landing box*/
-.landing-box h3 {
+/*font size and style for h2 inside landing box*/
+.landing-box h2 {
 	padding: 0.5rem 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 900;
@@ -375,24 +379,35 @@ input[type="submit"] {
 	border: none; /*remove default border around*/
 }
 
-form input {
+form input, textarea {
 	border-radius: 0.05rem;
 	font-family: inherit; /*so that placeholder text and text on form buttons inherit font*/
 }
 
 /**============================contact us page=========================================**/
 
+#contact-section h2 {
+	padding-bottom: 1rem;
+}
+
 .required {
 	color: var(--green);
 }
 
 #contact-section form {
-	/*display: flex;*/
-	max-width: 90%;
+	/* max-width: 90%; use with media query for larger screen*/
 	box-sizing: border-box;
 }
 
-#contact-section input, #contact-section textarea {
+#contact-section form p {
+	padding-bottom: 0;
+}
+
+#contact-section label {
+	display: block;
+}
+
+#contact-section input:not([type="checkbox"]), #contact-section textarea {
 	display: block;
 	border: 0.05rem solid var(--light-grey);
 	width: 100%;
@@ -401,10 +416,22 @@ form input {
 	box-sizing: border-box;
 }
 
-#contact-section input[type="checkbox"] {
-	display: inline-block;
-	width: 10%;
+.checkbox-container {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
 }
+
+.checkbox-group {
+	display: flex;
+	justify-content: space-between;
+}
+
+#contact-section textarea {
+	height: 5rem;
+}
+
 
 #contact-section input:hover, #contact-section input:focus #contact-section input:active {
 	border-color: var(--green);
@@ -412,6 +439,7 @@ form input {
 
 #contact-section input[type="submit"] {
 	border: none; 
+	margin: 1.5rem 0;
 }
 
 #contact-section input[type="submit"]:hover {
