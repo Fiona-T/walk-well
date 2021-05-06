@@ -96,7 +96,7 @@ h2 {
 	line-height: 2.2rem;
 }
 
-h3 {
+.subtitle {
 	font-size: 1.2rem;
 	line-height: 2rem;
 	font-weight: 600;
@@ -307,9 +307,9 @@ nav {
 }
 
 /*subheading*/
-.long-article h4 {
+.long-article .subtitle {
 	font-style: italic; 
-	margin-bottom: 1rem;
+	font-weight: 200;
 }
 
 .article-author {
