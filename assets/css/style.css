@@ -116,7 +116,7 @@ p > a {
 	font-weight: 900; /*to make green stand out more for links in paragraphs*/
 }
 
-header {
+#page-header {
     background-color: var(--white);
 	width: 100%; /*to keep full width*/
 	padding: 1rem;
@@ -141,7 +141,7 @@ header {
 	color: var(--dark-grey);
 }
 
-header a {
+#page-header a {
 	text-transform: uppercase;
 	color: var(--dark-grey);
 	font-size: 1.1rem;
