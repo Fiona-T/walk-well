@@ -275,7 +275,7 @@ top: 2rem;
 }
 
 .landing-button {
-	background-color: rgba(4, 229, 174, 0.7);
+	background-color: rgba(4, 229, 174, 0.8);
 	padding: 1rem 2rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
@@ -285,16 +285,16 @@ top: 2rem;
 	border-radius: 0.1rem;
 }
 
+
+
+/*below fold landing section - 3 boxes*/
 #landing-box-container {
 	display: flex; /*set parent element as flex container*/
 	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
-	position: absolute; /*position this against the parent landing-section so that overlays the hero image*/
-	bottom: 1rem; /*positioning from bottom of parent landing-section*/
 	width: 100%; /*needs to be set so that justify content works*/
 	justify-content: center; /*to centre the boxes within this container*/
 	
 }
-
 
 .landing-box {
 	/* display: inline-block; this will only be for larger sizes*/
@@ -304,7 +304,11 @@ top: 2rem;
     margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
     text-align: center;/*centre the text within the boxes*/
 	transition: transform 250ms; /*to set time for the transform on hover below*/
-	display: none; /*temp to get positioning of text*/
+	/* display: none;  */
+}
+
+.landing-box a {
+	color: var(--dark-grey);
 }
 
 .landing-box:hover {
