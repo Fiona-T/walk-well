@@ -123,6 +123,18 @@ em {
 	font-style: italic;
 }
 
+/*removing the default focus style for tabbing and replacing it with brand color border*/
+:focus {
+	outline:none;
+	border:0.1rem solid var(--green);
+}
+
+/*adding back the outline for form checkbox since border does not work with this*/
+input[type="checkbox"]:focus {
+	outline: 0.1rem solid var(--green);
+}
+
+
 /*=================================header and nav==============================================*/
 #page-header {
     background-color: var(--white);
@@ -412,6 +424,7 @@ form input, textarea {
 	font-family: inherit; /*so that placeholder text and text on form buttons inherit font*/
 }
 
+
 /**============================contact us page=========================================**/
 
 #contact-section h2 {
@@ -444,6 +457,18 @@ form input, textarea {
 	box-sizing: border-box;
 }
 
+input[type="checkbox"] {
+	border: 0.05rem solid var(--light-grey);
+}
+
+#contact-section input:hover, #contact-section textarea:hover {
+	border-color: var(--green);
+}
+
+#contact-section input:focus, #contact-section textarea:focus {
+	border:0.1rem solid var(--green);
+}
+
 .checkbox-container {
 	display: flex;
 	flex-direction: column;
@@ -460,17 +485,12 @@ form input, textarea {
 	height: 5rem;
 }
 
-
-#contact-section input:hover, #contact-section input:focus #contact-section input:active {
-	border-color: var(--green);
-}
-
 #contact-section input[type="submit"] {
 	border: none; 
 	margin: 1.5rem 0;
 }
 
-#contact-section input[type="submit"]:hover {
+#contact-section input[type="submit"]:hover, #contact-section input[type="submit"]:focus, #contact-section input[type="submit"]:active {
 	background-color: var(--dark-grey); 
 	color: var(--white);
 }
