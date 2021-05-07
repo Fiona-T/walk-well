@@ -164,7 +164,7 @@ input[type="checkbox"]:focus {
 	color: var(--dark-grey);
 }
 
-#page-header a {
+.nav-item {
 	text-transform: uppercase;
 	color: var(--dark-grey);
 	font-size: 1.1rem;
@@ -173,8 +173,8 @@ input[type="checkbox"]:focus {
 /*change colour and show underline on hover, tab (focus) or active, 
 also for the active page, using active class*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
-	color: var(--green);
 	border-bottom: 0.5rem solid var(--green);
+	color: var(--green);
 }
 
 /*header nav*/
@@ -202,6 +202,7 @@ nav {
   /* for the icon to display at mobile size */
 .topnav a.icon {
     display: block;
+	color: var(--dark-grey);
   }
 
 .topnav.open a {
