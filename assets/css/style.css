@@ -171,7 +171,7 @@ input[type="checkbox"]:focus {
 }
 
 /*change colour and show underline on hover, tab (focus) or active, 
-also for active class on page*/
+also for the active page, using active class*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
 	color: var(--green);
 	border-bottom: 0.5rem solid var(--green);
@@ -231,6 +231,7 @@ top: 2rem;
 #landing-section {
 	width: 100%;
 	overflow: hidden; 
+	/* height: 100vh; */
 	/*position: relative; /*so that the landing-box div can be positioned against this*/
 }
 
@@ -544,10 +545,15 @@ footer p {
 	padding-bottom: 0; /*remove padding from p so closer to form boxes*/
 }
 
+/*setting the form as a flex container removes the space between input and submit, instead of negative margin*/
+footer form {
+	display: flex;
+	justify-content: center;
+}
+
 footer input {
 	padding: 0.6rem; /*increase size of boxes*/
 	border: none; /*remove default border around*/
-	margin-left: -0.3rem; /*to bring button beside input field with no gap*/
 }
 
 footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer input[type="submit"]:active {
