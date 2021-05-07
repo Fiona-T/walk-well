@@ -484,8 +484,10 @@ footer {
 	flex-direction: column; /*for mobile view, so displays in row*/
 	padding: 1rem 0 2rem; /*padding top and bottom of footer*/
 	color: var(--white);
+	font-size: 0.9rem;
 	/*grid setting*/
 	grid-row: 2 / 3;
+	
 }
 
 .footer-box {
@@ -495,7 +497,6 @@ footer {
 
 footer a {
 	color: var(--white);
-	font-size: 1rem;
 }
 
 /*social media and download links, change color on hover, focus, active*/
@@ -548,14 +549,27 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 830px) {
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;	
 	}
 
+	.footer-box:first-of-type {
+		padding-left: 2rem;
+	}
+
+	.footer-box:last-of-type {
+		padding-right: 2rem;
+	}
+}
+
+
+/* @media screen and (min-width: 1025px) {
+	
 	.footer-box {
 		padding: 0 2rem;
 	}
-}
+} */
+
