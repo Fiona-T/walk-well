@@ -142,7 +142,7 @@ input[type="checkbox"]:focus {
 /*=================================header and nav==============================================*/
 #page-header {
     background-color: var(--white);
-	width: 100%; /*to keep full width*/
+	/* width: 100%;  */
 	padding: 1rem;
 	z-index: 3; /*to keep content on top of scrolling content*/
 	display: flex; /*set header as flex container*/
@@ -177,25 +177,9 @@ also for the active page, using active class*/
 	color: var(--green);
 }
 
-/*header nav*/
-nav li {
-	display: inline;
-	margin-right: 1rem;
-}
 
-nav {
-	margin: 1rem;
-}
-
-/*to centre the icon vertically within the header*/
-.topnav {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-}
-
-/* for other nav items at mobile size */
-.topnav a {
+/* for nav ul items to be hidden at mobile size initially*/
+.topnav ul {
 	display: none;
   }
 
@@ -205,13 +189,19 @@ nav {
 	color: var(--dark-grey);
   }
 
-.topnav.open a {
-	display: block;
+.topnav.open ul {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.topnav.open li {
+	padding-bottom: 0.5rem;
+	min-width: 100%;
 }
 
 .topnav.open a.icon {
 position: absolute;
-right: 2rem;
+right: 1rem;
 top: 2rem;
 }
 
@@ -595,21 +585,30 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 /*===========================media queries=================================================*/
 
 @media screen and (min-width: 480px) {
+	
+	/*==========nav in page header=======================*/
 	/* for other nav items to display at larger size */
-.topnav a {
-	display: inline-flex;
-	margin: 0 1rem;
-  }
+	.topnav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
 
-  /* for the icon to be hidden at larger size */
-.topnav a.icon {
-    display: none;
-  }
+	.topnav li {
+		padding: 1rem;
+	}
+
+	/* for the icon to be hidden at larger size */
+	.topnav a.icon {
+		display: none;
+	}
+
 
 }
 
 
 @media screen and (min-width: 830px) {
+	/*==========footer=======================*/
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
@@ -623,6 +622,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	.footer-box:last-of-type {
 		padding-right: 2rem;
 	}
+
 }
 
 
