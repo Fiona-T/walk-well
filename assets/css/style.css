@@ -119,6 +119,10 @@ p > a {
 	border-bottom: 0.1rem solid var(--green);
 }
 
+p > a:focus, p > a:hover, p > a:active {
+	color: var(--green);
+}
+
 em {
 	font-style: italic;
 }
