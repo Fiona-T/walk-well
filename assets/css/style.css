@@ -285,52 +285,60 @@ top: 2rem;
 	border-radius: 0.1rem;
 }
 
-
-
 /*below fold landing section - 3 boxes*/
-#landing-box-container {
+#below-fold-landing {
 	display: flex; /*set parent element as flex container*/
 	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
 	width: 100%; /*needs to be set so that justify content works*/
 	justify-content: center; /*to centre the boxes within this container*/
-	
+	background-color: var(--green);
+	padding: 5rem 0;
 }
 
 .landing-box {
 	/* display: inline-block; this will only be for larger sizes*/
-	background-color: var(--green);
-	color: var(--white);
+	background-color: var(--white);
+	color: var(--dark-grey);
 	padding: 1rem;
-    margin: 0.6rem 4rem; /*space between the boxes, more on left right to bring away from edge of page*/
-    text-align: center;/*centre the text within the boxes*/
+    margin: 0.6rem 4rem; /*space between the boxes, more on sides to bring away from edge of page*/
+    text-align: center;
 	transition: transform 250ms; /*to set time for the transform on hover below*/
-	/* display: none;  */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+    align-items: center;
 }
 
-.landing-box a {
-	color: var(--dark-grey);
-}
-
-.landing-box:hover {
-	transform: scale(1.02); /*increase size of box on hover*/ /*could change opacity also*/
-}
-/*need to look at interaction for focus. Also change focus box styles*/
-
-.landing-box a:hover, .landing-box a:focus, .landing-box a:active {
-	color: var(--dark-grey);
+.landing-icon {
+	font-size: 2rem;
 }
 
 /*font size and style for h2 inside landing box*/
 .landing-box h2 {
 	padding: 0.5rem 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 900;
     font-size: 1.8rem;
 }
 
 .landing-box p {
 	font-size: .9rem;
+	line-height: 1rem;
 }
+
+/*focus not working on landing-page-link - come back to*/
+/* .landing-page-link:focus-visible {
+	outline: solid 1px green;
+} */
+
+.landing-page-link:hover {
+	transform: scale(1.02); /*increase size of box on hover*/ 
+}
+
+.landing-box:hover, .landing-page-link:focus, .landing-page-link:active {
+	color: var(--green);
+}
+
+
+
 
 
 /*sections for all pages **/
