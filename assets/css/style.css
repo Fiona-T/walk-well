@@ -280,7 +280,7 @@ top: 2rem;
 #below-fold-landing {
 	display: flex; /*set parent element as flex container*/
 	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
-	width: 100%; /*needs to be set so that justify content works*/
+	/* width: 100%;  */
 	justify-content: center; /*to centre the boxes within this container*/
 	background-color: var(--green);
 	padding: 5rem 0;
@@ -299,6 +299,8 @@ top: 2rem;
 	justify-content: space-evenly;
     align-items: center;
 }
+
+
 
 .landing-icon {
 	font-size: 2rem;
@@ -584,6 +586,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 
 /*===========================media queries=================================================*/
 
+
 @media screen and (min-width: 480px) {
 	
 	/*==========nav in page header=======================*/
@@ -604,6 +607,22 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 
 
+}
+
+
+@media screen and (min-width: 768px) {
+	#below-fold-landing {
+		flex-direction: row; 
+		padding: 5rem 2rem;
+	}
+
+	.landing-box {
+		margin: 0 2rem;
+	}
+
+	.landing-page-link {
+		flex-grow: 1;
+	}
 }
 
 
