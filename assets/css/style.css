@@ -275,14 +275,20 @@ top: 2rem;
 
 .landing-button {
 	background-color: rgba(4, 229, 174, 0.8);
-	padding: 1rem 2rem;
+	padding: 1rem 2rem 0.1rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
     word-spacing: 0.1rem;
 	font-size: 1.1rem;
 	color: var(--dark-grey);
 	border-radius: 0.1rem;
+	display: block;
 }
+
+.landing-button span {
+	display: block;
+}
+
 
 /*below fold landing section - 3 boxes*/
 #below-fold-landing {
