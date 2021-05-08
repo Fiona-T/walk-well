@@ -262,8 +262,6 @@ top: 2rem;
 }
 
 .landing-text p {
-	font-size: 1.1rem;
-	line-height: 2rem;
 	padding-bottom: 0;
 }
 
@@ -279,12 +277,12 @@ top: 2rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
     word-spacing: 0.1rem;
-	font-size: 1.1rem;
 	color: var(--dark-grey);
 	border-radius: 0.1rem;
 	display: block;
 }
 
+/*so that arrow displays below text in the button*/
 .landing-button span {
 	display: block;
 }
