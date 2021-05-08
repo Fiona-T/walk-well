@@ -53,6 +53,10 @@ table {
 
 /* ===================== end of Meyer CSS Reset ============================================*/
 
+* {
+    box-sizing: inherit;
+}
+
 /*======set variables for colors =============*/
 :root {
 	--green: #04E5AE; /*accent color*/
@@ -61,6 +65,10 @@ table {
 	--white: #fff; /*header and footer text color*/
 	--light-grey: #7f7f88; /*lighter text color*/
 	--extra-light-grey: #eeeeee /*borders*/
+}
+
+html {
+	box-sizing: border-box;
 }
 
 /*explicitly set height for grid use*/
@@ -435,6 +443,18 @@ margin-bottom: 2rem;
 	font-weight: 500;
 	padding-bottom: 0.5rem;
 }
+
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+	max-width: 100%;
+    margin: 1rem 0;
+}
+
 
 /**===========================general form styles=================================**/
 
