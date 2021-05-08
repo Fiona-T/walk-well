@@ -424,7 +424,7 @@ margin-bottom: 2rem;
 /*============================events page==============================================*/
 
 
-
+/*events table listing*/
 tbody tr {
 	margin-bottom: 1rem; /*to space out the cards when shown at mobile */
   }
@@ -437,13 +437,18 @@ tbody tr {
   }
 
   /* removes table header at mobile size */
+  /*from https://allthingssmitty.com/2016/10/03/responsive-table-layout/*/
   table thead {
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
+    /* clip: rect(0 0 0 0); removed as this is deprecated */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+  	white-space: nowrap;
+  	clip-path: inset(100%);
+  	overflow: hidden;
   }
 
   table tr, table td {
@@ -688,14 +693,13 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 
 	/* show the table header at larger size,reverse the positioning done for mobile size */
 	table thead {
-		/* border: 0.1rem solid var(--dark-grey); */
-		clip: auto;
 		height: auto;
-		margin: auto;
-		overflow: auto;
+		margin: 0;
+		overflow: visible;
 		position: static;
 		width: 100%;
 		display: table;
+		clip-path: none;
 	  }
 	  
 
@@ -705,7 +709,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	
 	  table tr {
 		  display: table-row-group;
-		  width: 100%;
+		  /* width: 100%; */
 	  }
 	
 	  table td, table th {
