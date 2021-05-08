@@ -225,6 +225,14 @@ top: 2rem;
 	
 }
 
+main {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 /*hero image*/
 /*parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
 #landing-section {
@@ -348,11 +356,9 @@ top: 2rem;
 
 /*sections for all pages **/
 #intro-section, #get-started-section, #more-info-section, .long-article, #events-section, #contact-section {
-	/* width: 100%; */
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
 	margin: 2rem;
-	/* margin: 0 auto; */
 	justify-content: center;
 }
 
@@ -678,6 +684,11 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 
 
 @media screen and (min-width: 768px) {
+	
+	main {
+		width: 90%;
+	}
+	
 	#below-fold-landing {
 		flex-direction: row; 
 		padding: 5rem 2rem;
@@ -752,6 +763,14 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 
 }
+
+@media screen and (min-width: 1200px) {
+	main {
+		width: 80%%;
+	}
+
+}
+
 
 
 
