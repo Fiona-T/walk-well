@@ -355,7 +355,7 @@ main {
 
 
 /*sections for all pages **/
-#intro-section, #get-started-section, #more-info-section, .long-article, #events-section, #contact-section {
+#intro-section, #get-started-section, #more-info-section, .long-article, .events-section, #contact-section {
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
 	margin: 2rem;
