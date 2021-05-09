@@ -708,6 +708,8 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		flex-basis: 35rem;
 	}
 
+	
+
 
 }
 
@@ -794,6 +796,11 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
     justify-content: space-between;
 }
 
+	/*article text centered below image on longer article at larger sizes*/
+	.article-below-img {
+		width: 90%;
+		margin: 0 auto;
+	}
 
 }
 
