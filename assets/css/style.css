@@ -368,6 +368,20 @@ main {
 
 .more-info-box img, .long-article img {
 	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.article-summary-box {
+	padding: 0.5rem;
+	border: 0.1rem solid var(--extra-light-grey);
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+	display: flex;
+    flex-direction: column;
+}
+
+.article-summary-box h3 {
+	line-height: 1.6rem;
 }
 
 /*font styles for article date in more info section index.html*/
@@ -684,6 +698,14 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		width: 90%; 
 		margin: 0 auto;
 		
+	}
+
+	.article-summary-container {
+		display: flex;
+	}
+
+	.article-summary-box {
+		flex-basis: 35rem;
 	}
 
 
