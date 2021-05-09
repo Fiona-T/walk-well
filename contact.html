@@ -24,55 +24,57 @@
         </nav>
     </header>
     <div id="main-page-wrapper"> 
-        <section id="contact-section">
-            <h2>Get in touch</h2>
-            <p>Hello! Thank you for visiting our site!</p>
-            <p>Interested in joining one of our <a href="events.html">walks or attending one of our events</a>? Just fill in your details below and we'll be in touch with all the details you need!</p>
-            <p>We love to hear from our community and we value your input. If you've any questions or feeback for us, or there is a topic you'd like us to cover in our longer articles, just put the details in the form below. We'll get back to you as soon as we can!</p>
-            <p><em>Fields marked with <span class="required">*</span> must be completed.</em></p>
-            <form method="" action="form-success.html">
-                <!--method is left blank here because it is not a real form. Action links to a dummy success page-->
-                <label for="first-name">First name<span class="required">*</span></label>
-                <input type="text" id="first-name" name="first-name" required>
+        <main>
+            <section id="contact-section">
+                <h2>Get in touch</h2>
+                <p>Hello! Thank you for visiting our site!</p>
+                <p>Interested in joining one of our <a href="events.html">walks or attending one of our events</a>? Just fill in your details below and we'll be in touch with all the details you need!</p>
+                <p>We love to hear from our community and we value your input. If you've any questions or feeback for us, or there is a topic you'd like us to cover in our longer articles, just put the details in the form below. We'll get back to you as soon as we can!</p>
+                <p><em>Fields marked with <span class="required">*</span> must be completed.</em></p>
+                <form method="" action="form-success.html">
+                    <!--method is left blank here because it is not a real form. Action links to a dummy success page-->
+                    <label for="first-name">First name<span class="required">*</span></label>
+                    <input type="text" id="first-name" name="first-name" required>
 
-                <label for="surname">Surname<span class="required">*</span></label>
-                <input type="text" id="surname" name="surname" required>
+                    <label for="surname">Surname<span class="required">*</span></label>
+                    <input type="text" id="surname" name="surname" required>
 
-                <label for="email">Email address<span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="name@email.com">
+                    <label for="email">Email address<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="name@email.com">
 
-                <label for="phone-number">Mobile phone number (optional). <em>In the format: 08X 1234567</em></label>
-                <input type="tel" id="phone-number" name="phone-number" placeholder ="in the format 08X 1234567" maxlength="11" pattern="[0-9]{3} [0-9]{7}">
-                <!--type=tel does not validate but brings up a relevant keyboard on mobile phones for input
-                pattern attribute for mobile phone number
-                -->
-                
-                <p>Event(s) you are interested in<span class="required">*</span>. Choose as many as you like.</p>
-                <div class="checkbox-container">
-                    <div class="checkbox-group">
-                        <label for="ticknock-walk">Guided walk - Ticknock</label>
-                        <input type="checkbox" id="ticknock-walk" name="events" value="ticknock-walk" checked> 
+                    <label for="phone-number">Mobile phone number (optional). <em>In the format: 08X 1234567</em></label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder ="in the format 08X 1234567" maxlength="11" pattern="[0-9]{3} [0-9]{7}">
+                    <!--type=tel does not validate but brings up a relevant keyboard on mobile phones for input
+                    pattern attribute for mobile phone number
+                    -->
+                    
+                    <p>Event(s) you are interested in<span class="required">*</span>. Choose as many as you like.</p>
+                    <div class="checkbox-container">
+                        <div class="checkbox-group">
+                            <label for="ticknock-walk">Guided walk - Ticknock</label>
+                            <input type="checkbox" id="ticknock-walk" name="events" value="ticknock-walk" checked> 
+                        </div>
+                        <div class="checkbox-group">
+                            <label for="dodder-walk">Guided walk - Dodder</label>
+                            <input type="checkbox" id="dodder-walk" name="events" value="dodder-walk"> 
+                        </div>
+                        <div class="checkbox-group">
+                            <label for="forest-bathing">Forest Bathing</label>
+                            <input type="checkbox" id="forest-bathing" name="events" value="forest-bathing"> 
+                        </div>
+                        <div class="checkbox-group">
+                            <label for="mindful-morning">Mindful Mornings</label>
+                            <input type="checkbox" id="mindful-morning" name="events" value="mindful-morning"> 
+                        </div>
                     </div>
-                    <div class="checkbox-group">
-                        <label for="dodder-walk">Guided walk - Dodder</label>
-                        <input type="checkbox" id="dodder-walk" name="events" value="dodder-walk"> 
-                    </div>
-                    <div class="checkbox-group">
-                        <label for="forest-bathing">Forest Bathing</label>
-                        <input type="checkbox" id="forest-bathing" name="events" value="forest-bathing"> 
-                    </div>
-                    <div class="checkbox-group">
-                        <label for="mindful-morning">Mindful Mornings</label>
-                        <input type="checkbox" id="mindful-morning" name="events" value="mindful-morning"> 
-                    </div>
-                </div>
 
-                <label for="message">Any other thoughts or questions for us?</label>
-                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                    <label for="message">Any other thoughts or questions for us?</label>
+                    <textarea id="message" name="message" placeholder="Your message"></textarea>
 
-                <input type="submit" value ="Send Enquiry">
-            </form>
-        </section>
+                    <input type="submit" value ="Send Enquiry">
+                </form>
+            </section>
+        </main>
         <footer>
             <div class="footer-box">
                 <ul class="social-media-links">

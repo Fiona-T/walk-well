@@ -579,6 +579,7 @@ input[type="checkbox"] {
 .checkbox-group {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 #contact-section textarea {
@@ -679,6 +680,12 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		display: none;
 	}
 
+	#contact-section form {
+		width: 90%; 
+		margin: 0 auto;
+		
+	}
+
 
 }
 
@@ -752,6 +759,19 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		max-width: 45%;
 		margin: .5rem;
 	}
+
+
+	input[type="checkbox"] {
+		margin: 0 .5rem;
+	}
+
+
+.checkbox-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 
 }
 
