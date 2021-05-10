@@ -232,7 +232,7 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 0 auto;
-	align-items: center;
+	/* align-items: center; */
 }
 
 /*hero image*/
@@ -728,41 +728,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		flex-grow: 1;
 	}
 
-	/* show the table header at larger size,reverse the positioning done for mobile size */
-	table thead {
-		height: auto;
-		margin: 0;
-		overflow: visible;
-		position: static;
-		width: 100%;
-		display: table;
-		clip-path: none;
-	  }
-	  
-
-	  table  {
-		table-layout: fixed;
-	  }
 	
-	  table tr {
-		  display: table-row-group;
-		  /* width: 100%; */
-	  }
-	
-	  table td, table th {
-		  display: table-cell;
-		  width: 25%; /*to align th with tds*/
-		  padding: 0.5rem;
-		  text-align: left;
-	  }
-	
-	  table td:last-of-type, table th:last-of-type {
-		  width: 10%;
-	  }
-
-	  table td:nth-of-type(2), table th:nth-of-type(2) {
-		width: 15%;
-	}
 
 	#reviews-container {
 		display: flex;
@@ -816,6 +782,41 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 
 	.footer-box:last-of-type {
 		padding-right: 2rem;
+	}
+
+	/* show the table header at larger size,reverse the positioning done for mobile size */
+	/*done at this breakpoint because of alignment - edge case - explained in readme.md*/
+	table thead {
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: 100%;
+		display: table;
+		clip-path: none;
+	  }
+	  
+	  table  {
+		table-layout: fixed;
+	  }
+	
+	  table tr {
+		  display: table-row-group;
+	  }
+	
+	  table td, table th {
+		  display: table-cell;
+		  width: 25%; 
+		  padding: 0.5rem;
+		  text-align: left;
+	  }
+	
+	  table td:last-of-type, table th:last-of-type {
+		  width: 10%;
+	  }
+
+	  table td:nth-of-type(2), table th:nth-of-type(2) {
+		width: 15%;
 	}
 
 }

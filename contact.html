@@ -43,10 +43,8 @@
                     <input type="email" id="email" name="email" required placeholder="name@email.com">
 
                     <label for="phone-number">Mobile phone number (optional). <em>In the format: 08X 1234567</em></label>
-                    <input type="tel" id="phone-number" name="phone-number" placeholder ="in the format 08X 1234567" maxlength="11" pattern="[0-9]{3} [0-9]{7}">
-                    <!--type=tel does not validate but brings up a relevant keyboard on mobile phones for input
-                    pattern attribute for mobile phone number
-                    -->
+                    <!--using pattern to partly validate phone number since 'tel' does not validate-->
+                    <input type="tel" id="phone-number" name="phone-number" placeholder ="in the format 08X 1234567" maxlength="11" pattern="[0]{1}[8]{1}[0-8]{1} [0-9]{7}">
                     
                     <p>Event(s) you are interested in<span class="required">*</span>. Choose as many as you like.</p>
                     <div class="checkbox-container">
