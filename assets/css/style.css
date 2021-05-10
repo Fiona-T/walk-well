@@ -90,7 +90,7 @@ body {
   	grid-template-rows: auto 1fr;
   	grid-template-areas: 
 						'header'
-						'main';
+						'main-page-wrapper';
 }
 
 h1, h2 {
@@ -220,8 +220,10 @@ top: 2rem;
 	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
 	overflow-y:	auto;
 	/*grid setting*/
-	grid-area: main;
+	grid-area: main-page-wrapper;
+	display: grid;
 	grid-template-rows: 1fr auto; /*two rows - main content plus footer*/
+	
 	
 }
 
@@ -229,8 +231,8 @@ main {
 	display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
     margin: 0 auto;
+	align-items: center;
 }
 
 /*hero image*/
@@ -349,10 +351,6 @@ main {
 .landing-box:hover, .landing-page-link:focus, .landing-page-link:active {
 	color: var(--green);
 }
-
-
-
-
 
 /*sections for all pages **/
 #intro-section, #get-started-section, #more-info-section, .long-article, .events-section, #contact-section, .form-success-section {
@@ -620,9 +618,6 @@ footer {
 	padding: 1rem 0 2rem; /*padding top and bottom of footer*/
 	color: var(--white);
 	font-size: 0.9rem;
-	/*grid setting*/
-	grid-row: 2 / 3;
-	
 }
 
 .footer-box {
