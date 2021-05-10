@@ -15,7 +15,7 @@
             <h1 id="logo">Walk Well</h1>
         </a>
         <nav id="menu" class="topnav">
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="navToggle()"><i class="fa fa-bars"></i></a>
             <ul>
                 <li><a href="index.html" class="nav-item">Home</a></li>
                 <li><a href="events.html" class="nav-item">Events</a></li>
@@ -95,16 +95,7 @@
     </div>
     <!--script for the fontawesome icons-->
     <script src="https://kit.fontawesome.com/f92ca5e5ec.js" crossorigin="anonymous"></script>
-    <!--script for the hamburger menu at mobile size. code from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-    <script>
-        function myFunction() {
-          var x = document.getElementById("menu");
-          if (x.className === "topnav") {
-            x.className += " open";
-          } else {
-            x.className = "topnav";
-          }
-        }
-    </script>
+    <!--script for the hamburger menu at mobile size, to open and close it-->
+    <script src="assets/scripts/script.js"></script>
 </body>
 </html>
