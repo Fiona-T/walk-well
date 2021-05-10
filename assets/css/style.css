@@ -297,41 +297,43 @@ main {
 	display: block;
 }
 
+#below-fold-landing {
+	background-color: var(--extra-light-grey);
+}
 
 /*below fold landing section - 3 boxes*/
-#below-fold-landing {
+.landing-page-links-container {
 	display: flex; /*set parent element as flex container*/
 	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
-	/* width: 100%;  */
+	width: 90%; 
+	margin: 0 auto;
 	justify-content: center; /*to centre the boxes within this container*/
-	background-color: var(--green);
 	padding: 5rem 0;
 }
 
 .landing-box {
-	/* display: inline-block; this will only be for larger sizes*/
 	background-color: var(--white);
 	color: var(--dark-grey);
-	padding: 1rem;
+	padding: 1.5rem 2rem;
     margin: 0.6rem 4rem; /*space between the boxes, more on sides to bring away from edge of page*/
     text-align: center;
 	transition: transform 250ms; /*to set time for the transform on hover below*/
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: column;
 	justify-content: space-evenly;
     align-items: center;
 }
 
-
-
 .landing-icon {
-	font-size: 2rem;
+	font-size: 4rem;
+	margin-bottom: 0.5rem;
 }
 
 /*font size and style for h2 inside landing box*/
 .landing-box h2 {
 	padding: 0.5rem 0;
     font-size: 1.8rem;
+	font-family: 'Nunito Sans', sans-serif;
 }
 
 .landing-box p {
@@ -719,7 +721,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		width: 90%;
 	}
 	
-	#below-fold-landing {
+	.landing-page-links-container {
 		flex-direction: row; 
 		padding: 5rem 2rem;
 	}
