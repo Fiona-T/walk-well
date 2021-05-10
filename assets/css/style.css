@@ -830,14 +830,17 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		justify-content: space-between;
 	}
 	
-	.intro-box {
-		width: 48%;
+	.intro-box, .get-started-steps {
+		max-width: 48%;
 	}
 
-	/*center the video within this div*/
-	/* .intro-box:last-of-type {
-		align-self: center;
-	} */
+
+	.get-started-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+    	justify-content: space-between;
+	}
 
 	.gallery img {
 		max-width: 30%;
