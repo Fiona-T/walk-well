@@ -355,7 +355,7 @@ main {
 
 
 /*sections for all pages **/
-#intro-section, #get-started-section, #more-info-section, .long-article, .events-section, #contact-section {
+#intro-section, #get-started-section, #more-info-section, .long-article, .events-section, #contact-section, .form-success-section {
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
 	margin: 2rem;
@@ -402,7 +402,7 @@ main {
 }
 
 /*===============article pages===============================================================*/
-.long-article h2 {
+.long-article h2, .form-success-section h2 {
 	text-transform: none; /*longer headings so not uppercase*/
 	margin-bottom: 1rem;
 }

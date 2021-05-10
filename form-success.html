@@ -10,11 +10,12 @@
     <title>Walk Well</title>
 </head>
 <body>
-    <header>
+    <header id="page-header">
         <a href="index.html">
             <h1 id="logo">Walk Well</h1>
         </a>
-        <nav>
+        <nav id="menu" class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="navToggle()"><i class="fa fa-bars"></i></a>
             <ul>
                 <li><a href="index.html" class="nav-item">Home</a></li>
                 <li><a href="events.html" class="nav-item">Events</a></li>
@@ -22,16 +23,50 @@
             </ul>
         </nav>
     </header>
-    <div id="main-page-wrapper"> <!--so can set a top margin on this, so that it will show below the header-->
-        <section>
-            <h2>Thanks for getting in touch!</h2>
-            <p>Your query has been submitted successfully and we'll be back to you very shortly!</p>
-                <!--this is a dummy success page for the form submittal, since the form does not go anywhere-->
-          
-        </section>
+    <div id="main-page-wrapper"> 
+        <main>
+            <!--this is a dummy success page for the form submittal, since the form does not go anywhere-->
+            <section class="form-success-section">
+                <h2>Query received, thank you!</h2>
+                <p>We really appreciate you getting in touch with us. We value our Walk Well community and we love to receive feedback, good or bad, to help us improve.</p>
+                <p>If you were getting in touch about one of <a href="events.html">our Events or Walks</a>, we'll be back to you with more details within a day. We'll send these details to the email address you provided in the form.</p>
+                <p>If you sent us a query or some feedback, we will come back to you as soon as possible. We may call you at the phone number you provided, otherwise we'll contact you at the email address you provided.</p>
+                <p>In the meantime, you can <a href="index.html">continue to browse our site</a>.</p>
+                <p>Thank you!<br>Walk Well Team</p>
+            </section>
+        </main>
         <footer>
-            social links and sign up button
+            <div class="footer-box">
+                <ul class="social-media-links">
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (link opens in a new tab)"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (link opens in a new tab)"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (link opens in a new tab)"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://tripadvisor.com" target="_blank" rel="noopener" aria-label="Visit our TripAdvisor page (link opens in a new tab)"><i class="fab fa-tripadvisor"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <p id="newsletter-sign-up">Sign up to our newsletter here:</p>
+                <form method="" action="sign-up-success.html">
+                    <input type="email" id="sign-up-email" name="sign-up-email" required aria-label="Email address" placeholder="Email address">
+                    <input type="submit" value ="Sign Up">
+                </form>
+            </div>
+            <div class="footer-box">
+                <a href="assets/downloads/walk-well-mindful-guide.pdf">Download Mindful Walking Guide <i class="fas fa-download"></i></a>
+            </div>
         </footer>
     </div>
+    <!--script for the fontawesome icons-->
+    <script src="https://kit.fontawesome.com/f92ca5e5ec.js" crossorigin="anonymous"></script>
+   <!--script for the hamburger menu at mobile size, to open and close it-->
+   <script src="assets/scripts/script.js"></script>
 </body>
 </html>
