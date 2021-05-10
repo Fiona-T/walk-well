@@ -360,6 +360,10 @@ main {
 	justify-content: center;
 }
 
+.get-started-steps i {
+	color: var(--green);
+}
+
 .intro-box video {
 	margin: 0 auto;
 }
