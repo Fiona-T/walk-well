@@ -88,9 +88,7 @@ body {
 	display: grid;
   	grid-template-columns: 1fr;
   	grid-template-rows: auto 1fr;
-  	grid-template-areas: 
-						'header'
-						'main-page-wrapper';
+  	grid-template-areas: 'header' 'main-page-wrapper';
 }
 
 h1, h2 {
@@ -147,7 +145,7 @@ input[type="checkbox"]:focus {
 
 
 /*=================================header and nav==============================================*/
-#page-header {
+.page-header {
     background-color: var(--white);
 	/* width: 100%;  */
 	padding: 1rem;
