@@ -387,7 +387,7 @@ main {
 	line-height: 1.6rem;
 }
 
-/*font styles for article date in more info section index.html*/
+/*font styles for article date in more info section home page and in header of article pages*/
 .article-date {
 	font-weight: 500;
 	font-size: 0.9rem;
@@ -406,12 +406,13 @@ main {
 
 /*===============article pages===============================================================*/
 
-/*subheading*/
+/*subheading font styles*/
 .long-article .subtitle {
 	font-style: italic; 
 	font-weight: 200;
 }
 
+/*font style for article author in article pages*/
 .article-author {
 	font-weight: bold;
 }
@@ -440,8 +441,6 @@ margin-bottom: 2rem;
 }
 
 /*============================events page==============================================*/
-
-
 /*events table listing*/
 tbody tr {
 	margin-bottom: 1rem; /*to space out the cards when shown at mobile */
@@ -677,11 +676,9 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 
 
 
-/*===========================media queries=================================================*/
-
+/*================================media queries=================================================*/
 
 @media screen and (min-width: 480px) {
-	
 	/*==========nav in page header=======================*/
 	/* for other nav items to display at larger size */
 	.topnav ul {
@@ -713,14 +710,9 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		flex-basis: 35rem;
 	}
 
-	
-
-
 }
 
-
 @media screen and (min-width: 768px) {
-	
 	main {
 		width: 90%;
 	}
@@ -738,7 +730,6 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		flex-grow: 1;
 	}
 
-	
 	/*flex-container for the review boxes on events page*/
 	.reviews-container {
 		display: flex;
@@ -757,16 +748,16 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		margin: .5rem;
 	}
 
+	/*containder for checkboxes on contact form, display in same row at this size*/
+	.checkbox-container {
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
 
+	/*margin for checkboxes on contact form, since they are displayed in a row at this size*/
 	input[type="checkbox"] {
 		margin: 0 .5rem;
 	}
-
-
-.checkbox-container {
-	flex-flow: row wrap;
-    justify-content: space-between;
-}
 
 	/*article text centered below image on longer article at larger sizes*/
 	.article-below-img {
@@ -775,9 +766,6 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 
 }
-
-
-  
 
 @media screen and (min-width: 830px) {
 	/*==========footer=======================*/
@@ -805,33 +793,32 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		width: 100%;
 		display: table;
 		clip-path: none;
-	  }
-	  
-	  table  {
+	}
+	
+	table  {
 		table-layout: fixed;
-	  }
+	}
 	
-	  table tr {
-		  display: table-row-group;
-	  }
+	table tr {
+		display: table-row-group;
+	}
 	
-	  table td, table th {
-		  display: table-cell;
-		  width: 25%; 
-		  padding: 0.5rem;
-		  text-align: left;
-	  }
+	table td, table th {
+		display: table-cell;
+		width: 25%; 
+		padding: 0.5rem;
+		text-align: left;
+	}
 	
-	  table td:last-of-type, table th:last-of-type {
-		  width: 10%;
-	  }
+	table td:last-of-type, table th:last-of-type {
+		width: 10%;
+	}
 
-	  table td:nth-of-type(2), table th:nth-of-type(2) {
+	table td:nth-of-type(2), table th:nth-of-type(2) {
 		width: 15%;
 	}
 
 }
-
 
 @media screen and (min-width: 1024px) {
 	
@@ -846,7 +833,6 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		max-width: 48%;
 	}
 
-
 	.get-started-container {
 		display: flex;
 		flex-flow: row wrap;
@@ -858,7 +844,6 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		max-width: 30%;
 	}
 }
-
 
 @media screen and (min-width: 1200px) {
 	main {
