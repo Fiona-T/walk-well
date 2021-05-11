@@ -25,28 +25,32 @@
     </header>
     <div class="main-page-wrapper"> 
         <main>
+            <!--section containing intro text, and form-->
             <section class="page-sections-flex-container contact-section">
                 <h2 class="page-heading">Get in touch</h2>
                 <p>Hello! Thank you for visiting our site!</p>
                 <p>Interested in joining one of our <a href="events.html">walks or attending one of our events</a>? Just fill in your details below and we'll be in touch with all the details you need!</p>
                 <p>We love to hear from our community and we value your input. If you've any questions or feeback for us, or there is a topic you'd like us to cover in our longer articles, just put the details in the form below. We'll get back to you as soon as we can!</p>
+                <!--required class used to highlight the asterisk for mandatory fields-->
                 <p><em>Fields marked with <span class="required">*</span> must be completed.</em></p>
-                <form method="" action="form-success.html">
-                    <!--method is left blank here because it is not a real form. Action links to a dummy success page-->
+                <!--method not included because it is not a real form. Action links to a dummy success page-->
+                <form method="#" action="form-success.html">
+                    <!--firstname-->
                     <label for="first-name">First name<span class="required">*</span></label>
                     <input type="text" id="first-name" name="first-name" required>
-
+                    <!--surname-->
                     <label for="surname">Surname<span class="required">*</span></label>
                     <input type="text" id="surname" name="surname" required>
-
+                    <!--email address-->
                     <label for="email">Email address<span class="required">*</span></label>
                     <input type="email" id="email" name="email" required placeholder="name@email.com">
-
+                    <!--phone number-->
                     <label for="phone-number">Mobile phone number (optional). <em>In the format: 08X 1234567</em></label>
                     <!--using pattern to partly validate phone number since 'tel' does not validate-->
                     <input type="tel" id="phone-number" name="phone-number" placeholder ="in the format 08X 1234567" maxlength="11" pattern="[0]{1}[8]{1}[0-8]{1} [0-9]{7}">
-                    
+                    <!--checkbox listing events-->
                     <p>Event(s) you are interested in<span class="required">*</span>. Choose as many as you like.</p>
+                    <!--flex container for the checkbox groups - each group is label and input - for flexbox-->
                     <div class="checkbox-container">
                         <div class="checkbox-group">
                             <label for="ticknock-walk">Guided walk - Ticknock</label>
@@ -65,10 +69,10 @@
                             <input type="checkbox" id="mindful-morning" name="events" value="mindful-morning"> 
                         </div>
                     </div>
-
+                    <!--textarea message-->
                     <label for="message">Any other thoughts or questions for us?</label>
                     <textarea id="message" name="message" placeholder="Your message"></textarea>
-
+                    <!--submit button-->
                     <input type="submit" value ="Send Enquiry">
                 </form>
             </section>

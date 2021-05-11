@@ -530,60 +530,69 @@ td:last-child {
 
 /**===========================general form styles=================================**/
 
-/*for contact form button and foooter button*/
+/*for contact form button and footer submit buttons*/
 input[type="submit"] {
 	text-transform: uppercase;
 	background-color: var(--green); 
 	color: var(--dark-grey);
-	border: none; /*remove default border around*/
+	border: none; 
 }
 
+/* for form inputs (including submit buttons) and textarea. 
+Rounded corners and set placeholder text to inherit font*/
 form input, textarea {
 	border-radius: 0.05rem;
-	font-family: inherit; /*so that placeholder text and text on form buttons inherit font*/
+	font-family: inherit; 
 }
 
 
 /**============================contact us page=========================================**/
 
+/*class used for asterisk to indicate fields on form that are mandatory*/
 .required {
 	color: var(--green);
 }
 
-.contact-section form {
-	/* max-width: 90%; use with media query for larger screen*/
-	box-sizing: border-box;
-}
-
+/*remove padding from bottom of p inside form*/
 .contact-section form p {
 	padding-bottom: 0;
 }
 
+/*labels on form so they sit above the inputs*/
 .contact-section label {
 	display: block;
 }
 
+/*for inputs except checkbox; and for textarea - layout, spacing*/
 .contact-section input:not([type="checkbox"]), .contact-section textarea {
 	display: block;
 	border: 0.05rem solid var(--light-grey);
 	width: 100%;
 	padding: 0.5rem;
     margin-bottom: 0.5rem;
-	box-sizing: border-box;
 }
 
+/*set height for textarea*/
+.contact-section textarea {
+	height: 5rem;
+}
+
+/*set border on checkbox inputs*/
 input[type="checkbox"] {
 	border: 0.05rem solid var(--light-grey);
 }
 
+/*change border color on hover for inputs and textarea*/
 .contact-section input:hover, .contact-section textarea:hover {
 	border-color: var(--green);
 }
 
+/*set border for inputs and textarea on focus*/
 .contact-section input:focus, .contact-section textarea:focus {
 	border:0.1rem solid var(--green);
 }
 
+/*flex container for checkbox groups (each group = label and input)*/
 .checkbox-container {
 	display: flex;
 	flex-direction: column;
@@ -591,26 +600,25 @@ input[type="checkbox"] {
 	margin-bottom: 0.5rem;
 }
 
+/*set each checkbox group as flex container - contents are label and input*/
+/*at mobile size these take the full width, repositioned at larger size*/
 .checkbox-group {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.contact-section textarea {
-	height: 5rem;
-}
-
+/*submit button, remove border, add margin*/
 .contact-section input[type="submit"] {
 	border: none; 
 	margin: 1.5rem 0;
 }
 
+/*hover and focus style for submit button*/
 .contact-section input[type="submit"]:hover, .contact-section input[type="submit"]:focus, .contact-section input[type="submit"]:active {
 	background-color: var(--dark-grey); 
 	color: var(--white);
 }
-
 
 /**============================footer=========================================**/
 footer {
@@ -692,10 +700,10 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		display: none;
 	}
 
+	/* constrain the width of the form at larger size */
 	.contact-section form {
 		width: 90%; 
 		margin: 0 auto;
-		
 	}
 
 	.article-summary-container {
