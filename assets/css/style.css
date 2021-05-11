@@ -727,7 +727,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 
 	
 
-	#reviews-container {
+	.reviews-container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
