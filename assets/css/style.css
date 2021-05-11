@@ -50,23 +50,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /* ===================== end of Meyer CSS Reset ============================================*/
 
+/*set box-sizing to inherit so that some selectors can use content-box if needed*/
 * {
     box-sizing: inherit;
 }
 
-/*======set variables for colors =============*/
+/*==========set variables for colors =============*/
 :root {
 	--green: #04E5AE; /*accent color*/
-	--orange: #F25F5C; /*was accent color but don't think works re contrast, also re color-blindness - amended to use green*/
 	--dark-grey: #334B49; /*text color and footer*/
 	--white: #fff; /*header and footer text color*/
 	--light-grey: #7f7f88; /*lighter text color*/
 	--extra-light-grey: #eeeeee /*borders*/
 }
 
+/*border box set as the default*/
 html {
 	box-sizing: border-box;
 }
@@ -76,7 +76,7 @@ html, body {
 	height: 100%;
 }
 
-/*using rem for font styles throughout, so that they are responsive */
+/*body font styles and settings for grid - two rows*/
 body {
     font-family: 'Nunito Sans', sans-serif;
     color: var(--dark-grey);
@@ -84,13 +84,13 @@ body {
 	line-height: 1.6rem;
 	min-height: 100vh;
 	overflow: hidden;
-	/*grid settings*/
 	display: grid;
   	grid-template-columns: 1fr;
   	grid-template-rows: auto 1fr;
   	grid-template-areas: 'header' 'main-page-wrapper';
 }
 
+/*==================font styles=============================*/
 h1, h2 {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.05rem;
@@ -122,7 +122,7 @@ a {
 	color: var(--green);
 }
 
-/*to make stand out more for links in paragraphs*/
+/*to make links in paragraphs stand out more*/
 p > a {
 	font-weight: 900; 
 	color: var(--dark-grey);
@@ -148,74 +148,78 @@ input[type="checkbox"]:focus {
 	outline: 0.1rem solid var(--green);
 }
 
-
-/*=================================header and nav==============================================*/
+/*===================================header and nav==============================================*/
+/*header - flex container for logo and navigation, z-index above other items so content can scroll behind*/
+/*flex-wrap so that navigation wraps below on medium screens (when hamburger not displayed)*/
 .page-header {
     background-color: var(--white);
-	/* width: 100%;  */
 	padding: 1rem;
-	z-index: 3; /*to keep content on top of scrolling content*/
-	display: flex; /*set header as flex container*/
-	align-items: center; /*vertically align logo and nav within header*/
-	justify-content: space-between; /*aligns logo to left and nav to right*/
-	flex-wrap: wrap; /*so nav wraps below on smaller screen - may remove later if menu changed to hamburger*/
+	z-index: 3; 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-between; 
+	flex-wrap: wrap;
 	border-bottom: 0.1rem solid var(--extra-light-grey);
-	/*grid setting*/
 	grid-area: header;
 }
 
+/*logo font styles */
 .logo {
 	font-size: 2rem;
 	text-transform: uppercase;
-	margin: 1rem; /*equal margin on logo and nav in header*/
+	margin-left: 0.5rem;
 	color: var(--green);
 }
 
+/*logo link change color on hover and focus*/
 .logo:hover, .logo:focus {
 	color: var(--dark-grey);
 }
 
+/*================main navigation menu and hamburger icon==============================*/
+/* for nav ul items to be hidden at mobile size initially, hamburger icon shown instead*/
+.topnav ul {
+	display: none;
+  }
+
+/* for the icon to display at mobile size */
+.topnav a.icon {
+    display: block;
+	color: var(--dark-grey);
+  }
+
+/*==when the top nav is set to class open, by navToggle function on click of hamburger icon==*/
+/*ul inside topnav as flex container*/
+.topnav.open ul {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+/*items inside the ul take full width*/
+.topnav.open li {
+	padding-bottom: 0.5rem;
+	min-width: 100%;
+}
+
+/*position for hamburger icon when topnav open class is set*/
+.topnav.open a.icon {
+	position: absolute;
+	right: 1rem;
+	top: 2rem;
+}
+
+/*font styles for the navigation items*/
 .nav-item {
 	text-transform: uppercase;
 	color: var(--dark-grey);
 	font-size: 1.1rem;
 }
 
-/*change colour and show underline on hover, tab (focus) or active, 
-also for the active page, using active class*/
+/*change colour, add underline on hover, tab (focus) or active, also if active class is set*/
 .nav-item:hover, .nav-item:focus, .nav-item:active, .active {
 	border-bottom: 0.5rem solid var(--green);
 	color: var(--green);
 }
-
-
-/* for nav ul items to be hidden at mobile size initially*/
-.topnav ul {
-	display: none;
-  }
-
-  /* for the icon to display at mobile size */
-.topnav a.icon {
-    display: block;
-	color: var(--dark-grey);
-  }
-
-.topnav.open ul {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.topnav.open li {
-	padding-bottom: 0.5rem;
-	min-width: 100%;
-}
-
-.topnav.open a.icon {
-position: absolute;
-right: 1rem;
-top: 2rem;
-}
-
 
 .main-page-wrapper {
 	width: 100%;
@@ -440,7 +444,7 @@ margin-bottom: 2rem;
 	float: right;
 }
 
-/*============================events page==============================================*/
+/*===============================events page==============================================*/
 /*events table listing*/
 tbody tr {
 	margin-bottom: 1rem; /*to space out the cards when shown at mobile */
@@ -454,9 +458,7 @@ tbody tr {
   }
 
   /* removes table header at mobile size */
-  /*from https://allthingssmitty.com/2016/10/03/responsive-table-layout/*/
   table thead {
-    /* clip: rect(0 0 0 0); removed as this is deprecated */
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -525,7 +527,6 @@ td:last-child {
     margin: 1rem 0;
 }
 
-
 /**===========================general form styles=================================**/
 
 /*for contact form button and footer submit buttons*/
@@ -542,7 +543,6 @@ form input, textarea {
 	border-radius: 0.05rem;
 	font-family: inherit; 
 }
-
 
 /**============================contact us page=========================================**/
 
@@ -674,13 +674,11 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	color: var(--white);	
 }
 
-
-
 /*================================media queries=================================================*/
 
 @media screen and (min-width: 480px) {
-	/*==========nav in page header=======================*/
-	/* for other nav items to display at larger size */
+	/*==========navigation in page header=======================*/
+	/* for the navigation links to display (hidden at mobile size) */
 	.topnav ul {
 		display: flex;
 		flex-direction: row;
@@ -691,11 +689,12 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		padding: 1rem;
 	}
 
-	/* for the icon to be hidden at larger size */
+	/* for the hamburger icon to be hidden */
 	.topnav a.icon {
 		display: none;
 	}
 
+	/*==========contact form in contact page=======================*/
 	/* constrain the width of the form at larger size */
 	.contact-section form {
 		width: 90%; 
@@ -730,6 +729,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		flex-grow: 1;
 	}
 
+	/*==============events page=======================*/
 	/*flex-container for the review boxes on events page*/
 	.reviews-container {
 		display: flex;
@@ -748,7 +748,8 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		margin: .5rem;
 	}
 
-	/*containder for checkboxes on contact form, display in same row at this size*/
+	/*==============contact page=======================*/
+	/*container for checkboxes on contact form, display in same row at this size*/
 	.checkbox-container {
 		flex-flow: row wrap;
 		justify-content: space-between;
@@ -759,6 +760,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		margin: 0 .5rem;
 	}
 
+	/*==============long article pages=======================*/
 	/*article text centered below image on longer article at larger sizes*/
 	.article-below-img {
 		width: 90%;
@@ -783,7 +785,8 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		padding-right: 2rem;
 	}
 
-	/* show the table header at larger size,reverse the positioning done for mobile size */
+	/*=================events page - table=======================*/
+	/* show table header at larger size,reverse the positioning done for mobile size */
 	/*done at this breakpoint because of alignment - edge case - explained in readme.md*/
 	table thead {
 		height: auto;
@@ -795,14 +798,17 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		clip-path: none;
 	}
 	
+	/*so that widths can be set*/
 	table  {
 		table-layout: fixed;
 	}
 	
+	/*so rows display as rows (since table set to display:block at mobile first)*/
 	table tr {
 		display: table-row-group;
 	}
 	
+	/*so cells display as cells, and to set width and spacing*/
 	table td, table th {
 		display: table-cell;
 		width: 25%; 
@@ -810,10 +816,12 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		text-align: left;
 	}
 	
+	/*smaller width for last column*/
 	table td:last-of-type, table th:last-of-type {
 		width: 10%;
 	}
 
+	/*width for second column*/
 	table td:nth-of-type(2), table th:nth-of-type(2) {
 		width: 15%;
 	}
@@ -821,7 +829,6 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 @media screen and (min-width: 1024px) {
-	
 	/*intro section home page - two columns*/
 	.intro-section-container {
 		display: flex;
