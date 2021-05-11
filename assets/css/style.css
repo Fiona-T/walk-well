@@ -493,7 +493,7 @@ td:last-child {
 	line-height: 0.8rem;
 }
 
-.stars {
+.review-box i {
 	color: var(--green);
 }
 
