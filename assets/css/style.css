@@ -159,14 +159,14 @@ input[type="checkbox"]:focus {
 	grid-area: header;
 }
 
-#logo {
+.logo {
 	font-size: 2rem;
 	text-transform: uppercase;
 	margin: 1rem; /*equal margin on logo and nav in header*/
 	color: var(--green);
 }
 
-#logo:hover, #logo:focus {
+.logo:hover, .logo:focus {
 	color: var(--dark-grey);
 }
 
