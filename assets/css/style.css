@@ -233,6 +233,7 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 0 auto;
+	padding-bottom: 2rem;
 }
 
 /*hero image*/
@@ -406,10 +407,6 @@ main {
 
 /*===============article pages===============================================================*/
 
-/*check if this is still needed after correcting the fixed header*/
-.long-article {
-	clear: both; /*to clear the previous and next arrows at top of page*/
-}
 
 /*subheading*/
 .long-article .subtitle {
@@ -425,11 +422,15 @@ main {
 margin-bottom: 2rem;
 }
 
-/*container for arrows. did not use flexbox to position because some pages only have one arrow either right or left*/
-/*consider using same class for both of these - need to check to ensure no impact*/
-.article-arrows-container, .article-arrows-container-top {
-    padding: 1rem 2rem;
-	margin-bottom: 2rem;
+/*container for arrows at top and bottom of long article pages */ 
+/*top of page: positioning to line up with page-sections (right and left) and add space on top*/
+.article-arrows-container:first-of-type {
+    margin: 2rem 2rem 0;
+}
+
+/*bottom of page: positioning to line up with page-sections (right and left) and add space on bottom*/
+.article-arrows-container:last-of-type {
+    margin: 0 2rem 1rem;
 }
 
 .article-previous {
