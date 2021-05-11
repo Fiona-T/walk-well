@@ -96,7 +96,6 @@ body {
 h1, h2 {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.05rem;
-	text-transform: uppercase;
 }
 
 h2 {
@@ -164,6 +163,7 @@ input[type="checkbox"]:focus {
 
 #logo {
 	font-size: 2rem;
+	text-transform: uppercase;
 	margin: 1rem; /*equal margin on logo and nav in header*/
 	color: var(--green);
 }
@@ -278,7 +278,6 @@ main {
 .landing-text h2 {
 	font-size: 3rem;
 	line-height: 3.2rem;
-	text-transform: none;
 }
 
 .landing-button {
@@ -407,7 +406,6 @@ main {
 
 /*===============article pages===============================================================*/
 .long-article h2, .form-success-section h2 {
-	text-transform: none; /*longer headings so not uppercase*/
 	margin-bottom: 1rem;
 }
 
