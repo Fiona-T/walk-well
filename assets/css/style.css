@@ -308,7 +308,7 @@ main {
 .landing-page-links-container {
 	display: flex; /*set parent element as flex container*/
 	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
-	width: 90%; 
+	width: 100%; 
 	margin: 0 auto;
 	justify-content: center; /*to centre the boxes within this container*/
 	padding: 5rem 0;
@@ -318,13 +318,14 @@ main {
 	background-color: var(--white);
 	color: var(--dark-grey);
 	padding: 1.5rem 2rem;
-    margin: 0.6rem 4rem; /*space between the boxes, more on sides to bring away from edge of page*/
+    margin: 0.6rem auto; 
     text-align: center;
 	transition: transform 250ms; /*to set time for the transform on hover below*/
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
     align-items: center;
+	max-width: 15rem;
 }
 
 .landing-icon {
@@ -693,7 +694,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	.topnav a.icon {
 		display: none;
 	}
-
+	
 	/*==========contact form in contact page=======================*/
 	/* constrain the width of the form at larger size */
 	.contact-section form {
@@ -717,12 +718,13 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 	
 	.landing-page-links-container {
+		width: 90%;
 		flex-direction: row; 
 		padding: 5rem 2rem;
 	}
 
 	.landing-box {
-		margin: 0 2rem;
+		margin: 0 1rem;
 	}
 
 	.landing-page-link {
