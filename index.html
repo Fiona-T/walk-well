@@ -27,16 +27,22 @@
     </header>
     <!--container for page content and footer-->
     <div class="main-page-wrapper">
-        <!--header contains landing page - hero image and links below hero-->
+        <!--secondary header contains landing page: hero image and and links to page sections-->
         <header>
-            <section id="landing-section"> <!--overflow hidden on this for hero image in child div-->
-                <div id="hero-image">
+            <!--outer container for hero image-->
+            <section class="landing-section">
+                <!--container for hero image and landing page text-->
+                <div class="hero-image">
                     <div class="landing-text">
                         <h2>Mindful Walking</h2>
                         <p>Add some zen to your step.</p>
                     </div>
+                    <!--button to jump below the hero image-->
                     <div class="landing-text">
-                        <a href="#below-fold-landing" class="landing-button"><span>LET'S GO!</span><span><i class="fas fa-angle-double-down"></i></span></a>
+                        <a href="#below-fold-landing" class="landing-button">
+                            <span>LET'S GO!</span>
+                            <span><i class="fas fa-angle-double-down"></i></span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -53,7 +59,6 @@
                             </div>
                         </div>
                     </a>
-                
                     <a href="#get-started-section" class="landing-page-link">
                         <div class="landing-box">
                             <div class="landing-icon">

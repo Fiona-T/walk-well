@@ -221,50 +221,43 @@ input[type="checkbox"]:focus {
 	color: var(--green);
 }
 
+/*wrapper for page content and footer centered, overflow-x hidden to stop horizontal scroll on mobile*/
+/*overflow-y auto so that content scrolls below page header*/
 .main-page-wrapper {
 	width: 100%;
-	margin: 0 auto; /*centre page content*/
-	overflow-x: hidden; /*to stop scroll horizontal on mobile view*/
+	margin: 0 auto; 
+	overflow-x: hidden;
 	overflow-y:	auto;
-	/*grid setting*/
 	grid-area: main-page-wrapper;
 	display: grid;
-	grid-template-rows: 1fr auto; /*two rows - main content plus footer*/
+	grid-template-rows: 1fr auto; 
 }
 
-main {
-	display: flex;
-	flex-flow: column nowrap;
-    margin: 0 auto;
-	padding-bottom: 2rem;
-}
-
-/*hero image*/
-/*parent container for hero-image so need to set overflow here to stop horizontal scrolling on image*/
-#landing-section {
+/*==========================hero image and landing page=================================*/
+/*parent container for hero-image so overflow hidden to stop horizontal scrolling on image*/
+.landing-section {
 	width: 100%;
 	overflow: hidden; 
 	color: var(--white);
 }
 
-/*hero image centred, no repeat and full width and height*/
-#hero-image {
-	/*background image and with linear gradient to darken it so text stands out*/
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/walking-nature-hero-image.jpg);
+/*hero image centred, no repeat and full width and height, with linear gradient to darken so text stands out*/
+/*flex container for landing text*/
+.hero-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+					rgba(0, 0, 0, 0.5)), 
+					url(../images/walking-nature-hero-image.jpg);
 	height: 100vh; 
-	/*width: 100%;*/
-	/* centre the image, not repeated, ensure it covers the container*/
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/*flex containder for landing-text*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-/*text box - child of hero-image*/
+/*text and button on top of hero-image*/
 .landing-text {
 	text-align: center; 
 	padding: 0 1rem;
@@ -284,6 +277,7 @@ main {
 	line-height: 3.2rem;
 }
 
+/*link button on hero image to jump to navigation to page sections*/
 .landing-button {
 	background-color: rgba(4, 229, 174, 0.8);
 	padding: 1rem 2rem 0.1rem;
@@ -356,6 +350,14 @@ main {
 
 .landing-box:hover, .landing-page-link:focus, .landing-page-link:active {
 	color: var(--green);
+}
+
+/*flex container for page content - column at mobile size*/
+main {
+	display: flex;
+	flex-flow: column nowrap;
+    margin: 0 auto;
+	padding-bottom: 2rem;
 }
 
 /*sections for all pages set as flex container, initially one column for mobile view**/
