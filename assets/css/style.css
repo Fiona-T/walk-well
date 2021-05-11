@@ -101,6 +101,11 @@ h2 {
 	line-height: 2.2rem;
 }
 
+/*h2s that are top of sections on home page/top of other pages*/
+.page-heading {
+	padding-bottom: 1rem;
+}
+
 .subtitle, h3 {
 	font-size: 1.2rem;
 	line-height: 2rem;
@@ -348,10 +353,10 @@ main {
 	color: var(--green);
 }
 
-/*sections for all pages **/
+/*sections for all pages set as flex container, initially one column for mobile view**/
 .page-sections-flex-container {
 	display: flex;
-	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
+	flex-direction: column; 
 	margin: 2rem;
 	justify-content: center;
 }
@@ -400,9 +405,6 @@ main {
 }
 
 /*===============article pages===============================================================*/
-.long-article h2, .form-success-section h2 {
-	margin-bottom: 1rem;
-}
 
 /*check if this is still needed after correcting the fixed header*/
 .long-article {
@@ -537,10 +539,6 @@ form input, textarea {
 
 
 /**============================contact us page=========================================**/
-
-.contact-section h2 {
-	padding-bottom: 1rem;
-}
 
 .required {
 	color: var(--green);
