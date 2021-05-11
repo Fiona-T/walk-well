@@ -484,25 +484,29 @@ td:last-child {
 	  color: var(--white);
   }
 
-/*===================reviews section=======================*/
+/*===================reviews section of events page=======================*/
+/*box which contains the review details for each review*/
 .review-box {
 	border: 0.1rem solid var(--extra-light-grey);
-	margin: 1rem; /*separate boxes from each other*/
+	margin: 1rem; 
 	padding: 1rem;
 	font-size: 0.8rem;
 	line-height: 0.8rem;
 }
 
+/*fontawesome icon for star rating - color*/
 .review-box i {
 	color: var(--green);
 }
 
+/*summary line for each review - bolder weight*/
 .review-summary {
 	font-weight:900;
 	font-size: 0.9rem;
 	padding-bottom: 0;
 }
 
+/*name and date for each review - font styles*/
 .review-user-date {
 	color: var(--light-grey);
 	font-style: italic;
@@ -510,12 +514,14 @@ td:last-child {
 	padding-bottom: 0.5rem;
 }
 
+/*flex container for images*/
 .gallery {
 	display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/*images within the gallery container*/
 .gallery img {
 	max-width: 100%;
     margin: 1rem 0;
@@ -726,17 +732,19 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 
 	
-
+	/*flex-container for the review boxes on events page*/
 	.reviews-container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
+	/*boxes holding review details - flex basis for larger screens*/
 	.review-box {
 		flex: 1 1 15rem;
 	}
 
+	/*images in gallery container - max width for 2 column layout at this size*/
 	.gallery img {
 		max-width: 45%;
 		margin: .5rem;
@@ -840,6 +848,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
     	justify-content: space-between;
 	}
 
+	/*images in gallery container - max width for 3 column layout at this size*/
 	.gallery img {
 		max-width: 30%;
 	}
