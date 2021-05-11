@@ -221,8 +221,6 @@ top: 2rem;
 	grid-area: main-page-wrapper;
 	display: grid;
 	grid-template-rows: 1fr auto; /*two rows - main content plus footer*/
-	
-	
 }
 
 main {
@@ -230,7 +228,6 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 0 auto;
-	/* align-items: center; */
 }
 
 /*hero image*/
@@ -352,7 +349,7 @@ main {
 }
 
 /*sections for all pages **/
-#intro-section, #get-started-section, #more-info-section, .long-article, .events-section, #contact-section, .form-success-section {
+.page-sections-flex-container {
 	display: flex;
 	flex-direction: column; /*so that child divs display in one column - amend for larger screen*/
 	margin: 2rem;
@@ -541,7 +538,7 @@ form input, textarea {
 
 /**============================contact us page=========================================**/
 
-#contact-section h2 {
+.contact-section h2 {
 	padding-bottom: 1rem;
 }
 
@@ -549,20 +546,20 @@ form input, textarea {
 	color: var(--green);
 }
 
-#contact-section form {
+.contact-section form {
 	/* max-width: 90%; use with media query for larger screen*/
 	box-sizing: border-box;
 }
 
-#contact-section form p {
+.contact-section form p {
 	padding-bottom: 0;
 }
 
-#contact-section label {
+.contact-section label {
 	display: block;
 }
 
-#contact-section input:not([type="checkbox"]), #contact-section textarea {
+.contact-section input:not([type="checkbox"]), .contact-section textarea {
 	display: block;
 	border: 0.05rem solid var(--light-grey);
 	width: 100%;
@@ -575,11 +572,11 @@ input[type="checkbox"] {
 	border: 0.05rem solid var(--light-grey);
 }
 
-#contact-section input:hover, #contact-section textarea:hover {
+.contact-section input:hover, .contact-section textarea:hover {
 	border-color: var(--green);
 }
 
-#contact-section input:focus, #contact-section textarea:focus {
+.contact-section input:focus, .contact-section textarea:focus {
 	border:0.1rem solid var(--green);
 }
 
@@ -596,16 +593,16 @@ input[type="checkbox"] {
 	align-items: center;
 }
 
-#contact-section textarea {
+.contact-section textarea {
 	height: 5rem;
 }
 
-#contact-section input[type="submit"] {
+.contact-section input[type="submit"] {
 	border: none; 
 	margin: 1.5rem 0;
 }
 
-#contact-section input[type="submit"]:hover, #contact-section input[type="submit"]:focus, #contact-section input[type="submit"]:active {
+.contact-section input[type="submit"]:hover, .contact-section input[type="submit"]:focus, .contact-section input[type="submit"]:active {
 	background-color: var(--dark-grey); 
 	color: var(--white);
 }
@@ -691,7 +688,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		display: none;
 	}
 
-	#contact-section form {
+	.contact-section form {
 		width: 90%; 
 		margin: 0 auto;
 		
