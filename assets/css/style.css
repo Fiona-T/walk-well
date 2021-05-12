@@ -54,16 +54,12 @@ table {
 /* ===================== end of Meyer CSS Reset ============================================*/
 /*==========set variables for colors =============*/
 :root {
-	/*accent color*/
 	--green: #04E5AE;
-	/*text color and footer*/
-	--dark-grey: #334B49;
-	/*footer text color*/
+	--headings-grey: #334B49;
+	--very-dark-grey: #172120;
 	--white: #fff;
-	/*lighter text color*/
-	--light-grey: #7f7f88;
-	/*borders*/
-	--extra-light-grey: #eeeeee	
+	--light-grey: #71717A;
+	--extra-light-grey: #eeeeee;
 }
 
 /*set box-sizing to inherit so that some selectors can use content-box if needed*/
@@ -85,7 +81,7 @@ body {
 /*body font styles and settings for grid - two rows*/
 body {
 	font-family: 'Nunito Sans', sans-serif;
-	color: var(--dark-grey);
+	color: var(--very-dark-grey);
 	font-size: 1rem;
 	line-height: 1.6rem;
 	min-height: 100vh;
@@ -111,6 +107,7 @@ h2 {
 /*h2s that are top of sections on home page/top of other pages*/
 .page-heading {
 	padding-bottom: 1rem;
+	color: var(--headings-grey);
 }
 
 .subtitle,
@@ -118,6 +115,7 @@ h3 {
 	font-size: 1.2rem;
 	line-height: 2rem;
 	font-weight: 600;
+	color: var(--headings-grey);
 }
 
 p {
@@ -134,7 +132,7 @@ a {
 p>a,
 .article-summary-box a {
 	font-weight: 900;
-	color: var(--dark-grey);
+	color: var(--very-dark-grey);
 	border-bottom: 0.1rem solid var(--green);
 }
 
@@ -163,14 +161,13 @@ input[type="checkbox"]:focus {
 /*header - flex container for logo and navigation, z-index above other items so content can scroll behind*/
 /*flex-wrap so that navigation wraps below on medium screens (when hamburger not displayed)*/
 .page-header {
-	background-color: var(--white);
+	background-color: var(--very-dark-grey);
 	padding: 1rem;
 	z-index: 3;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	border-bottom: 0.1rem solid var(--extra-light-grey);
 	grid-area: header;
 }
 
@@ -185,7 +182,7 @@ input[type="checkbox"]:focus {
 /*logo link change color on hover and focus*/
 .logo:hover,
 .logo:focus {
-	color: var(--dark-grey);
+	color: var(--white);
 }
 
 /*================ main navigation menu and hamburger icon ==============================*/
@@ -197,7 +194,7 @@ input[type="checkbox"]:focus {
 /* for the icon to display at mobile size */
 .topnav a.icon {
 	display: block;
-	color: var(--dark-grey);
+	color: var(--white);
 }
 
 /*==when the top nav is set to class open, by navToggle function on click of hamburger icon==*/
@@ -223,7 +220,7 @@ input[type="checkbox"]:focus {
 /*font styles for the navigation items*/
 .nav-item {
 	text-transform: uppercase;
-	color: var(--dark-grey);
+	color: var(--white);
 	font-size: 1.1rem;
 }
 
@@ -296,7 +293,7 @@ input[type="checkbox"]:focus {
 	font-weight: 600;
 	letter-spacing: 0.05rem;
 	word-spacing: 0.1rem;
-	color: var(--dark-grey);
+	color: var(--very-dark-grey);
 	border-radius: 0.1rem;
 	display: block;
 	transition: transform 250ms; 
@@ -331,7 +328,7 @@ input[type="checkbox"]:focus {
 /*boxes inside links - flex container for text and icons, transition set for hover*/
 .landing-box {
 	background-color: var(--white);
-	color: var(--dark-grey);
+	color: var(--headings-grey);
 	padding: 1.5rem 2rem;
 	margin: 0.6rem auto;
 	text-align: center;
@@ -532,7 +529,7 @@ td:first-child {
 }
 
 td:last-child {
-	background-color: var(--dark-grey);
+	background-color: var(--headings-grey);
 	color: var(--white);
 }
 
@@ -585,7 +582,7 @@ td:last-child {
 input[type="submit"] {
 	text-transform: uppercase;
 	background-color: var(--green);
-	color: var(--dark-grey);
+	color: var(--very-dark-grey);
 	border: none;
 }
 
@@ -672,7 +669,7 @@ input[type="checkbox"] {
 .contact-section input[type="submit"]:hover,
 .contact-section input[type="submit"]:focus,
 .contact-section input[type="submit"]:active {
-	background-color: var(--dark-grey);
+	background-color: var(--headings-grey);
 	color: var(--white);
 }
 
@@ -682,7 +679,7 @@ input[type="checkbox"] {
 footer {
 	width: 100%;
 	display: flex;
-	background-color: var(--dark-grey);
+	background-color: var(--very-dark-grey);
 	flex-direction: column;
 	padding: 1rem 0 2rem;
 	color: var(--white);
