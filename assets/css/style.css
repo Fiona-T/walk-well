@@ -476,6 +476,16 @@ video {
 	float: right;
 }
 
+/*color for previous and next text and arrows*/
+.article-previous, .article-next {
+	color: var(--very-dark-grey);
+	border-bottom: 0.2rem solid var(--green);
+}
+
+.article-previous:hover, .article-next:hover, .article-previous:focus, .article-next:focus {
+	color: var(--green);
+}
+
 /*subheading font styles*/
 .long-article .subtitle {
 	font-style: italic;
