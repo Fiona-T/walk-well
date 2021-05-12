@@ -844,21 +844,17 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 @media screen and (min-width: 1024px) {
-	/*intro section home page - two columns*/
-	.intro-section-container {
+	/*================home page intro and get started section===========================*/
+	/*flex container so that section spread over two columns*/
+	.sub-section-container {
 		display: flex;
-		flex-direction: row;
+		flex-flow: row wrap;
 		justify-content: space-between;
 	}
 	
+	/**/
 	.intro-box, .get-started-steps {
 		max-width: 48%;
-	}
-
-	.get-started-container {
-		display: flex;
-		flex-flow: row wrap;
-    	justify-content: space-between;
 	}
 
 	/*images in gallery container - max width for 3 column layout at this size*/
