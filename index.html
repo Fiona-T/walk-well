@@ -94,30 +94,33 @@
         </header>
         <!--container for page content-->
         <main>
-            <!--container for intro section header and text container-->
+            <!--container for intro section header and sub-section flex-container-->
             <section id="intro-section" class="page-sections-flex-container">
                 <header>
                     <h2 class="page-heading">What's it all about?</h2>
                     <p class="subtitle">So what is mindful walking?</p>
                 </header>
-                <!--flex container for two intro section boxes - used at larger screen size-->
+                <!--flex container for 2 column intro section boxes - used at larger screen size-->
                 <div class="sub-section-container">
-                    <div class="intro-box">
+                    <!--first column-->
+                    <div class="two-column-box">
                         <p>Mindful walking simply involves paying attention to our breath, our movements and our surroundings as we walk. We concentrate on walking purely for the act of walking, bringing awareness to the fact that we are walking, without getting lost in thoughts or rushing. </p>
                         <p>Whether moving between floors of a building, on a city street, on our commute, or in the woods, it is an opportunity to guide ourselves out of the distracted autopilot we live in throughout so much of our day.</p>
                         <p>Paying attention to walking in this way can transform an unconscious mode of getting from one place to another into a vivid and interesting experience that brings refreshment to the body and calmness to the mind.</p>
                         <p>Mindful walking, also called walking meditation, is designed to bring body and mind in sync while we’re out and about. And if you don’t like to sit and close the eyes to meditate, this is a great alternative that still trains the mind in awareness.</p>
                     </div>
-                    <div class="intro-box">
-                        <!--using 100% width on video instead of px size so that it is responsive to screen size, height sets auto with this-->
+                    <!--second column-->
+                    <div class="two-column-box">
+                        <!--using 100% width on video instead of px so it is responsive to screen size, height sets auto with this-->
                         <video width="100%" autoplay muted controls loop>
                             <source src="assets/images/intro-video-clip.mp4" type="video/mp4">
-                            <p>Your browser doesn't support video. You can view the video <a href="https://pixabay.com/videos/park-walk-woman-girl-spring-3280/" target="_blank" rel="noopener">here</a>instead.</p>
+                            <p>Your browser doesn't support video. You can <a href="https://pixabay.com/videos/park-walk-woman-girl-spring-3280/" target="_blank" rel="noopener">view the video here</a>instead.</p>
                         </video>
                         <p>Once you learn how to meditate while walking, you’ll consciously notice the little details and your mind can find a quieter groove. it’s a great tool for improving your concentration and kick-starting your creative mind.</p>
                     </div>
                 </div>
             </section>
+            <!--container for get started section header, text, and sub-section flex-container-->
             <section id="get-started-section" class="page-sections-flex-container">
                     <header>
                         <h2 class="page-heading">Get started</h2>
@@ -125,9 +128,10 @@
                     </header>
                     <p>This guide is also available <a href="assets/downloads/walk-well-mindful-guide.pdf" download>here as a downloadable pdf</a>.</p>
                     <p>So let’s begin. There are many approaches to mindful walking, but this one here is a quick version that you can do anywhere you like and at whatever walking pace you choose. Follow each of these cues for about 30 to 60 seconds before moving on to the next one.</p>
-                    <!--flex container for two get started section boxes - used at larger screen size-->
+                    <!--flex container for 2 column get started section boxes - used at larger screen size-->
                     <div class="sub-section-container">
-                        <div class="get-started-steps">
+                        <!--first column-->
+                        <div class="two-column-box">
                             <h3><i class="fas fa-walking"></i> Tune in to your body</h3>
                             <p>As you start to walk, notice how the body feels. Heavy or light, stiff or relaxed? Take a few seconds to become aware of your posture and the way you’re carrying yourself.</p>
                             <h3><i class="fas fa-shoe-prints fa-rotate-270"></i> Focus on your footsteps</h3>
@@ -139,7 +143,8 @@
                             <p>Actively listen. Notice the sounds that drift in. What can you hear? Again, try to be aware of sounds but not dwell on them.</p>
                             <p>Now turn your attention to any smells, whether pleasant or unpleasant. Notice how the mind habitually wants to create a story out of each smell and how it might remind you of somewhere, something, or someone.</p>
                         </div>
-                        <div class="get-started-steps">
+                        <!--second column-->
+                        <div class="two-column-box">
                             <h3><i class="fas fa-cloud-sun"></i> Observe physical sensations</h3>
                             <p>Next, make a point of noticing any physical sensations, from how the weather makes you feel to how it feels as the sole of your feet touch the ground. There’s still no need to think about any of these observations. Simply notice, acknowledge, and let go.</p>
                             <h3><i class="fas fa-brain"></i> Mind your movement</h3>
@@ -151,15 +156,17 @@
                         </div>
                     </div>
             </section>
+            <!--more reading section - split into two divs that take full width-->
             <section id="more-info-section" class="page-sections-flex-container">
-                <div class="more-info-box">
+                <!--intro text to this section-->
+                <div>
                     <h2 class="page-heading">More reading</h2>
                     <p>Here you'll find further reading on walking, mindfulness and meditation, written by members of our community and also by some respected guest authors.</p>
                     <p>We welcome and value the input of our community so if you have any feedback or if you'd like to find out more about a particular topic that you do not see covered here, you can <a href="contact.html">get in touch with us over on our Contact Us page</a>.</p>
                     <p>You can also <a href="#newsletter-sign-up">sign up to our weekly newsletter</a> to receive regular updates and a round up of recent articles, or to find out about upcoming events. To find out more about our walks and events, <a href="events.html">check our Events page</a>.</p>
                 </div>
                 <div class="article-summary-container">
-                    <div class="more-info-box article-summary-box">
+                    <div class="article-summary-box">
                         <img src="assets/images/dandelion-mindfulness.jpg" alt="macro shot of single seed on a dandelion. Image by jplenio from Pixabay.com">
                         <div class="more-info-summary">
                             <h3>What is Mindfulness?</h3>
@@ -168,7 +175,7 @@
                             <a href="what-is-mindfulness-article.html">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
-                    <div class="more-info-box article-summary-box">
+                    <div class="article-summary-box">
                         <img src="assets/images/people-walking.jpg" alt="blurred people walking in autumn tree scene. Image by Rudy and Peter Skitterians from Pixabay.com">
                         <div class="more-info-summary">
                             <h3>Why walking works as a self-acting repair tool for body and soul</h3>
@@ -177,7 +184,7 @@
                             <a href="walking-benefits-article.html">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
-                    <div class="more-info-box article-summary-box">
+                    <div class="article-summary-box">
                         <img src="assets/images/forest.jpg" alt="forest floor with tree trunks rising to the sky. Image by Siggy Nowak from pixabay.com">
                         <div class="more-info-summary">
                             <h3>Getting back to nature: how forest bathing can make us feel better</h3>

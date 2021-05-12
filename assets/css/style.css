@@ -356,7 +356,8 @@ input[type="checkbox"]:focus {
 	outline: solid 1px green;
 } */
 
-/*flex container for page content - column at mobile size*/
+/*========================== page content =================================*/
+/*flex container for page content*/
 main {
 	display: flex;
 	flex-flow: column nowrap;
@@ -364,7 +365,7 @@ main {
 	padding-bottom: 2rem;
 }
 
-/*sections for all pages set as flex container, initially one column for mobile view**/
+/*sections for all pages set as flex container**/
 .page-sections-flex-container {
 	display: flex;
 	flex-direction: column; 
@@ -372,15 +373,18 @@ main {
 	justify-content: center;
 }
 
-.get-started-steps i {
+/*========================== home page =================================*/
+/*icons beside each step in get started section*/
+h3 > i {
 	color: var(--green);
 }
 
-.intro-box video {
+/*center the video*/
+video {
 	margin: 0 auto;
 }
 
-.more-info-box img, .long-article img {
+.article-summary-box img, .long-article img {
 	width: 100%;
 	margin-bottom: 1rem;
 }
@@ -415,8 +419,7 @@ main {
 	padding-left: 0.5rem;
 }
 
-/*===============article pages===============================================================*/
-
+/*========================== long article pages =================================*/
 /*subheading font styles*/
 .long-article .subtitle {
 	font-style: italic; 
@@ -451,7 +454,7 @@ margin-bottom: 2rem;
 	float: right;
 }
 
-/*===============================events page==============================================*/
+/*========================== events page =================================*/
 /*events table listing*/
 tbody tr {
 	margin-bottom: 1rem; /*to space out the cards when shown at mobile */
@@ -534,7 +537,7 @@ td:last-child {
     margin: 1rem 0;
 }
 
-/**===========================general form styles=================================**/
+/**========================== general form styles ===============================**/
 
 /*for contact form button and footer submit buttons*/
 input[type="submit"] {
@@ -551,7 +554,7 @@ form input, textarea {
 	font-family: inherit; 
 }
 
-/**============================contact us page=========================================**/
+/**============================ contact us page ===================================**/
 
 /*class used for asterisk to indicate fields on form that are mandatory*/
 .required {
@@ -625,7 +628,7 @@ input[type="checkbox"] {
 	color: var(--white);
 }
 
-/**============================footer=========================================**/
+/**============================ footer =========================================**/
 footer {
 	width: 100%; /*full width*/
 	display: flex; /*footer is flex container for two divs - social media and form*/
@@ -681,10 +684,10 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	color: var(--white);	
 }
 
-/*================================media queries=================================================*/
+/*================================ media queries =================================================*/
 
 @media screen and (min-width: 480px) {
-	/*==========navigation in page header=======================*/
+	/*========== navigation in page header =======================*/
 	/* for the navigation links to display (hidden at mobile size) */
 	.topnav ul {
 		display: flex;
@@ -701,7 +704,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		display: none;
 	}
 	
-	/*==========contact form in contact page=======================*/
+	/*========== contact form in contact page =======================*/
 	/* constrain the width of the form at larger size */
 	.contact-section form {
 		width: 90%; 
@@ -723,7 +726,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		width: 90%;
 	}
 	
-	/*============home page links to sections==============*/
+	/*============ home page links to sections ==============*/
 	/*container - display items in row and constrain width*/
 	.landing-page-links-container {
 		width: 90%;
@@ -744,7 +747,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		margin: 0 1rem;
 	}
 	
-	/*==============events page=======================*/
+	/*==================== events page =========================*/
 	/*flex-container for the review boxes on events page*/
 	.reviews-container {
 		display: flex;
@@ -763,7 +766,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		margin: .5rem;
 	}
 
-	/*==============contact page=======================*/
+	/*==================== contact page =======================*/
 	/*container for checkboxes on contact form, display in same row at this size*/
 	.checkbox-container {
 		flex-flow: row wrap;
@@ -775,7 +778,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		margin: 0 .5rem;
 	}
 
-	/*==============long article pages=======================*/
+	/*==================== long article pages =======================*/
 	/*article text centered below image on longer article at larger sizes*/
 	.article-below-img {
 		width: 90%;
@@ -785,7 +788,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 @media screen and (min-width: 830px) {
-	/*==========footer=======================*/
+	/*===================== footer ==================================*/
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
@@ -800,7 +803,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		padding-right: 2rem;
 	}
 
-	/*=================events page - table=======================*/
+	/*=================== events page - table =========================*/
 	/* show table header at larger size,reverse the positioning done for mobile size */
 	/*done at this breakpoint because of alignment - edge case - explained in readme.md*/
 	table thead {
@@ -844,16 +847,16 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 @media screen and (min-width: 1024px) {
-	/*================home page intro and get started section===========================*/
-	/*flex container so that section spread over two columns*/
+	/*================ home page intro and get started section ===========================*/
+	/*flex container so that section spread over 2 columns*/
 	.sub-section-container {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
 	}
 	
-	/**/
-	.intro-box, .get-started-steps {
+	/*flex items of the container above - 2 cols at this size*/
+	.two-column-box {
 		max-width: 48%;
 	}
 
