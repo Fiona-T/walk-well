@@ -677,20 +677,19 @@ input[type="checkbox"] {
 }
 
 /**============================ footer =========================================**/
+
+/*flex container for social media, newsletter sign up, download. displayed in columm at mobile view*/
 footer {
 	width: 100%;
-	/*full width*/
 	display: flex;
-	/*footer is flex container for two divs - social media and form*/
 	background-color: var(--dark-grey);
 	flex-direction: column;
-	/*for mobile view, so displays in row*/
 	padding: 1rem 0 2rem;
-	/*padding top and bottom of footer*/
 	color: var(--white);
 	font-size: 0.9rem;
 }
 
+/*flex-items in footer*/
 .footer-box {
 	margin: 1rem 0;
 	text-align: center;
@@ -710,24 +709,21 @@ footer a:active {
 /*for the social media icons (li) to display in a line*/
 .social-media-links {
 	display: flex;
-	/*flex container for li inside, displays them inline*/
 	justify-content: center;
 }
 
 /*to increase the size of the icons used for social media links*/
 .social-media-links a {
 	font-size: 1.4rem;
-	/*to increase the size of the icons used for social media links*/
 	padding: 0 1rem;
-	/*padding on each icon to add space between*/
 }
 
+	/*remove padding from p so closer to form boxes*/
 footer p {
 	padding-bottom: 0;
-	/*remove padding from p so closer to form boxes*/
 }
 
-/*setting the form as a flex container removes the space between input and submit, instead of negative margin*/
+/*setting the form as a flex container removes space between input and submit, instead of negative margin*/
 footer form {
 	display: flex;
 	justify-content: center;
@@ -735,9 +731,7 @@ footer form {
 
 footer input {
 	padding: 0.6rem;
-	/*increase size of boxes*/
 	border: none;
-	/*remove default border around*/
 }
 
 footer input[type="submit"]:hover,
@@ -856,6 +850,7 @@ footer input[type="submit"]:active {
 @media screen and (min-width: 830px) {
 
 	/*===================== footer ==================================*/
+	/*change flex direction to row so they are displayed in one line at this size - specific break point*/
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
