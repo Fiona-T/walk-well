@@ -52,48 +52,55 @@ table {
 	border-spacing: 0;
 }
 /* ===================== end of Meyer CSS Reset ============================================*/
-
 /*==========set variables for colors =============*/
 :root {
-	--green: #04E5AE; /*accent color*/
-	--dark-grey: #334B49; /*text color and footer*/
-	--white: #fff; /*header and footer text color*/
-	--light-grey: #7f7f88; /*lighter text color*/
-	--extra-light-grey: #eeeeee /*borders*/
+	--green: #04E5AE;
+	/*accent color*/
+	--dark-grey: #334B49;
+	/*text color and footer*/
+	--white: #fff;
+	/*header and footer text color*/
+	--light-grey: #7f7f88;
+	/*lighter text color*/
+	--extra-light-grey: #eeeeee
+		/*borders*/
 }
 
 /*set box-sizing to inherit so that some selectors can use content-box if needed*/
 * {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
+
 /*border box set as the default*/
 html {
 	box-sizing: border-box;
 }
 
 /*explicitly set height for grid use*/
-html, body {
+html,
+body {
 	height: 100%;
 }
 
 /*body font styles and settings for grid - two rows*/
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    color: var(--dark-grey);
+	font-family: 'Nunito Sans', sans-serif;
+	color: var(--dark-grey);
 	font-size: 1rem;
 	line-height: 1.6rem;
 	min-height: 100vh;
 	overflow: hidden;
 	display: grid;
-  	grid-template-columns: 1fr;
-  	grid-template-rows: auto 1fr;
-  	grid-template-areas: 'header' 'main-page-wrapper';
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: 'header''main-page-wrapper';
 }
 
 /*================== font styles =============================*/
-h1, h2 {
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 0.05rem;
+h1,
+h2 {
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 0.05rem;
 }
 
 h2 {
@@ -106,7 +113,8 @@ h2 {
 	padding-bottom: 1rem;
 }
 
-.subtitle, h3 {
+.subtitle,
+h3 {
 	font-size: 1.2rem;
 	line-height: 2rem;
 	font-weight: 600;
@@ -123,13 +131,16 @@ a {
 }
 
 /*to make links in paragraphs stand out more*/
-p > a, .article-summary-box a {
-	font-weight: 900; 
+p>a,
+.article-summary-box a {
+	font-weight: 900;
 	color: var(--dark-grey);
 	border-bottom: 0.1rem solid var(--green);
 }
 
-p > a:focus, p > a:hover, p > a:active {
+p>a:focus,
+p>a:hover,
+p>a:active {
 	color: var(--green);
 }
 
@@ -139,8 +150,8 @@ em {
 
 /*remove the default focus style for tabbing and replacing it with brand color border*/
 :focus {
-	outline:none;
-	border:0.1rem solid var(--green);
+	outline: none;
+	border: 0.1rem solid var(--green);
 }
 
 /*adding back the outline for form checkbox since border does not work with this*/
@@ -152,12 +163,12 @@ input[type="checkbox"]:focus {
 /*header - flex container for logo and navigation, z-index above other items so content can scroll behind*/
 /*flex-wrap so that navigation wraps below on medium screens (when hamburger not displayed)*/
 .page-header {
-    background-color: var(--white);
+	background-color: var(--white);
 	padding: 1rem;
-	z-index: 3; 
-	display: flex; 
-	align-items: center; 
-	justify-content: space-between; 
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	border-bottom: 0.1rem solid var(--extra-light-grey);
 	grid-area: header;
@@ -172,7 +183,8 @@ input[type="checkbox"]:focus {
 }
 
 /*logo link change color on hover and focus*/
-.logo:hover, .logo:focus {
+.logo:hover,
+.logo:focus {
 	color: var(--dark-grey);
 }
 
@@ -180,13 +192,13 @@ input[type="checkbox"]:focus {
 /* for nav ul items to be hidden at mobile size initially, hamburger icon shown instead*/
 .topnav ul {
 	display: none;
-  }
+}
 
 /* for the icon to display at mobile size */
 .topnav a.icon {
-    display: block;
+	display: block;
 	color: var(--dark-grey);
-  }
+}
 
 /*==when the top nav is set to class open, by navToggle function on click of hamburger icon==*/
 /*ul inside topnav as flex container*/
@@ -216,7 +228,10 @@ input[type="checkbox"]:focus {
 }
 
 /*change colour, add underline on hover, tab (focus) or active, also if active class is set*/
-.nav-item:hover, .nav-item:focus, .nav-item:active, .active {
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active,
+.active {
 	border-bottom: 0.5rem solid var(--green);
 	color: var(--green);
 }
@@ -225,29 +240,29 @@ input[type="checkbox"]:focus {
 /*overflow-y auto so that content scrolls below page header*/
 .main-page-wrapper {
 	width: 100%;
-	margin: 0 auto; 
+	margin: 0 auto;
 	overflow-x: hidden;
-	overflow-y:	auto;
+	overflow-y: auto;
 	grid-area: main-page-wrapper;
 	display: grid;
-	grid-template-rows: 1fr auto; 
+	grid-template-rows: 1fr auto;
 }
 
 /*========================== hero image and landing page =================================*/
 /*parent container for hero-image so overflow hidden to stop horizontal scrolling on image*/
 .landing-section {
 	width: 100%;
-	overflow: hidden; 
+	overflow: hidden;
 	color: var(--white);
 }
 
 /*hero image centred, no repeat and full width and height, with linear gradient to darken so text stands out*/
 /*flex container for landing text*/
 .hero-image {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
-					rgba(0, 0, 0, 0.5)), 
-					url(../images/walking-nature-hero-image.jpg);
-	height: 100vh; 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)),
+		url(../images/walking-nature-hero-image.jpg);
+	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -259,7 +274,7 @@ input[type="checkbox"]:focus {
 
 /*text and button on top of hero-image - font-styles and spacing*/
 .landing-text {
-	text-align: center; 
+	text-align: center;
 	padding: 0 1rem;
 }
 
@@ -280,9 +295,9 @@ input[type="checkbox"]:focus {
 .landing-button {
 	background-color: rgba(4, 229, 174, 0.8);
 	padding: 1rem 2rem 0.1rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    word-spacing: 0.1rem;
+	font-weight: 600;
+	letter-spacing: 0.05rem;
+	word-spacing: 0.1rem;
 	color: var(--dark-grey);
 	border-radius: 0.1rem;
 	display: block;
@@ -300,11 +315,11 @@ input[type="checkbox"]:focus {
 
 /*flex container for below fold links. Column for mobile view initially*/
 .landing-page-links-container {
-	display: flex; 
-	flex-direction: column; 
-	width: 100%; 
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	margin: 0 auto;
-	justify-content: center; 
+	justify-content: center;
 	padding: 5rem 0;
 }
 
@@ -313,13 +328,13 @@ input[type="checkbox"]:focus {
 	background-color: var(--white);
 	color: var(--dark-grey);
 	padding: 1.5rem 2rem;
-    margin: 0.6rem auto; 
-    text-align: center;
-	transition: transform 250ms; 
+	margin: 0.6rem auto;
+	text-align: center;
+	transition: transform 250ms;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-    align-items: center;
+	align-items: center;
 	max-width: 15rem;
 }
 
@@ -331,7 +346,7 @@ input[type="checkbox"]:focus {
 
 .landing-box h2 {
 	padding: 0.5rem 0;
-    font-size: 1.8rem;
+	font-size: 1.8rem;
 	font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -340,14 +355,16 @@ input[type="checkbox"]:focus {
 	line-height: 1rem;
 }
 
-/*increase size of landing page link (parent of landing-box) on hover*/ 
+/*increase size of landing page link (parent of landing-box) on hover*/
 .landing-page-link:hover {
-	transform: scale(1.02); 
+	transform: scale(1.02);
 	color: var(--green);
 }
 
 /*change color of landing page link on hover*/
-.landing-box:hover, .landing-page-link:focus, .landing-page-link:active {
+.landing-box:hover,
+.landing-page-link:focus,
+.landing-page-link:active {
 	color: var(--green);
 }
 
@@ -361,21 +378,21 @@ input[type="checkbox"]:focus {
 main {
 	display: flex;
 	flex-flow: column nowrap;
-    margin: 0 auto;
+	margin: 0 auto;
 	padding-bottom: 2rem;
 }
 
 /*sections for all pages set as flex container**/
 .page-sections-flex-container {
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
 	margin: 2rem;
 	justify-content: center;
 }
 
 /*========================== home page =================================*/
 /*icons beside each step in get started section*/
-h3 > i {
+h3>i {
 	color: var(--green);
 }
 
@@ -396,7 +413,7 @@ video {
 	border: 0.1rem solid var(--extra-light-grey);
 	margin-bottom: 1rem;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
 
 /*font-styles for article summary boxes*/
@@ -409,7 +426,7 @@ video {
 .article-date {
 	font-weight: 500;
 	font-size: 0.9rem;
-    color: var(--light-grey);
+	color: var(--light-grey);
 	padding-bottom: 0.2rem;
 }
 
@@ -423,26 +440,29 @@ video {
 }
 
 /*read more and arrow link, styles on focus, hover, active*/
-.article-summary-box a:focus, .article-summary-box a:hover, .article-summary-box a:active {
+.article-summary-box a:focus,
+.article-summary-box a:hover,
+.article-summary-box a:active {
 	color: var(--green);
 }
 
 /*images in more reading section and longer article pages*/
-.article-summary-box img, .long-article img {
+.article-summary-box img,
+.long-article img {
 	width: 100%;
 	margin-bottom: 1rem;
 }
 
 /*========================== long article pages =================================*/
-/*container for arrows at top and bottom of long article pages */ 
+/*container for arrows at top and bottom of long article pages */
 /*top of page: positioning to line up with page-sections (right and left) and add space on top*/
 .article-arrows-container:first-of-type {
-    margin: 2rem 2rem 0;
+	margin: 2rem 2rem 0;
 }
 
 /*bottom of page: positioning to line up with page-sections (right and left) and add space on bottom*/
 .article-arrows-container:last-of-type {
-    margin: 0 2rem 1rem;
+	margin: 0 2rem 1rem;
 }
 
 .article-previous {
@@ -455,7 +475,7 @@ video {
 
 /*subheading font styles*/
 .long-article .subtitle {
-	font-style: italic; 
+	font-style: italic;
 	font-weight: 200;
 }
 
@@ -471,10 +491,12 @@ video {
 /*========================== events page =================================*/
 /*events table listing*/
 tbody tr {
-	margin-bottom: 1rem; /*to space out the cards when shown at mobile */
+	margin-bottom: 1rem;
+	/*to space out the cards when shown at mobile */
 }
-  
-table th, table td {
+
+table th,
+table td {
 	padding: .5rem 1rem 0.5rem 0.5rem;
 	text-align: center;
 	border: 0.1rem solid var(--white);
@@ -489,12 +511,13 @@ table thead {
 	margin: -1px;
 	border: 0;
 	padding: 0;
-  	white-space: nowrap;
-  	clip-path: inset(100%);
-  	overflow: hidden;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	overflow: hidden;
 }
 
-table tr, table td {
+table tr,
+table td {
 	display: block;
 }
 
@@ -502,7 +525,7 @@ td:first-child {
 	background-color: var(--green);
 	font-weight: bold;
 }
-  
+
 td:last-child {
 	background-color: var(--dark-grey);
 	color: var(--white);
@@ -512,7 +535,7 @@ td:last-child {
 /*box which contains the review details for each review*/
 .review-box {
 	border: 0.1rem solid var(--extra-light-grey);
-	margin: 1rem; 
+	margin: 1rem;
 	padding: 1rem;
 	font-size: 0.8rem;
 	line-height: 0.8rem;
@@ -525,7 +548,7 @@ td:last-child {
 
 /*summary line for each review - bolder weight*/
 .review-summary {
-	font-weight:900;
+	font-weight: 900;
 	font-size: 0.9rem;
 	padding-bottom: 0;
 }
@@ -541,14 +564,14 @@ td:last-child {
 /*flex container for images*/
 .gallery {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 /*images within the gallery container*/
 .gallery img {
 	max-width: 100%;
-    margin: 1rem 0;
+	margin: 1rem 0;
 }
 
 /**========================== general form styles ===============================**/
@@ -556,16 +579,17 @@ td:last-child {
 /*for contact form button and footer submit buttons*/
 input[type="submit"] {
 	text-transform: uppercase;
-	background-color: var(--green); 
+	background-color: var(--green);
 	color: var(--dark-grey);
-	border: none; 
+	border: none;
 }
 
 /* for form inputs (including submit buttons) and textarea. 
 Rounded corners and set placeholder text to inherit font*/
-form input, textarea {
+form input,
+textarea {
 	border-radius: 0.05rem;
-	font-family: inherit; 
+	font-family: inherit;
 }
 
 /**============================ contact us page ===================================**/
@@ -586,12 +610,13 @@ form input, textarea {
 }
 
 /*for inputs except checkbox; and for textarea - layout, spacing*/
-.contact-section input:not([type="checkbox"]), .contact-section textarea {
+.contact-section input:not([type="checkbox"]),
+.contact-section textarea {
 	display: block;
 	border: 0.05rem solid var(--light-grey);
 	width: 100%;
 	padding: 0.5rem;
-    margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 /*set height for textarea*/
@@ -605,13 +630,15 @@ input[type="checkbox"] {
 }
 
 /*change border color on hover for inputs and textarea*/
-.contact-section input:hover, .contact-section textarea:hover {
+.contact-section input:hover,
+.contact-section textarea:hover {
 	border-color: var(--green);
 }
 
 /*set border for inputs and textarea on focus*/
-.contact-section input:focus, .contact-section textarea:focus {
-	border:0.1rem solid var(--green);
+.contact-section input:focus,
+.contact-section textarea:focus {
+	border: 0.1rem solid var(--green);
 }
 
 /*flex container for checkbox groups (each group = label and input)*/
@@ -632,23 +659,29 @@ input[type="checkbox"] {
 
 /*submit button, remove border, add margin*/
 .contact-section input[type="submit"] {
-	border: none; 
+	border: none;
 	margin: 1.5rem 0;
 }
 
 /*hover and focus style for submit button*/
-.contact-section input[type="submit"]:hover, .contact-section input[type="submit"]:focus, .contact-section input[type="submit"]:active {
-	background-color: var(--dark-grey); 
+.contact-section input[type="submit"]:hover,
+.contact-section input[type="submit"]:focus,
+.contact-section input[type="submit"]:active {
+	background-color: var(--dark-grey);
 	color: var(--white);
 }
 
 /**============================ footer =========================================**/
 footer {
-	width: 100%; /*full width*/
-	display: flex; /*footer is flex container for two divs - social media and form*/
+	width: 100%;
+	/*full width*/
+	display: flex;
+	/*footer is flex container for two divs - social media and form*/
 	background-color: var(--dark-grey);
-	flex-direction: column; /*for mobile view, so displays in row*/
-	padding: 1rem 0 2rem; /*padding top and bottom of footer*/
+	flex-direction: column;
+	/*for mobile view, so displays in row*/
+	padding: 1rem 0 2rem;
+	/*padding top and bottom of footer*/
 	color: var(--white);
 	font-size: 0.9rem;
 }
@@ -663,24 +696,30 @@ footer a {
 }
 
 /*social media and download links, change color on hover, focus, active*/
-footer a:hover, footer a:focus, footer a:active {
+footer a:hover,
+footer a:focus,
+footer a:active {
 	color: var(--green);
 }
 
 /*for the social media icons (li) to display in a line*/
 .social-media-links {
-	display: flex; /*flex container for li inside, displays them inline*/
+	display: flex;
+	/*flex container for li inside, displays them inline*/
 	justify-content: center;
 }
 
 /*to increase the size of the icons used for social media links*/
 .social-media-links a {
-	font-size: 1.4rem; /*to increase the size of the icons used for social media links*/
-	padding:0 1rem; /*padding on each icon to add space between*/
+	font-size: 1.4rem;
+	/*to increase the size of the icons used for social media links*/
+	padding: 0 1rem;
+	/*padding on each icon to add space between*/
 }
 
 footer p {
-	padding-bottom: 0; /*remove padding from p so closer to form boxes*/
+	padding-bottom: 0;
+	/*remove padding from p so closer to form boxes*/
 }
 
 /*setting the form as a flex container removes the space between input and submit, instead of negative margin*/
@@ -690,17 +729,22 @@ footer form {
 }
 
 footer input {
-	padding: 0.6rem; /*increase size of boxes*/
-	border: none; /*remove default border around*/
+	padding: 0.6rem;
+	/*increase size of boxes*/
+	border: none;
+	/*remove default border around*/
 }
 
-footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer input[type="submit"]:active {
-	color: var(--white);	
+footer input[type="submit"]:hover,
+footer input[type="submit"]:focus,
+footer input[type="submit"]:active {
+	color: var(--white);
 }
 
 /*================================ media queries =================================================*/
 
 @media screen and (min-width: 480px) {
+
 	/*========== navigation in page header =======================*/
 	/* for the navigation links to display (hidden at mobile size) */
 	.topnav ul {
@@ -717,11 +761,11 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	.topnav a.icon {
 		display: none;
 	}
-	
+
 	/*========== contact form in contact page ====================*/
 	/* constrain the width of the form at larger size */
 	.contact-section form {
-		width: 90%; 
+		width: 90%;
 		margin: 0 auto;
 	}
 
@@ -743,13 +787,13 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	main {
 		width: 90%;
 	}
-	
+
 	/*============ home page links to sections ==============*/
 	/*container - display items in row and constrain width*/
 	.landing-page-links-container {
 		width: 90%;
 		margin: 0 auto;
-		flex-direction: row; 
+		flex-direction: row;
 		justify-content: space-around;
 		padding: 5rem 2rem;
 	}
@@ -763,7 +807,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	.landing-box {
 		margin: 0 1rem;
 	}
-	
+
 	/*==================== events page =========================*/
 	/*flex-container for the review boxes on events page*/
 	.reviews-container {
@@ -805,11 +849,12 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 @media screen and (min-width: 830px) {
+
 	/*===================== footer ==================================*/
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;	
+		align-items: center;
 	}
 
 	.footer-box:first-of-type {
@@ -832,38 +877,42 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		display: table;
 		clip-path: none;
 	}
-	
+
 	/*so that widths can be set*/
-	table  {
+	table {
 		table-layout: fixed;
 	}
-	
+
 	/*so rows display as rows (since table set to display:block at mobile first)*/
 	table tr {
 		display: table-row-group;
 	}
-	
+
 	/*so cells display as cells, and to set width and spacing*/
-	table td, table th {
+	table td,
+	table th {
 		display: table-cell;
-		width: 25%; 
+		width: 25%;
 		padding: 0.5rem;
 		text-align: left;
 	}
-	
+
 	/*smaller width for last column*/
-	table td:last-of-type, table th:last-of-type {
+	table td:last-of-type,
+	table th:last-of-type {
 		width: 10%;
 	}
 
 	/*width for second column*/
-	table td:nth-of-type(2), table th:nth-of-type(2) {
+	table td:nth-of-type(2),
+	table th:nth-of-type(2) {
 		width: 15%;
 	}
 
 }
 
 @media screen and (min-width: 1024px) {
+
 	/*================ home page ===========================*/
 	/*flex container intro and get started sections*/
 	.sub-section-container {
@@ -871,7 +920,7 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		flex-flow: row wrap;
 		justify-content: space-between;
 	}
-	
+
 	/*flex items of the container above - 2 cols at this size*/
 	.two-column-box {
 		max-width: 48%;
@@ -895,8 +944,3 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 
 }
-
-
-
-
-
