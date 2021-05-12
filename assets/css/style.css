@@ -90,7 +90,7 @@ body {
   	grid-template-areas: 'header' 'main-page-wrapper';
 }
 
-/*==================font styles=============================*/
+/*================== font styles =============================*/
 h1, h2 {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.05rem;
@@ -123,7 +123,7 @@ a {
 }
 
 /*to make links in paragraphs stand out more*/
-p > a {
+p > a, .article-summary-box a {
 	font-weight: 900; 
 	color: var(--dark-grey);
 	border-bottom: 0.1rem solid var(--green);
@@ -148,7 +148,7 @@ input[type="checkbox"]:focus {
 	outline: 0.1rem solid var(--green);
 }
 
-/*===================================header and nav==============================================*/
+/*=================================== header and nav ==============================================*/
 /*header - flex container for logo and navigation, z-index above other items so content can scroll behind*/
 /*flex-wrap so that navigation wraps below on medium screens (when hamburger not displayed)*/
 .page-header {
@@ -176,7 +176,7 @@ input[type="checkbox"]:focus {
 	color: var(--dark-grey);
 }
 
-/*================main navigation menu and hamburger icon==============================*/
+/*================ main navigation menu and hamburger icon ==============================*/
 /* for nav ul items to be hidden at mobile size initially, hamburger icon shown instead*/
 .topnav ul {
 	display: none;
@@ -233,7 +233,7 @@ input[type="checkbox"]:focus {
 	grid-template-rows: 1fr auto; 
 }
 
-/*==========================hero image and landing page=================================*/
+/*========================== hero image and landing page =================================*/
 /*parent container for hero-image so overflow hidden to stop horizontal scrolling on image*/
 .landing-section {
 	width: 100%;
@@ -384,25 +384,28 @@ video {
 	margin: 0 auto;
 }
 
-.article-summary-box img, .long-article img {
-	width: 100%;
-	margin-bottom: 1rem;
+/*flex container for article summary boxes, more reading section, set at column for mobile size*/
+.article-summary-container {
+	display: flex;
+	flex-direction: column;
 }
 
+/*box holding article summary details, flex container*/
 .article-summary-box {
-	padding: 0.5rem;
+	padding: 0.625rem;
 	border: 0.1rem solid var(--extra-light-grey);
-	margin-right: 0.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 	display: flex;
     flex-direction: column;
 }
 
+/*font-styles for article summary boxes*/
 .article-summary-box h3 {
+	font-size: 1.05rem;
 	line-height: 1.6rem;
+	padding-bottom: 0.5rem;
 }
 
-/*font styles for article date in more info section home page and in header of article pages*/
 .article-date {
 	font-weight: 500;
 	font-size: 0.9rem;
@@ -414,27 +417,21 @@ video {
 	font-style: italic;
 }
 
-/*increase space between read more and arrow*/
-.more-info-summary i {
+.article-summary-box i {
 	padding-left: 0.5rem;
 }
 
+.article-summary-box a:focus, .article-summary-box a:hover, .article-summary-box a:active {
+	color: var(--green);
+}
+
+/*images in more reading section and longer article pages*/
+.article-summary-box img, .long-article img {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
 /*========================== long article pages =================================*/
-/*subheading font styles*/
-.long-article .subtitle {
-	font-style: italic; 
-	font-weight: 200;
-}
-
-/*font style for article author in article pages*/
-.article-author {
-	font-weight: bold;
-}
-
-.long-article img {
-margin-bottom: 2rem;
-}
-
 /*container for arrows at top and bottom of long article pages */ 
 /*top of page: positioning to line up with page-sections (right and left) and add space on top*/
 .article-arrows-container:first-of-type {
@@ -454,21 +451,36 @@ margin-bottom: 2rem;
 	float: right;
 }
 
+/*subheading font styles*/
+.long-article .subtitle {
+	font-style: italic; 
+	font-weight: 200;
+}
+
+/*font style for article author in article pages*/
+.article-author {
+	font-weight: bold;
+}
+
+.long-article img {
+	margin-bottom: 2rem;
+}
+
 /*========================== events page =================================*/
 /*events table listing*/
 tbody tr {
 	margin-bottom: 1rem; /*to space out the cards when shown at mobile */
-  }
+}
   
-  table th, table td {
+table th, table td {
 	padding: .5rem 1rem 0.5rem 0.5rem;
 	text-align: center;
 	border: 0.1rem solid var(--white);
 	background-color: var(--extra-light-grey);
-  }
+}
 
-  /* removes table header at mobile size */
-  table thead {
+/* removes table header at mobile size */
+table thead {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -478,11 +490,11 @@ tbody tr {
   	white-space: nowrap;
   	clip-path: inset(100%);
   	overflow: hidden;
-  }
+}
 
-  table tr, table td {
-	  display: block;
-  }
+table tr, table td {
+	display: block;
+}
 
 td:first-child {
 	background-color: var(--green);
@@ -490,9 +502,9 @@ td:first-child {
 }
   
 td:last-child {
-	  background-color: var(--dark-grey);
-	  color: var(--white);
-  }
+	background-color: var(--dark-grey);
+	color: var(--white);
+}
 
 /*===================reviews section of events page=======================*/
 /*box which contains the review details for each review*/
@@ -704,19 +716,23 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		display: none;
 	}
 	
-	/*========== contact form in contact page =======================*/
+	/*========== contact form in contact page ====================*/
 	/* constrain the width of the form at larger size */
 	.contact-section form {
 		width: 90%; 
 		margin: 0 auto;
 	}
 
+	/*========= home page more reading section ===================*/
+	/*change flex direction so boxes display beside each other*/
 	.article-summary-container {
-		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
 	}
 
+	/*two columns at this size*/
 	.article-summary-box {
-		flex-basis: 35rem;
+		max-width: 48%;
 	}
 
 }
@@ -736,7 +752,6 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		padding: 5rem 2rem;
 	}
 
-	/*flex item of above container, max width*/
 	.landing-page-link {
 		max-width: 15rem;
 		flex-grow: 1;
@@ -804,8 +819,8 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 	}
 
 	/*=================== events page - table =========================*/
-	/* show table header at larger size,reverse the positioning done for mobile size */
-	/*done at this breakpoint because of alignment - edge case - explained in readme.md*/
+	/* show table header,reverse positioning done for mobile size */
+	/*done at this breakpoint because of alignment (edge case) explained in readme.md*/
 	table thead {
 		height: auto;
 		margin: 0;
@@ -847,8 +862,8 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 }
 
 @media screen and (min-width: 1024px) {
-	/*================ home page intro and get started section ===========================*/
-	/*flex container so that section spread over 2 columns*/
+	/*================ home page ===========================*/
+	/*flex container intro and get started sections*/
 	.sub-section-container {
 		display: flex;
 		flex-flow: row wrap;
@@ -860,6 +875,12 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		max-width: 48%;
 	}
 
+	/*more reading article summary boxes - 3 columns at this size*/
+	.article-summary-box {
+		max-width: 32%;
+	}
+
+	/*================ events page ===========================*/
 	/*images in gallery container - max width for 3 column layout at this size*/
 	.gallery img {
 		max-width: 30%;
