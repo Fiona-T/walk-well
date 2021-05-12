@@ -417,10 +417,12 @@ video {
 	font-style: italic;
 }
 
+/*move arrow icon away from read more text*/
 .article-summary-box i {
 	padding-left: 0.5rem;
 }
 
+/*read more and arrow link, styles on focus, hover, active*/
 .article-summary-box a:focus, .article-summary-box a:hover, .article-summary-box a:active {
 	color: var(--green);
 }
