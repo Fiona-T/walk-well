@@ -1,6 +1,7 @@
-
+/*Nunito Sans and Ubuntu Google Fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Ubuntu:wght@700&display=swap');
 
+/* ===================== Meyer CSS Reset ============================================*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,11 +53,6 @@ table {
 }
 /* ===================== end of Meyer CSS Reset ============================================*/
 
-/*set box-sizing to inherit so that some selectors can use content-box if needed*/
-* {
-    box-sizing: inherit;
-}
-
 /*==========set variables for colors =============*/
 :root {
 	--green: #04E5AE; /*accent color*/
@@ -66,6 +62,10 @@ table {
 	--extra-light-grey: #eeeeee /*borders*/
 }
 
+/*set box-sizing to inherit so that some selectors can use content-box if needed*/
+* {
+    box-sizing: inherit;
+}
 /*border box set as the default*/
 html {
 	box-sizing: border-box;
@@ -137,7 +137,7 @@ em {
 	font-style: italic;
 }
 
-/*removing the default focus style for tabbing and replacing it with brand color border*/
+/*remove the default focus style for tabbing and replacing it with brand color border*/
 :focus {
 	outline:none;
 	border:0.1rem solid var(--green);
@@ -257,13 +257,12 @@ input[type="checkbox"]:focus {
 	align-items: center;
 }
 
-/*text and button on top of hero-image*/
+/*text and button on top of hero-image - font-styles and spacing*/
 .landing-text {
 	text-align: center; 
 	padding: 0 1rem;
 }
 
-/*space between text and button and nudge text up*/
 .landing-text:first-of-type {
 	margin-bottom: 4rem;
 }
@@ -289,32 +288,34 @@ input[type="checkbox"]:focus {
 	display: block;
 }
 
-/*so that arrow displays below text in the button*/
+/*arrow in button - display block so it is below the text*/
 .landing-button span {
 	display: block;
 }
 
-#below-fold-landing {
+/*outer container for below fold links container - full width background color*/
+.full-width {
 	background-color: var(--extra-light-grey);
 }
 
-/*below fold landing section - 3 boxes*/
+/*flex container for below fold links. Column for mobile view initially*/
 .landing-page-links-container {
-	display: flex; /*set parent element as flex container*/
-	flex-direction: column; /*one column for mobile view - alter on larger size under media query*/
+	display: flex; 
+	flex-direction: column; 
 	width: 100%; 
 	margin: 0 auto;
-	justify-content: center; /*to centre the boxes within this container*/
+	justify-content: center; 
 	padding: 5rem 0;
 }
 
+/*boxes inside links - flex container for text and icons, transition set for hover*/
 .landing-box {
 	background-color: var(--white);
 	color: var(--dark-grey);
 	padding: 1.5rem 2rem;
     margin: 0.6rem auto; 
     text-align: center;
-	transition: transform 250ms; /*to set time for the transform on hover below*/
+	transition: transform 250ms; 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -322,12 +323,12 @@ input[type="checkbox"]:focus {
 	max-width: 15rem;
 }
 
-.landing-icon {
+/*font size and style for icon, h2 and p inside landing box*/
+.landing-box i {
 	font-size: 4rem;
 	margin-bottom: 0.5rem;
 }
 
-/*font size and style for h2 inside landing box*/
 .landing-box h2 {
 	padding: 0.5rem 0;
     font-size: 1.8rem;
@@ -339,18 +340,21 @@ input[type="checkbox"]:focus {
 	line-height: 1rem;
 }
 
+/*increase size of landing page link (parent of landing-box) on hover*/ 
+.landing-page-link:hover {
+	transform: scale(1.02); 
+	color: var(--green);
+}
+
+/*change color of landing page link on hover*/
+.landing-box:hover, .landing-page-link:focus, .landing-page-link:active {
+	color: var(--green);
+}
+
 /*focus not working on landing-page-link - come back to*/
 /* .landing-page-link:focus-visible {
 	outline: solid 1px green;
 } */
-
-.landing-page-link:hover {
-	transform: scale(1.02); /*increase size of box on hover*/ 
-}
-
-.landing-box:hover, .landing-page-link:focus, .landing-page-link:active {
-	color: var(--green);
-}
 
 /*flex container for page content - column at mobile size*/
 main {
@@ -719,20 +723,27 @@ footer input[type="submit"]:hover, footer input[type="submit"]:focus, footer inp
 		width: 90%;
 	}
 	
+	/*============home page links to sections==============*/
+	/*container - display items in row and constrain width*/
 	.landing-page-links-container {
 		width: 90%;
+		margin: 0 auto;
 		flex-direction: row; 
+		justify-content: space-around;
 		padding: 5rem 2rem;
 	}
 
-	.landing-box {
-		margin: 0 1rem;
-	}
-
+	/*flex item of above container, max width*/
 	.landing-page-link {
+		max-width: 15rem;
 		flex-grow: 1;
 	}
 
+	/*margin between boxes when displayed in a row */
+	.landing-box {
+		margin: 0 1rem;
+	}
+	
 	/*==============events page=======================*/
 	/*flex-container for the review boxes on events page*/
 	.reviews-container {
