@@ -54,16 +54,16 @@ table {
 /* ===================== end of Meyer CSS Reset ============================================*/
 /*==========set variables for colors =============*/
 :root {
-	--green: #04E5AE;
 	/*accent color*/
-	--dark-grey: #334B49;
+	--green: #04E5AE;
 	/*text color and footer*/
+	--dark-grey: #334B49;
+	/*footer text color*/
 	--white: #fff;
-	/*header and footer text color*/
-	--light-grey: #7f7f88;
 	/*lighter text color*/
-	--extra-light-grey: #eeeeee
-		/*borders*/
+	--light-grey: #7f7f88;
+	/*borders*/
+	--extra-light-grey: #eeeeee	
 }
 
 /*set box-sizing to inherit so that some selectors can use content-box if needed*/
@@ -259,9 +259,7 @@ input[type="checkbox"]:focus {
 /*hero image centred, no repeat and full width and height, with linear gradient to darken so text stands out*/
 /*flex container for landing text*/
 .hero-image {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-			rgba(0, 0, 0, 0.5)),
-		url(../images/walking-nature-hero-image.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/walking-nature-hero-image.jpg);
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -301,11 +299,18 @@ input[type="checkbox"]:focus {
 	color: var(--dark-grey);
 	border-radius: 0.1rem;
 	display: block;
+	transition: transform 250ms; 
 }
 
 /*arrow in button - display block so it is below the text*/
 .landing-button span {
 	display: block;
+}
+
+/*increase size of button and change color on*/
+.landing-button:hover {
+	color: var(--white);
+	transform: scale(1.05);
 }
 
 /*outer container for below fold links container - full width background color*/
