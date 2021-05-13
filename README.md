@@ -175,15 +175,16 @@ You can make a clone of the repository which will create a local copy on your ow
 3. Under HTTPS copy the link provided (in this case https://github.com/Fiona-T/walk-well.git) 
 4. Go to Gitpod or whichever IDE you are using and open the Terminal
 5. Change the current working directory to the location where you want the cloned directory to be made
-6. Type 'git clone followed by the url you copied in step 3:
+6. Type 'git clone' followed by the url you copied in step 3:
 git clone https://github.com/Fiona-T/walk-well.git
 7. Press Enter to create the local clone
 
 You can refer to the [GitHub documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more detailed information on the above process.
 
 ## Credits
-It should be noted that this project is for eductional/learning purposes and therefore not all of the content on the site is original, credits are listed below. 
+It should be noted that this project is for eductional/learning purposes only. Therefore not all of the content on the site is original and the original sources are duly credited below. 
 ### Code
+
 ### Content
 The content on the home page is taken from the following sources:
 -   [Mindfulness at Work](https://mindfulnessatwork.ie/tips-for-mindful-walking/)
@@ -217,3 +218,7 @@ Video and images for the project were sourced from [Pixabay](https://pixabay.com
     - the remaining images in this section are the developer's own
 
 ### Acknowledgements
+I would like to thank the following:
+-   my mentor Rohit Sharma for feedback and guidance throughout this project.
+
+-   the Code Institute Slack community for advice along the way
