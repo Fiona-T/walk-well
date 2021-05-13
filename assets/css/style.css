@@ -398,9 +398,11 @@ h3>i {
 	color: var(--green);
 }
 
-/*center the video*/
+/*center the video, max-width and auto height so responsive*/
 video {
 	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /*flex container for article summary boxes, more reading section, set at column for mobile size*/
