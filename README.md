@@ -65,21 +65,32 @@ These colours help promote the feeling of calmness, connection with nature, whil
 
 - ### Wireframes
     - Desktop wireframes:
-        - home page, landing page: [View](docs/wireframes/home-page-landing.png)
-        - home page, introductory section: [View](docs/wireframes/home-page-intro.png)
-        - home page, get started walking section: [View](docs/wireframes/home-page-walk.png)
-        - home page, more reading section: [View](docs/wireframes/home-page-more-info.png)
-        - events page, upcoming events section (top of page): [View](docs/wireframes/events-page-section-one.png)
-        - events page, user reviews and image gallery (scroll down): [View](docs/wireframes/events-page-scroll.png)
-        - contact page: [View](docs/wireframes/contact-page.png)
+        - [Home page, landing section](docs/wireframes/home-page-landing.png)
+        - [Home page, Introductory section](docs/wireframes/home-page-intro.png)
+        - [Home page, Get Started section](docs/wireframes/home-page-walk.png)
+        - [Home page, More Reading section](docs/wireframes/home-page-more-info.png)
+        - [Events page, Upcoming Events section (top of page)](docs/wireframes/events-page-section-one.png)
+        - [Events page, User Reviews and Gallery (scrolled down on page)](docs/wireframes/events-page-scroll.png)
+        - [Contact page](docs/wireframes/contact-page.png)
 
     - Mobile wireframes:
-        - home page, landing page: [View](docs/wireframes/mobile-home-page-landing.png)
-        - home page, introductory section: [View](docs/wireframes/mobile-home-page-intro.png)
-        - home page, get started walking section: [View](docs/wireframes/mobile-home-page-walk.png)
-        - home page, more reading section: [View](docs/wireframes/mobile-home-page-more.png)
-        - events page: [View](docs/wireframes/mobile-event-page.png)
-        - contact page: [View](docs/wireframes/mobile-contact-page.png)
+        - [Home page, landing section](docs/wireframes/mobile-home-page-landing.png)
+        - [Home page, Introductory section](docs/wireframes/mobile-home-page-intro.png)
+        - [Home page, Get Started section](docs/wireframes/mobile-home-page-walk.png)
+        - [Home page, More Reading section](docs/wireframes/mobile-home-page-more.png)
+        - [Events page](docs/wireframes/mobile-event-page.png)
+        - [Contact page](docs/wireframes/mobile-contact-page.png)
+
+    - Changes to wireframe design as project progressed:
+
+        As the wireframes are basic outline sketches for each page, some changes were made to the design over the course of the project, where relevant.
+        - Home page: the three boxes to allow user jump to each section of the home page were originally overlaid on the hero image. However in mobile view these obscured the hero image rendering it ineffecive. A new section below the hero image was created to contain these three boxes, and a call to action button 'Let's Go!' added to the hero image to invite the user to access the site content. This gives more breathing room to the hero image landing section on mobile; and a more impactful hero image on desktop.
+        - Home page - Get Started section: the wireframe shows an image accompanying each paragraph, however the finished site instead incorporates an icon beside each heading. This section is relatively long and the images would have added to this length without providing much in the way of additional benefit to the user experience, especially on mobile because there would have been an image below each paragraph. The icons add a pop of colour and break up the text so are a better solution. Without the images, it means this text can display over two columns on large screen; and as one continuous column of text on mobile. The information in this section is key for the site goal, so the images in this case would have detracted from that goal.
+        - Events page: An introductory section was added which was not shown on the wireframe. This was added because the section needed some text to give the user context as to what the page was about; and to add some personality/add a welcoming tone to the page.
+        - Events page - Upcoming Events table: On the mobile wireframe the table is depicted as being a smaller version of the larger screen table. In reality, the table could not been shown in full on mobile and would have introduced horizontal scrolling. Therefore on mobile and tablet view, the table is collapsed into 'mini tables' with each event displayed in it's own single column table. This is much easier to read than a full size horizontal scrolling table on a smaller screen.
+        - Footer: The 'Guide to Mindful Walking' pdf download was added to the footer during development, it is not shown on the wireframes. This was added because it improves the user experience by having this guide easily accessible from any page (not just the Get Started section).
+        - Footer - position: the wireframes show a fixed footer on all screens. However upon researching further, this was bad UX design because, especially on mobile, it would take up too much screen space since the site also has a fixed header. 
+        - Footer - layout: the footer on mobile view is shown on the wireframes with everything on one row. On the finished site the footer is stacked into three rows: social media, newsletter sign up, pdf download. This allows more space around the elements and since the footer is not fixed, this does not take 
 
 ## Features
 
