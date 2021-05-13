@@ -52,6 +52,7 @@ table {
 	border-spacing: 0;
 }
 /* ===================== end of Meyer CSS Reset ============================================*/
+
 /*==========set variables for colors =============*/
 :root {
 	--green: #04E5AE;
@@ -181,7 +182,8 @@ input[type="checkbox"]:focus {
 
 /*logo link change color on hover and focus*/
 .logo:hover,
-.logo:focus {
+.logo:focus,
+.logo:active {
 	color: var(--white);
 }
 
@@ -197,24 +199,26 @@ input[type="checkbox"]:focus {
 	color: var(--white);
 }
 
-/*==when the top nav is set to class open, by navToggle function on click of hamburger icon==*/
+/* when the top nav is set to class open, by navToggle function on click of hamburger icon */
 /*ul inside topnav as flex container*/
 .topnav.open ul {
 	display: flex;
 	flex-flow: row wrap;
+	padding-top: 1rem;
+	margin-left: 0.5rem;
 }
 
 /*items inside the ul take full width*/
 .topnav.open li {
-	padding-bottom: 0.5rem;
 	min-width: 100%;
+	padding: 0.5rem 0;
 }
 
 /*position for hamburger icon when topnav open class is set*/
 .topnav.open a.icon {
 	position: absolute;
 	right: 1rem;
-	top: 2rem;
+	top: 1rem;
 }
 
 /*font styles for the navigation items*/
@@ -370,11 +374,6 @@ input[type="checkbox"]:focus {
 .landing-page-link:active {
 	color: var(--green);
 }
-
-/*focus not working on landing-page-link - come back to*/
-/* .landing-page-link:focus-visible {
-	outline: solid 1px green;
-} */
 
 /*========================== page content =================================*/
 /*flex container for page content*/
@@ -809,7 +808,6 @@ footer input[type="submit"]:active {
 
 }
 
-
 /*================================ tablet ================================================*/
 @media screen and (min-width: 768px) {
 	main {
@@ -875,7 +873,6 @@ footer input[type="submit"]:active {
 	}
 
 }
-
 
 /*============================breakpoint for footer and table =======================================*/
 @media screen and (min-width: 830px) {
@@ -970,7 +967,6 @@ footer input[type="submit"]:active {
 		max-width: 30%;
 	}
 }
-
 
 /*================================ larger screens ================================================*/
 @media screen and (min-width: 1200px) {
