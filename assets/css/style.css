@@ -542,6 +542,7 @@ table thead {
 	border: 0;
 	padding: 0;
 	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
 	clip-path: inset(100%);
 	overflow: hidden;
 }
@@ -767,6 +768,7 @@ footer input[type="submit"]:active {
 
 /*================================ media queries =================================================*/
 
+/*================================ larger mobile ================================================*/
 @media screen and (min-width: 480px) {
 
 	/*========== navigation in page header =======================*/
@@ -807,6 +809,8 @@ footer input[type="submit"]:active {
 
 }
 
+
+/*================================ tablet ================================================*/
 @media screen and (min-width: 768px) {
 	main {
 		width: 90%;
@@ -872,6 +876,8 @@ footer input[type="submit"]:active {
 
 }
 
+
+/*============================breakpoint for footer and table =======================================*/
 @media screen and (min-width: 830px) {
 
 	/*===================== footer ==================================*/
@@ -900,6 +906,7 @@ footer input[type="submit"]:active {
 		position: static;
 		width: 100%;
 		display: table;
+		-webkit-clip-path: none;
 		clip-path: none;
 	}
 
@@ -936,6 +943,7 @@ footer input[type="submit"]:active {
 
 }
 
+/*================================ laptop ================================================*/
 @media screen and (min-width: 1024px) {
 
 	/*================ home page ===========================*/
@@ -963,6 +971,8 @@ footer input[type="submit"]:active {
 	}
 }
 
+
+/*================================ larger screens ================================================*/
 @media screen and (min-width: 1200px) {
 	main {
 		max-width: 80%;
