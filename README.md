@@ -1,4 +1,5 @@
 # Walk Well
+---
 
 [View the live website here.](https://fiona-t.github.io/walk-well/)
 
@@ -180,4 +181,39 @@ git clone https://github.com/Fiona-T/walk-well.git
 
 You can refer to the [GitHub documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more detailed information on the above process.
 
+## Credits
+It should be noted that this project is for eductional/learning purposes and therefore not all of the content on the site is original, credits are listed below. 
+### Code
+### Content
+The content on the home page is taken from the following sources:
+-   [Mindfulness at Work](https://mindfulnessatwork.ie/tips-for-mindful-walking/)
+-   [Mindful](https://www.mindful.org/daily-mindful-walking-practice/)
+-   [Headspace](https://www.headspace.com/meditation/walking-meditation)
+-   [Healthy Magazine](https://www.healthy-magazine.co.uk/life-hacks-how-to-meditate-while-walking/)
+-   [rte.ie](https://www.rte.ie/lifestyle/living/2020/0609/1146342-what-are-meditation-walks-and-why-should-we-be-doing-them/)
 
+Content for the three longer article pages is taken from the following sources:
+-   What is Mindfulness article: from [Aware](https://www.aware.ie/information/mindfulness/#:~:text=%E2%80%9CMindfulness%20refers%20to%20the%20awareness,%E2%80%9D%20(Jon%20Kabat%2DZinn))
+
+-   Walking Benefits article: from [this article in the Irish Times](https://www.irishtimes.com/life-and-style/travel/ireland/why-walking-works-as-a-self-acting-repair-tool-for-body-and-soul-1.3968370)
+
+-   Forest bathing article: from [this article in The Guardian](https://www.theguardian.com/environment/2019/jun/08/forest-bathing-japanese-practice-in-west-wellbeing)
+
+The content on the remaining pages was created by the developer.
+
+### Media 
+Video and images for the project were sourced from [Pixabay](https://pixabay.com/) and [Pexels](https://www.pexels.com/), except for those images which were the developer's own. Credits are listed below:
+
+- Hero image on home page: [Vanessa Garcia from Pexels](https://www.pexels.com/photo/crop-woman-touching-green-plants-during-hiking-in-nature-6324462/)
+- Video on home page: [Milan Wulf from Pixabay](https://pixabay.com/videos/park-walk-woman-girl-spring-3280/) 
+- More reading section on home page:
+    -   dandelion-mindfulness.jpg [jplenio from Pixabay](https://pixabay.com/photos/dandelion-macro-seeds-close-up-5178095/)
+    -   people-walking.jpg [Rudy and Peter Skitterians from Pixabay](https://pixabay.com/photos/people-autumn-walking-blur-fall-1132524/ )
+    -   forest.jpg [Siggy Nowak from Pixabay](https://pixabay.com/photos/forest-trees-nature-woods-greenery-272595/)
+- Events page gallery images:
+    -   forest-floor.jpg [SplitShire from Pixabay](https://pixabay.com/photos/forest-path-rocks-trail-438432/)
+    -   woman-backpack-woods.jpg [Free-Photos from Pixabay](https://pixabay.com/photos/woman-backpack-forest-trees-woods-918704/)
+    -   forest-path.jpg [Free-Photos from Pixabay](https://pixabay.com/photos/forest-woods-trail-trees-conifers-1031654/)
+    - the remaining images in this section are the developer's own
+
+### Acknowledgements
