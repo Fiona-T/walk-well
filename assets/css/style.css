@@ -86,7 +86,7 @@ body {
 	font-size: 1rem;
 	line-height: 1.6rem;
 	min-height: 100vh;
-	overflow: hidden;
+	/* overflow: hidden; */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr;
@@ -245,8 +245,8 @@ input[type="checkbox"]:focus {
 	overflow-x: hidden;
 	overflow-y: auto;
 	grid-area: main-page-wrapper;
-	display: grid;
-	grid-template-rows: 1fr auto;
+	display: flex;
+	flex-direction: column;
 }
 
 /*========================== hero image and landing page =================================*/
@@ -382,6 +382,8 @@ main {
 	flex-flow: column nowrap;
 	margin: 0 auto;
 	padding-bottom: 2rem;
+	flex: 1 0 auto;
+	min-height: auto;
 }
 
 /*sections for all pages set as flex container**/
