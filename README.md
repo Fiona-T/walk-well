@@ -1,6 +1,10 @@
 # Walk Well
 
-View the live project [here:] (https://github.com/)
+[View the live website here.](https://fiona-t.github.io/walk-well/)
+
+This website was created for educational purposes as a student of Code Institute, and the business described below is a fictional one.
+
+*Screenprint of website on devices to be added.*
 
 ## Purpose
 Walk Well is a website dedicated to the practice of mindful walking and has two distinct purposes:
@@ -15,7 +19,15 @@ The events and group walks add a community feel and help people further their kn
 
 The target audience therefore is quite wide, but broadly speaking is people with an interest in health, mental wellbeing, mindfulness, meditation, yoga; as well as people who are curious about meditation and mindfulness but maybe have never tried it. The target audience is located in Ireland since the events and group walks are based in and around Dublin.
 
-*Screenprint of website on devices to be added.*
+####    User’s goals:
+-	the site's users are interested in mindfulness and want to find out more
+-   they want to access information to practice mindful walking straight away
+-	they may also want to learn more about mindfulness, walking and meditation generally
+-   they may want to connect with the wider community around mindfulness, walking and meditation
+
+####    Site owner’s goal:
+-	the goal of the site is to empower people to bring mindfulness to their daily lives in an easy and accessible way by providing the information to do this via mindful walking; and providing more detailed information to those users interested in reading up further
+-   the second goal of the site is to foster a sense of community around mindful walking by attracting people together through guided walks and events based around mindfulness, walking and meditation; and sharing a community newsletter
 
 ## User Experience (UX)
 
