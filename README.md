@@ -7,6 +7,7 @@ This website was created for educational purposes as a student of Code Institute
 *Screenprint of website on devices to be added.*
 
 ## Purpose
+---
 Walk Well is a website dedicated to the practice of mindful walking and has two distinct purposes:
 1) provides users with simple, easily accessible information on how they can incorporate meditation into their daily movement with the practice of mindful walking. 
 2) provides information about the events we run, which are small guided group walking sessions for participants to experience a longer and structured mindfulness session and connect with like-minded individuals.
@@ -30,7 +31,7 @@ The target audience therefore is quite wide, but broadly speaking is people with
 -   the second goal of the site is to foster a sense of community around mindful walking by attracting people together through guided walks and events based around mindfulness, walking and meditation; and sharing a community newsletter
 
 ## User Experience (UX)
-
+---
 - ### User stories
 Note: the website is static and as such does not have a login for registered users. Therefore all user stories are in the context of a visiting user.
 
@@ -91,9 +92,10 @@ These colours help promote the feeling of calmness, connection with nature, whil
         - Footer: The 'Guide to Mindful Walking' pdf download was added to the footer during development, it is not shown on the wireframes. This was added because it improves the user experience by having this guide easily accessible from any page (not just the Get Started section).
         - Footer - position: the wireframes show a fixed footer on all screens. However upon researching further, this was bad UX design because, especially on mobile, it would take up too much screen space since the site also has a fixed header. 
         - Footer - layout: the footer on mobile view is shown on the wireframes with everything on one row. On the finished site the footer is stacked into three rows: social media, newsletter sign up, pdf download. This allows more space around the elements and since the footer is not fixed, this does not take 
+        - Logo: the wireframes show a logo for the site, however this is not included in the final site as the wordmark sufficed for the purposes of the project. 
 
 ## Features
-
+---
 ### Existing Features
 - #### Navigation Bar
     - Navigation bar at the top of each page, fixed. Name of site and logo on left; menu items on the right. Three menu options: Home, Events, Contact Us. Different styling for the active page, and for hover and focus.
@@ -140,3 +142,42 @@ These colours help promote the feeling of calmness, connection with nature, whil
 - a new page for Community where registered users can:
     - map out a new walk
     - invite others/plan a meetup to do the walk together (this is distinct from the guided mindfulness walks as it just a group meeting rather than being guided)
+
+## Deployment
+---
+### Gitpod - during development
+The site was developed on Gitpod, using GitHub for version control and hosting the repository and final site. The repository for this project, and the associated workspace, was created from the [Code Institute tempate](https://github.com/Code-Institute-Org/gitpod-full-template). During development, code was written in the Gitpod workspace and previewed by opening the browser via the Terminal in Gitpod, using the command 'python3 -m http.server' and then selecting Port 8000. Files and code were added to the staging area in Gitpod using the command 'git add .' and commited using 'git commit -m "commit message"'. Commited changes were then pushed to GitHub using the "git push" command.
+
+### GitHub Pages - Deployment
+The following steps were followed to deploy the project to a live website in GitHub, using Github Pages:
+1. Ensure changes have been added and commited in Gitpod and pushed to GitHub
+2. Login to [GitHub](https://github.com/)
+3. Locate the relevant repository on GitHub. [This is the repository for Walk Well](https://github.com/Fiona-T/walk-well).
+4. At the top of the repository, above the green Gitpod button, locate the 'Settings' link and click on this
+5. On the left of the page, under Options, scroll down until you get to Pages and click on Pages
+6. Under Source, in the first box called None, click the dropdown and select either 'main' or 'master'. 
+7. Then press Save
+8. The page will refresh and you will see a link above the Save button. This is the link to the live site. Note that it may take a few minutes for the site to build, so be patient before clicking on the link to view the published site!
+
+There are no differences between the deployed version and the development version of this project.
+
+### Forking the GitHub Repository
+The repository can be forked on GitHub, this creates a copy of the repository that can be viewed or amended without affecting the original repository. This can be done using the following steps:
+1. Login to [GitHub](https://github.com/) and locate the repository as before
+2. At the top right of the repository (under your avatar) locate the Fork button and click this button
+3. You should now have a copy of the repository in your own GitHub account, to which you can make changes
+
+### Cloning the GitHub Repository
+You can make a clone of the repository which will create a local copy on your own computer. Again you can make changes to this local copy that will not affect the original repository. Follow these steps to clone the Walk Well repository. 
+1. Login to [GitHub](https://github.com/) and locate the repository as before
+2. Click the button called Code, located to the left of the green Gitpod button
+3. Under HTTPS copy the link provided (in this case https://github.com/Fiona-T/walk-well.git) 
+4. Go to Gitpod or whichever IDE you are using and open the Terminal
+5. Change the current working directory to the location where you want the cloned directory to be made
+6. Type 'git clone followed by the url you copied in step 3:
+git clone https://github.com/Fiona-T/walk-well.git
+7. Press Enter to create the local clone
+
+You can refer to the [GitHub documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more detailed information on the above process.
+
+
