@@ -74,23 +74,15 @@ html {
 	height: 100%;
 }
 
-/*explicitly set height for grid use*/
+/*body font styles*/
 body {
 	min-height: 100%;
-}
-
-/*body font styles and settings for grid - two rows*/
-body {
 	font-family: 'Nunito Sans', sans-serif;
 	color: var(--very-dark-grey);
 	font-size: 1rem;
 	line-height: 1.6rem;
-	/* min-height: 100vh;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr;
-	grid-template-areas: 'header''main-page-wrapper'; */
 }
+	
 
 /*================== font styles =============================*/
 h1,
@@ -159,6 +151,7 @@ input[type="checkbox"]:focus {
 
 /*=================================== header and nav ==============================================*/
 /*header - flex container for logo and navigation, z-index above other items so content can scroll behind*/
+/*position sticky so it stays in normal flow but fixed to top (min-height 100% on body)*/
 /*flex-wrap so that navigation wraps below on medium screens (when hamburger not displayed)*/
 .page-header {
 	background-color: var(--very-dark-grey);
@@ -168,7 +161,6 @@ input[type="checkbox"]:focus {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	/* grid-area: header; */
 	position: sticky;
 	top: 0;
 	right: 0;
@@ -247,7 +239,6 @@ input[type="checkbox"]:focus {
 	margin: 0 auto;
 	overflow-x: hidden;
 	overflow-y: auto;
-	/* grid-area: main-page-wrapper; */
 	display: flex;
 	flex-direction: column;
 }
@@ -389,12 +380,13 @@ main {
 	min-height: auto;
 }
 
-/*sections for all pages set as flex container**/
+/*sections for all pages set as flex container. scroll-margin-top for position when jumping to links**/
 .page-sections-flex-container {
 	display: flex;
 	flex-direction: column;
 	margin: 2rem;
 	justify-content: center;
+	scroll-margin-top: 6rem;
 }
 
 /*========================== home page =================================*/
