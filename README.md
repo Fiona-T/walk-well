@@ -224,6 +224,14 @@ You can refer to the [GitHub documentation](https://docs.github.com/en/github/cr
 ## Credits
 It should be noted that this project is for eductional/learning purposes only. Therefore not all of the content on the site is original and the original sources are duly credited below. 
 ### Code
+-   I used the example on [this post on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel) to set a pattern for the mobile telephone number input on the Contact Us form, I modified it for an Irish mobile phone.
+-   The hover transition on the home page button and links was done following the guidance on [this tutorial from W3Schools](https://www.w3schools.com/howto/howto_css_zoom_hover.asp )
+-   Hero image on the home page was done following the guidance on [this tutorial from W3Schools](https://www.w3schools.com/howto/howto_css_hero_image.asp)
+-   The hamburger icon for the responsive mobile navigation bar was implemented using [this tutorial from W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp). The JavaScript code was used as is, apart from renaming the function and the CSS was tweaked to suit the purposes of the project.
+-   Took advice from these two article from [HTML5 Doctor](http://html5doctor.com/howto-subheadings/) and [CSS Tricks](http://html5doctor.com/howto-subheadings/) in relation to using the correct semantic markup for subtitles underneath heading elements in HTML
+-   the responsive collapsable table on the Events page was implemented using the code and approach in [this article by Matt Smith](https://allthingssmitty.com/2016/10/03/responsive-table-layout/), amended to suit the purposes of the project. 
+- I used the code on [this article from H3XED](https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed) to implement the responsive `<iframe>` width and height
+
 
 ### Content
 The content on the home page is taken from the following sources:
