@@ -175,6 +175,7 @@ The [W3C Markup Validation Service](https://validator.w3.org/) was used to valid
 -   **Text not allowed in element `<iframe>` in this context.** I had included `<p>` inside the `<iframe>` with a note for users of older browsers if the content failed to load, and a link to where the content could be viewed on YouTube. However the W3C recommendation on this have changed and I removed the text from inside the `<iframe>`. 
 -   **Bad value 100% for attribute width on element `<video>`: Expected a digit but saw % instead** I had originally used `width="100%"` so that the `<video>` would resize responsively. I amended this to set a width and height in the html and added `max-width: 100%` and `height:auto` in the CSS instead.
 -   **Bad value `#` for attribute `method` on element `<form>`** I had done this because the the data from the forms in this project do not get sent anywhere. I removed the `method` attribute from the `<form>` elements to correct this error. 
+-   **Warning: Possible misuse of `aria-label`** The `aria-label` was on the `<span>` element containing the elements with the font-awesome `<i>` star icons for the star rating in the Events page. To fix this error, I added `role="img"` to the `<span>` so that the screenreader knows to read out the `aria-label` on this element. 
 
 The [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS file used for the project. There were no errors found.
 
@@ -182,6 +183,39 @@ The [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used 
 This section covers testing the user stories from the User Experience (UX) section.
 
 ### Fixed Bugs
+These bugs were encountered during development and during testing.
+
+-   **Issue: Mobile menu not opening below logo:**
+![](docs/bugs/mobile-menu-error.png)
+>Solution: Amended the flex container (the `ul`) to `flex-direction: row;` (from column), with `wrap`, to make them wrap on to the next line.
+And on the child (`li`) adding `min-width: 100%;`
+
+-   **Issue: Contact form, pattern not validating first three digits of mobile phone number:**
+![](docs/bugs/tel-pattern-not-validating.png)
+>Solution: The pattern was incorrect as it was allowing 0-9 for any of the first three digits. Reviewed the instructions again on [this post on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel) and amended the pattern to allow only 0 for first digit: `[0]{1}`, only 8 for second digit: `[8]{1}` and from 0 to 8 for the third digit: `[0-8]{1}`
+
+-   **Issue: `iframe` cutting off bottom of video:**
+![](docs/bugs/iframe-height-issue.png)
+>I used the code from [this article from H3XED](https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed) to wrap a container `div` around the `iframe` and set a `height` and `padding-bottom` on the container to set the aspect ratio, then position the `iframe` using `absolute` positioning inside the container. 
+
+-   **Issue: image height stretched in Safari:**
+![](docs/bugs/safari-images-stretched-bug.png)
+>After researching it appeared the issue was to do with how Safari adjusts the height of the images with flexbox, as discussed [as discussed on this Stack Overflow thread](https://stackoverflow.com/questions/57516373/image-stretching-in-flexbox-in-safari). Added `align items: start` on the flex container for the images. 
+
+-   **Issue: footer height expanding to contain its child items in Safari:**
+![](docs/bugs/footer-height-error-desktop.png)
+<br>
+![](docs/bugs/footer-height-error-mobile.png)
+>Researched and used a solution outlined [on this Stack Overflow thread](https://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent ) which was to set `flex: 0 0 auto;` on the container (i.e. the footer). 
+
+-   **Issue: space below footer on Events page when viewed on mobile (no issue on larger screen):**
+![](docs/bugs/space-under-footer-issue.png)
+>After researching, it appeared this was because both `html `and `body` had a height of 100% set, as discussed [on this Stack Overflow thread](https://stackoverflow.com/questions/6654958/make-body-have-100-of-the-browser-height#:~:text=Body%20looks%20to%20its%20parent,its%20height%20set%20as%20well.&text=Setting%20min%2Dheight%20to%20100%25%20will%20accomplish%20this%20goal) Amended `html `to `height: 100%;` and `body` to `min-height:100%`. This fixed this issue but meant the page header was no longer fixed to top of the screen. 
+-   **Sub-issue: header not fixed to top in grid:**
+    >Solution: removed the `grid` settings which had been set on the `body` (grid with two rows, one for header, one for wrapper containing content and footer) which had originally been implemented in order to create the fixed header, using [this tutorial on CSS Tricks](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/). Then amended the `header`to have `position: sticky` and this works along with the `min-height: 100%` on `body` to keep the header stuck to the top of the screen, even when scrolled, but also keeps the `header` in the document flow. There was one further issue described below:
+-   **Sub-issue: jumping to sections, initial content covered by fixed header:**
+    >Solution: instead of using a padding with negative margin, use `scroll-margin-top` as [explained in this tutorial](https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/) which sets a margin to the top of the section when jumping to that section but is not visible on the page.
+
 ### Supported Screens and Browsers
 
 ## Deployment
