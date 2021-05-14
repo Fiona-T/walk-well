@@ -99,18 +99,19 @@ These colours help promote the feeling of calmness, connection with nature, whil
 ---
 ### Existing Features
 - #### Navigation Bar
-    - Navigation bar at the top of each page, fixed. Name of site and logo on left; menu items on the right. Three menu options: Home, Events, Contact Us. Different styling for the active page, and for hover and focus.
-    - When viewed on a mobile phone, the logo and site name remains on the left but the menu items are collapsed into a hamburger menu which expands when clicked, to show the three menu items below the nav bar.
+    - Navigation bar at the top of each page, fixed. Name of site on left; menu items on the right. Three menu options: Home, Events, Contact Us. Different styling for the active page, and for hover and focus.
+    - When viewed on a mobile phone, the site name remains on the left but the menu items are collapsed into a hamburger menu which expands when clicked, to show the three menu items below the nav bar.
 
 - #### Footer
-    - Fixed *tbc if it should be fixed, maybe not fixed on mobile view, for space?* at the bottom of each page and contains social media links on the left (facebook, twitter, instagram and tripadvisor); and sign up to the newsletter on the right
+    - Fixed at the bottom of each page and contains social media links on the left (facebook, twitter, instagram and tripadvisor); and sign up to the newsletter in the middle, and link to download walking guide on the right
     - Newsletter sign up consists of one field for email address with corresponding label and Sign Up button. Email address field has placeholder text and validation to ensure an email address is entered. Leads to confirmation page after submitting.
-    - Layout may change to two rows on mobile view
+    - Layout may change to three rows on mobile view
 - #### Home page
     - Nav bar and footer as above. 
-    - Hero image at top of the page, with three boxes overlaid. What; Walk and Why. Each box is a link to the below three sections on the page.
+    - Hero image at top of the page, with button to jump below. 
+    - Three boxes under hero image. What; Walk and Why. Each box is a link to the below three sections on the page.
     - What: introductory section - basic information with accompanying video.
-    - Walk: steps for the user to follow, along with the option to download the steps?
+    - Walk: steps for the user to follow, along with the option to download the steps
     - Why: further information in the form of articles. These are shown as summary boxes in a rows of three across, with a link to click to read the full article. 
     - on mobile view the columns collapse into one vertically aligned column.
 
@@ -133,16 +134,20 @@ These colours help promote the feeling of calmness, connection with nature, whil
     - Success page is displayed after submitting.
 
 ### Future Features
-- option for users to book onto walks/events directly and make payment on the website
-- option to register as a user of the website
+The future features consist of adding more interactivty and personalisation which are not currently in scope to implement; and also building ont the structure of the site as it grows:
+- option for users to book onto walks/events directly and make payment on the website directly
+- option to register as a user of the website with a login and password
 - personalised content for registered users:
-    - see upcoming events that they are registered for
+    - see upcoming events that they are registered for in their account section
     - post reviews for events that they attended
     - upload images for events that they attended
-- integrate trip advisor event reviews into the website?
+- possibly integrate Trip Advisor event reviews into the website, as well as the direct user reviews
 - a new page for Community where registered users can:
     - map out a new walk
     - invite others/plan a meetup to do the walk together (this is distinct from the guided mindfulness walks as it just a group meeting rather than being guided)
+-   expand the Events section so that each event could have its own 'click through' page where the user can view much more detailed information than currently shown in the Events Table
+-   create a dedicated page for the More Reading section and movee it off the home page, as this section will grow over time as more articles are added. This would require a restructure of the home page.
+-   A more intuitive hamburger menu that changes to an X to close it if the user clicks it but does not want to select one of the pages. 
 
 ## Technology
 ---
@@ -202,9 +207,8 @@ And on the child (`li`) adding `min-width: 100%;`
 ![](docs/bugs/safari-images-stretched-bug.png)
 >After researching it appeared the issue was to do with how Safari adjusts the height of the images with flexbox, as discussed [as discussed on this Stack Overflow thread](https://stackoverflow.com/questions/57516373/image-stretching-in-flexbox-in-safari). Added `align items: start` on the flex container for the images. 
 
--   **Issue: footer height expanding to contain its child items in Safari:**
-![](docs/bugs/footer-height-error-desktop.png)
-<br>
+-   **Issue: footer height not expanding to contain its child items in Safari:**
+![](docs/bugs/footer-height-error-desktop.png) 
 ![](docs/bugs/footer-height-error-mobile.png)
 >Researched and used a solution outlined [on this Stack Overflow thread](https://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent ) which was to set `flex: 0 0 auto;` on the container (i.e. the footer). 
 
