@@ -566,8 +566,8 @@ td:last-child {
 	border: 0.1rem solid var(--extra-light-grey);
 	margin: 1rem;
 	padding: 1rem;
-	font-size: 0.8rem;
-	line-height: 0.8rem;
+	font-size: 0.9rem;
+	line-height: 0.9rem;
 }
 
 /*fontawesome icon for star rating - color*/
@@ -578,8 +578,8 @@ td:last-child {
 /*summary line for each review - bolder weight*/
 .review-summary {
 	font-weight: 900;
-	font-size: 0.9rem;
-	padding-bottom: 0;
+	font-size: 1rem;
+	padding: 0.5rem 0;
 }
 
 /*name and date for each review - font styles*/
@@ -817,6 +817,18 @@ footer input[type="submit"]:active {
 		width: 90%;
 	}
 
+	/*============ home page hero image ==============*/
+	/*increase landing text size at this screen size - displayed on one row as wider screen*/
+	.landing-text h2 {
+		font-size: 4rem;
+		line-height: 4.8rem;
+	}
+
+	.landing-text p {
+		font-size: 1.6rem;
+		line-height: 2.5rem;
+	}
+
 	/*============ home page links to sections ==============*/
 	/*container - display items in row and constrain width*/
 	.landing-page-links-container {
@@ -972,9 +984,22 @@ footer input[type="submit"]:active {
 }
 
 /*================================ larger screens ================================================*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
+	/*restrict page content to max-width for larger screens*/
 	main {
 		max-width: 80%;
+	}
+
+	/*============ home page hero image ==============*/
+	/*further increase landing text size at this screen size*/
+	.landing-text h2 {
+		font-size: 6rem;
+		line-height: 6rem;
+	}
+
+	.landing-text p {
+		font-size: 2rem;
+		line-height: 2.5rem;
 	}
 
 }
