@@ -167,6 +167,23 @@ These colours help promote the feeling of calmness, connection with nature, whil
 -   [Eye Dropper](https://eyedropper.org/) extension for Chrome was used to pick and generate colours for the project
 -   [Color Space](https://mycolor.space/) to generate colour palettes when deciding on the colour scheme for the project
 
+## Testing
+---
+### Code Validation
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML on every page of the project. On the first validation some issues were flagged and these were resolved as explained below:
+
+-   **Text not allowed in element `<iframe>` in this context.** I had included `<p>` inside the `<iframe>` with a note for users of older browsers if the content failed to load, and a link to where the content could be viewed on YouTube. However the W3C recommendation on this have changed and I removed the text from inside the `<iframe>`. 
+-   **Bad value 100% for attribute width on element `<video>`: Expected a digit but saw % instead** I had originally used `width="100%"` so that the `<video>` would resize responsively. I amended this to set a width and height in the html and added `max-width: 100%` and `height:auto` in the CSS instead.
+-   **Bad value `#` for attribute `method` on element `<form>`** I had done this because the the data from the forms in this project do not get sent anywhere. I removed the `method` attribute from the `<form>` elements to correct this error. 
+
+The [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS file used for the project. There were no errors found.
+
+### Test Cases
+This section covers testing the user stories from the User Experience (UX) section.
+
+### Fixed Bugs
+### Supported Screens and Browsers
+
 ## Deployment
 ---
 ### Gitpod - during development
