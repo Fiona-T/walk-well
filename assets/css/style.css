@@ -86,7 +86,6 @@ body {
 	font-size: 1rem;
 	line-height: 1.6rem;
 	min-height: 100vh;
-	/* overflow: hidden; */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr;
@@ -596,10 +595,12 @@ td:last-child {
 }
 
 /*flex container for images*/
+/*algin-items: flex-start added for safari to avoid images stretching in height at larger screen size*/
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: flex-start;
 }
 
 /*images within the gallery container*/
