@@ -708,7 +708,8 @@ input[type="checkbox"] {
 
 /**============================ footer =========================================**/
 
-/*flex container for social media, newsletter sign up, download. displayed in columm at mobile view*/
+/*flex container for three footer-box child items. displayed in columm at mobile view*/
+/*flex: 0 0 auto added so that footer contains the child items properly in Safari*/
 footer {
 	width: 100%;
 	display: flex;
@@ -717,6 +718,7 @@ footer {
 	padding: 1rem 0 2rem;
 	color: var(--white);
 	font-size: 0.9rem;
+	flex: 0 0 auto;
 }
 
 /*flex-items in footer*/
