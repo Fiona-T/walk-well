@@ -144,6 +144,29 @@ These colours help promote the feeling of calmness, connection with nature, whil
     - map out a new walk
     - invite others/plan a meetup to do the walk together (this is distinct from the guided mindfulness walks as it just a group meeting rather than being guided)
 
+## Technology
+---
+### Languages 
+-   HTML
+-   CSS
+-   Note: JavaScript was used for one aspect of the project, namely the opening of the hamburger icon. The code for this function is credited in the Credits section below.
+
+### Frameworks, Libraries, Programmes and Tools
+-   [Balsamiq](https://balsamiq.com/) to create the wireframes
+-   The fonts used in the project are imported from [Google Fonts](https://fonts.google.com/) 
+-   [Font Awesome](https://fontawesome.com/) for the icons used throughout the site 
+-   Git for version control, using the [Gitpod](https://www.gitpod.io/) terminal to commit to Git and push to GitHub
+-   [GitHub](https://github.com/) to store the project code and host the live project
+-   [Photoshop](https://www.adobe.com/ie/products/photoshop.html) to crop and re-size some of the images so they were correct aspect ratio
+-   [Tiny jpg](https://tinyjpg.com/) to compress the images so that pages load quicker
+-   [Webaim Contrast Checker](https://webaim.org/resources/contrastchecker/) to check the contrast for the colour choices on the website
+-   [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used during development and testing to fix issues with the code and check for responsiveness/different device sizes
+-   [W3C HTML validator](https://validator.w3.org/) to validate the HTML code
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate the CSS code
+-   [Am I Responsive](http://ami.responsivedesign.is/) to generate the mockup image showing the project on different devices
+-   [Eye Dropper](https://eyedropper.org/) extension for Chrome was used to pick and generate colours for the project
+-   [Color Space](https://mycolor.space/) to generate colour palettes when deciding on the colour scheme for the project
+
 ## Deployment
 ---
 ### Gitpod - during development
