@@ -68,15 +68,15 @@ table {
 	box-sizing: inherit;
 }
 
-/*border box set as the default*/
+/*border box set as the default, height*/
 html {
 	box-sizing: border-box;
+	height: 100%;
 }
 
 /*explicitly set height for grid use*/
-html,
 body {
-	height: 100%;
+	min-height: 100%;
 }
 
 /*body font styles and settings for grid - two rows*/
@@ -85,11 +85,11 @@ body {
 	color: var(--very-dark-grey);
 	font-size: 1rem;
 	line-height: 1.6rem;
-	min-height: 100vh;
+	/* min-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr;
-	grid-template-areas: 'header''main-page-wrapper';
+	grid-template-areas: 'header''main-page-wrapper'; */
 }
 
 /*================== font styles =============================*/
@@ -168,7 +168,11 @@ input[type="checkbox"]:focus {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	grid-area: header;
+	/* grid-area: header; */
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
 /*logo font styles */
@@ -243,7 +247,7 @@ input[type="checkbox"]:focus {
 	margin: 0 auto;
 	overflow-x: hidden;
 	overflow-y: auto;
-	grid-area: main-page-wrapper;
+	/* grid-area: main-page-wrapper; */
 	display: flex;
 	flex-direction: column;
 }
