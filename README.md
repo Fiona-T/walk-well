@@ -53,16 +53,19 @@ Note: the website is static and as such does not have a login for registered use
     1. As a visiting user, I want to sign up for the newsletter so that I am emailed a round up on new articles that were added to the website, and information on upcoming events.
 
 - ### Design
-The look and feel of the website is modern, minimal clean design, in keeping with the purpose of the website which is to promote mindfulness and also references the outdoors and nature.
+The look and feel of the website is modern, minimal clean design. This is in keeping with the purpose of the website which is to promote mindfulness and achieving a more calm mind. And in keeping with the wide target market. The design also references the colours of outdoors and nature.
 - #### Colour Scheme
-    - the main colour used is #00AAA0 a shade of green, to reflect the theme of nature
-    - a dark grey #334B49 is used for the text
-    - and a dark orange #F26945 is the accent color
+    ![](docs/readme-images/colours.png)
+    - the brand colour is #04E5AE which is a bright shade of green, giving a modern clean look and reflecting the theme of nature and calm. This colour is used for the logo (wordmark), for links and form inputs that are active/hovered/in focus, and as a pop of colour throughout the site: on the underline to highlight links in the content, for icons, star reviews, and form buttons.
+    - the body text, header and footer backgrounds are #172120 which is almost black. During the earlier stages of development the header was white, to add to the minimal feel, however the contrast between the green (logo, active navigation item in the header) on white was not sufficient for accessibility. As a solution this dark grey/black was used for the header so that the text has sufficient contrast. This was checked using the [Web Aim Contrast Checker](https://webaim.org/resources/contrastchecker/). This colour also provides good contrast for body text against the white background.
+    - a green-grey shade #334B49 is used for the headings (except hero image heading)
+    - white (#ffffff) is used for text that needs to stand out against a dark background, e.g. in the page header, footer, hero image. 
+    -  the two lighter shades of grey (#71717A and #eeeeee) are used for text in the article headings and reviews headings, and for box outlines respectively.
 
-These colours help promote the feeling of calmness, connection with nature, while still being fresh. And the accent provides a pop of colour.
+These colours used together help promote the feeling of calmness, while still being fresh and modern to appeal to the wide target audience. The brand colour provides the pop of colour and personality throughout the site, while tying in with the greens present in the imagery used throughout. 
 
 - #### Typography
-    - Nunito Sans - Light is used for the main body copy throughout the website. This is a clean, readable, sans serif font. The fallback option is 'sans serif'
+    - Nunito Sans - Light is used for the main body copy throughout the website. This is a clear, readable, sans serif font. The fallback option is 'sans serif'
     - Ubuntu - Bold is used for the headings to add a touch of personality and warmth.
 
 - ### Wireframes
@@ -134,7 +137,7 @@ These colours help promote the feeling of calmness, connection with nature, whil
     - Success page is displayed after submitting.
 
 ### Future Features
-The future features consist of adding more interactivty and personalisation which are not currently in scope to implement; and also building ont the structure of the site as it grows:
+The future features consist of adding more interactivty and personalisation which are not currently in scope to implement due to the developer level of expertise; and also building on the structure of the site as it grows:
 - option for users to book onto walks/events directly and make payment on the website directly
 - option to register as a user of the website with a login and password
 - personalised content for registered users:
@@ -148,6 +151,7 @@ The future features consist of adding more interactivty and personalisation whic
 -   expand the Events section so that each event could have its own 'click through' page where the user can view much more detailed information than currently shown in the Events Table
 -   create a dedicated page for the More Reading section and movee it off the home page, as this section will grow over time as more articles are added. This would require a restructure of the home page.
 -   A more intuitive hamburger menu that changes to an X to close it if the user clicks it but does not want to select one of the pages. 
+-   Expand the gallery section on the Events page so that it is more interactive, for example an image carousel, or allow user to zoom in on an image by clicking on it. 
 
 ## Technology
 ---
