@@ -278,7 +278,7 @@ Note, as mentioned earlier: the website is static and as such does not have a lo
     - when viewed on a mobile phone, the site name remains on the left but the menu items are collapsed into a hamburger menu which expands when clicked, to show the three menu items below the nav bar.
 
     >**Result:** Pass
-    - All of the above are present. The active page is highlighted in green and underlined. On mobile I can click the hamburger icon to display the menu options, once I click on an option the menu collapses back to the hamburger, or if I don't want to click on an option I can click on the hamburger to collapse it. 
+    - All of the above are present. The active page is highlighted in green and underlined. On mobile I can click the hamburger icon to display the menu options, once I click on an option the menu collapses back to the hamburger, or if I don't want to click on an option I can click on the hamburger to collapse it. Clicking on Walk Well brings me back to the home page from any page.  
     ![](docs/user-stories/navigation-bar.png)
 
 - #### **Newsletter sign up: Expectations**
@@ -345,6 +345,9 @@ And on the child (`li`) adding `min-width: 100%;`
 -   **Sub-issue: footer not at bottom of screen on shorter pages:**
     ![](docs/bugs/footer-shorter-page-bug.png)
     >Solution: this was caused by removing the grid settings described above. On reviewing the code, the "main-page-wrapper" div, which contained the page content plus footer, was no longer required. It had been added as part of the grid set up. Removed this from all pages and set the body as a flex container as described in [this article by Philip Walton via CSS Tricks](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/).
+
+### Other Testing
+Verified that all links across the website work and that external links open in a new page so as not to direct the user away from the site. Verified on laptop and mobile device that the download pdf link works and the pdf downloads.
 
 ### Supported Screens and Browsers
 
