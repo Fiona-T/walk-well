@@ -62,7 +62,7 @@ The look and feel of the website is modern, minimal clean design. This is in kee
     - white (#ffffff) is used for text that needs to stand out against a dark background, e.g. in the page header, footer, hero image. 
     -  the two lighter shades of grey (#71717A and #eeeeee) are used for text in the article headings and reviews headings, and for box outlines respectively.
 
-These colours used together help promote the feeling of calmness, while still being fresh and modern to appeal to the wide target audience. The brand colour provides the pop of colour and personality throughout the site, while tying in with the greens present in the imagery used throughout. 
+These colours used together help promote the feeling of calmness, while still being fresh, friendly and modern to appeal to the wide target audience. The brand colour provides the pop of colour and personality throughout the site, while tying in with the greens present in the imagery used throughout. There is plenty of white space throughout the site to allow breathing room for the content. 
 
 - #### Typography
     - Nunito Sans - Light is used for the main body copy throughout the website. This is a clear, readable, sans serif font. The fallback option is 'sans serif'
@@ -205,20 +205,24 @@ And on the child (`li`) adding `min-width: 100%;`
 
 -   **Issue: `iframe` cutting off bottom of video:**
 ![](docs/bugs/iframe-height-issue.png)
->I used the code from [this article from H3XED](https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed) to wrap a container `div` around the `iframe` and set a `height` and `padding-bottom` on the container to set the aspect ratio, then position the `iframe` using `absolute` positioning inside the container. 
+>Solution: I used the code from [this article from H3XED](https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed) to wrap a container `div` around the `iframe` and set a `height` and `padding-bottom` on the container to set the aspect ratio, then position the `iframe` using `absolute` positioning inside the container. 
+
+-   **Issue: `thead` slightly misaligned with `tbody` on larger screen:**
+![](docs/bugs/thead-misaligned-bug.png)
+>Solution: The issue arose because the mobile first design removes the `thead` from view and displays the rest of the table as block elements, so each event shows as its own mini one column table. At larger screen size I needed to reverse the hiding of the `thead` to display the full table. But for mid sized screens, the cells in `thead` were slightly misaligned with those in `tbody`. On advice from my mentor, I have treated this as an 'edge case' and set the media query to show the full table only at the screen size *after which* the mis-alignment does not occur. 
 
 -   **Issue: image height stretched in Safari:**
 ![](docs/bugs/safari-images-stretched-bug.png)
->After researching it appeared the issue was to do with how Safari adjusts the height of the images with flexbox, as discussed [as discussed on this Stack Overflow thread](https://stackoverflow.com/questions/57516373/image-stretching-in-flexbox-in-safari). Added `align items: start` on the flex container for the images. 
+>Solution: After researching it appeared the issue was to do with how Safari adjusts the height of the images with flexbox, as discussed [as discussed on this Stack Overflow thread](https://stackoverflow.com/questions/57516373/image-stretching-in-flexbox-in-safari). Added `align items: start` on the flex container for the images. 
 
 -   **Issue: footer height not expanding to contain its child items in Safari:**
 ![](docs/bugs/footer-height-error-desktop.png) 
 ![](docs/bugs/footer-height-error-mobile.png)
->Researched and used a solution outlined [on this Stack Overflow thread](https://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent ) which was to set `flex: 0 0 auto;` on the container (i.e. the footer). 
+>Solution: Researched and used a solution outlined [on this Stack Overflow thread](https://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent ) which was to set `flex: 0 0 auto;` on the container (i.e. the footer). 
 
 -   **Issue: space below footer on Events page when viewed on mobile (no issue on larger screen):**
 ![](docs/bugs/space-under-footer-issue.png)
->After researching, it appeared this was because both `html `and `body` had a height of 100% set, as discussed [on this Stack Overflow thread](https://stackoverflow.com/questions/6654958/make-body-have-100-of-the-browser-height#:~:text=Body%20looks%20to%20its%20parent,its%20height%20set%20as%20well.&text=Setting%20min%2Dheight%20to%20100%25%20will%20accomplish%20this%20goal) Amended `html `to `height: 100%;` and `body` to `min-height:100%`. This fixed this issue but meant the page header was no longer fixed to top of the screen. 
+>Solution: After researching, it appeared this was because both `html `and `body` had a height of 100% set, as discussed [on this Stack Overflow thread](https://stackoverflow.com/questions/6654958/make-body-have-100-of-the-browser-height#:~:text=Body%20looks%20to%20its%20parent,its%20height%20set%20as%20well.&text=Setting%20min%2Dheight%20to%20100%25%20will%20accomplish%20this%20goal) Amended `html `to `height: 100%;` and `body` to `min-height:100%`. This fixed this issue but meant the page header was no longer fixed to top of the screen. 
 -   **Sub-issue: header not fixed to top in grid:**
     >Solution: removed the `grid` settings which had been set on the `body` (grid with two rows, one for header, one for wrapper containing content and footer) which had originally been implemented in order to create the fixed header, using [this tutorial on CSS Tricks](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/). Then amended the `header`to have `position: sticky` and this works along with the `min-height: 100%` on `body` to keep the header stuck to the top of the screen, even when scrolled, but also keeps the `header` in the document flow. There was one further issue described below:
 -   **Sub-issue: jumping to sections, initial content covered by fixed header:**
