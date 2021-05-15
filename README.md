@@ -191,6 +191,37 @@ The [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used 
 ### Test Cases
 This section covers testing the user stories from the User Experience (UX) section.
 
+Note, as mentioned earlier: the website is static and as such does not have a login for registered users. Therefore all user stories are in the context of a visiting user.
+
+- #### Home page user stories test cases:
+    1. **Expectation:** As a visiting user, I want to find out what mindful walking is and its benefits, so that I can decide if it is something I want to do
+    >**Result:** Pass
+    - the home page features a landing page with hero image and text stating: Mindful Walking. Add some zen to your step. The user knows straight away that this website is dedicated to mindful walking. 
+    - The hero image sets the tone for the website
+    - The button on the hero image states 'Let's Go' with a down arrow so the user knows this will take them to site content. 
+    - On clicking the button, they are brought to a section displaying three options in boxes styled like cards so the user knows they can click on these:
+        -   WHAT? Learn the basics
+        -   WALK! Get started now
+        -   WHY? Find out more <br>
+    - It is clear to the user that they can click on "WHAT? Learn the basics" to bring them to a section which will explain what Mindful Walking is.
+    - The video in this section is a short clip of a person walking on a path through greenery. The person is out of focus and the focus is on a flower in the foreground. This emphasises one of the core elements of mindful walking which is to notice the details around us while we walk
+
+    2. **Expectation:** As a visiting user, I want to find the mindful walking guide, so that I can start my mindful walking practice.
+    >**Result:** Pass
+    - the user enters the site as described above and is brought to the three options described above.
+    -  the user sees the "WALK! Get started now" button and clicks on this to bring them to the Get Started section.
+    -  the user has the option of reading the steps on the website - they are presented as eight steps with each step having an icon and heading to identify them
+    - or the user can download the same information in a pdf, there is a link to this at the top of the section
+    - the pdf guide is also available for download from the footer section of all pages
+
+    3. **Expectation:** As a visiting user, I want to check for any new articles on walking/mindfulness/meditation, so that I am informed on this area.
+    >**Result:** Pass
+    - the user enters the site as described above and is brought to the three options described above.
+    -  the user sees the "WHY? Find out more" button and clicks on this to bring them to the More Reading section.
+    - here they can see a brief introduction to this section explaining what the articles are about and who writes them
+    - a summary of each article is shown in a box, with accompanying image, article title and a link for the user to click on if they want to read the article. Once they are in the article page, there are navigation arrows on the top and bottom of the page to bring to the next or previous artice. Or they can return to home page/any of the other pages via the fixed navigation menu at the top of the page.
+    - there is text in the More Reading section also notifying the user that they can sign up to the regular newsletter to be informed on new articles
+
 ### Fixed Bugs
 These bugs were encountered during development and during testing.
 
