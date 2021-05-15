@@ -240,7 +240,7 @@ Note, as mentioned earlier: the website is static and as such does not have a lo
 >**Result:** Pass
 - the user goes to the Events page as described above.
 - above the Upcoming Events table there is a link directing the user to a form where they can register their interest in order to receive more information (visible on above screenprint)
-- clicking this link brings them to the Contact Us page. Here they can input their details and tick which Events they are interested in. *More details on contact form functionality in features section*
+- clicking this link brings them to the Contact Us page. Here they can input their details and tick which Events they are interested in. *More details on contact form functionality in features testing section below*
 ![](docs/user-stories/events-contact.png)
 
 3. **Expectation:** *As a visiting user, I want to read the user reviews of previous events, so that I can make a decision on which event, if any, to attend.*
@@ -251,6 +251,23 @@ Note, as mentioned earlier: the website is static and as such does not have a lo
 - each review includes star rating, short snippet, name and date and review details, to help the user decide if this event if for them
 - photos below the reviews provide further context
 ![](docs/user-stories/events-page-reviews.png)
+
+- #### **Contact Us page user stories test cases:**
+1. **Expectation:** *As a visiting user, I want to register my interest for an upcoming event, so that I can be contacted with more information by the website owner.*
+>**Result:** Pass
+- the user enters the site as described above and can see the link to the Contact Us page in the header, clicking on this will bring them to the Contact Us page. 
+- The user can also access the Contact Us page from the links in the More Reading section of the Home page, and on the Events page as shown in the earlier screenprints
+- Whichever way they arrive, the user is greeted with introductory text followed by the form inputs, as shown already above. *More details on contact form functionality in features testing section below*
+
+- #### **Footer user stories test cases:**
+1. **Expectation:** *As a visiting user, I want to sign up for the newsletter so that I am emailed a round up on new articles that were added to the website, and information on upcoming events.*
+>**Result:** Pass
+- the footer is present at the bottom of all pages and contains a short form where the user can input their email address and Sign Up to the newsletter
+- the Sign Up button is in the green colour of the brand, so it stands out against the dark background of the footer
+- the newsletter sign up is located in the center of the footer, either middle row or middle column so that it is noticeable
+- the user is also directed to this form from  the More Reading section of the home page, and from the Events page, as their presence in these areas of the site indicates they are interested in learning more and being part of the Walk Well community and therefore in wanting to sign up for the newsletter. 
+ *More details on sign up form functionality in features testing section below*
+![](docs/user-stories/footer-newsletter-signup.png)
 
 ### Fixed Bugs
 These bugs were encountered during development and during testing.
