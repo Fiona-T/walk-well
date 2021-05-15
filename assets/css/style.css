@@ -893,10 +893,9 @@ footer input[type="submit"]:active {
 
 }
 
-/*============================breakpoint for footer and table =======================================*/
+/*============================breakpoint for footer =======================================*/
 @media screen and (min-width: 830px) {
 
-	/*===================== footer ==================================*/
 	/*change flex direction to row so they are displayed in one line at this size - specific break point*/
 	footer {
 		flex-direction: row;
@@ -912,7 +911,11 @@ footer input[type="submit"]:active {
 		padding-right: 2rem;
 	}
 
-	/*=================== events page - table =========================*/
+}
+
+/*============================ breakpoint for table on events page =======================================*/
+@media screen and (min-width: 850px) {
+
 	/* show table header,reverse positioning done for mobile size */
 	/*done at this breakpoint because of alignment (edge case) explained in readme.md*/
 	table thead {
@@ -957,8 +960,8 @@ footer input[type="submit"]:active {
 	table th:nth-of-type(2) {
 		width: 15%;
 	}
-
 }
+
 
 /*================================ laptop ================================================*/
 @media screen and (min-width: 1024px) {
