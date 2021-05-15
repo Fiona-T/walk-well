@@ -305,14 +305,14 @@ input[type="checkbox"]:focus {
 	background-color: var(--extra-light-grey);
 }
 
-/*flex container for below fold links. Column for mobile view initially*/
+/*flex container for below fold links. Column for mobile view initially and less padding*/
 .landing-page-links-container {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	margin: 0 auto;
 	justify-content: center;
-	padding: 5rem 0;
+	padding: 2rem 0;
 }
 
 /*boxes inside links - flex container for text and icons, transition set for hover*/
@@ -825,6 +825,11 @@ footer input[type="submit"]:active {
 	}
 
 	/*============ home page links to sections ==============*/
+	/*outer container for boxes - scroll margin when jumping to section so not covered by page-header*/
+	.full-width {
+		scroll-margin-top: 4rem;
+	}
+
 	/*container - display items in row and constrain width*/
 	.landing-page-links-container {
 		width: 90%;
