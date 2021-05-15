@@ -193,37 +193,64 @@ This section covers testing the user stories from the User Experience (UX) secti
 
 Note, as mentioned earlier: the website is static and as such does not have a login for registered users. Therefore all user stories are in the context of a visiting user.
 
-- #### Home page user stories test cases:
-    1. **Expectation:** As a visiting user, I want to find out what mindful walking is and its benefits, so that I can decide if it is something I want to do
-    >**Result:** Pass
-    - the home page features a landing page with hero image and text stating: "Mindful Walking. Add some zen to your step". The user knows straight away that this website is dedicated to mindful walking. 
-    - The hero image sets the tone for the website
-    - The button on the hero image states 'Let's Go' with a down arrow so the user knows this will take them to site content. 
-    - On clicking the button, they are brought to a section displaying three options in boxes styled like cards so the user knows they can click on these:
-        -   WHAT? Learn the basics
-        -   WALK! Get started now
-        -   WHY? Find out more <br>
-    - It is clear to the user that they can click on "WHAT? Learn the basics" to bring them to a section which will explain what Mindful Walking is.
-    ![](docs/user-stories/home-page-landing.png)
-    - The video in this section is a short clip of a person walking on a path through greenery. The person is out of focus and the focus is on a flower in the foreground. This emphasises one of the core elements of mindful walking which is to notice the details around us while we walk
-    ![](docs/user-stories/home-page-intro.png)
-    2. **Expectation:** As a visiting user, I want to find the mindful walking guide, so that I can start my mindful walking practice.
-    >**Result:** Pass
-    - the user enters the site as described above and is brought to the three options described above.
-    -  the user sees the "WALK! Get started now" button and clicks on this to bring them to the Get Started section.
-    -  the user has the option of reading the steps on the website - they are presented as eight steps with each step having an icon and heading to identify them
-    - or the user can download the same information in a pdf, there is a link to this at the top of the section
-    - the pdf guide is also available for download from the footer section of all pages. See more in the Footer User Story below.
-    ![](docs/user-stories/home-page-get-started.png)
+- #### **Home page user stories test cases:**
+1. **Expectation:** *As a visiting user, I want to find out what mindful walking is and its benefits, so that I can decide if it is something I want to do*
+>**Result:** Pass
+- the home page features a landing page with hero image and text stating: "Mindful Walking. Add some zen to your step". The user knows straight away that this website is dedicated to mindful walking. 
+- The hero image sets the tone for the website
+- The button on the hero image states 'Let's Go' with a down arrow so the user knows this will take them to site content. 
+- On clicking the button, they are brought to a section displaying three options in boxes styled like cards so the user knows they can click on these:
+    -   WHAT? Learn the basics
+    -   WALK! Get started now
+    -   WHY? Find out more <br>
+- It is clear to the user that they can click on "WHAT? Learn the basics" to bring them to a section which will explain what Mindful Walking is.
+![](docs/user-stories/home-page-landing.png)
+- The video in this section is a short clip of a person walking on a path through greenery. The person is out of focus and the focus is on a flower in the foreground. This emphasises one of the core elements of mindful walking which is to notice the details around us while we walk
+![](docs/user-stories/home-page-intro.png)
+<br>
+2. **Expectation:** *As a visiting user, I want to find the mindful walking guide, so that I can start my mindful walking practice.*
+>**Result:** Pass
+- the user enters the site as described above and is brought to the three options described above.
+-  the user sees the "WALK! Get started now" button and clicks on this to bring them to the Get Started section.
+-  the user has the option of reading the steps on the website - they are presented as eight steps with each step having an icon and heading to identify them
+- or the user can download the same information in a pdf, there is a link to this at the top of the section
+- the pdf guide is also available for download from the footer section of all pages. See more in the Footer User Story below.
+![](docs/user-stories/home-page-get-started.png)
+<br>
+3. **Expectation:** *As a visiting user, I want to check for any new articles on walking/mindfulness/meditation, so that I am informed on this area.*
+>**Result:** Pass
+- the user enters the site as described above and is brought to the three options described above.
+-  the user sees the "WHY? Find out more" button and clicks on this to bring them to the More Reading section.
+- here they can see a brief introduction to this section explaining what the articles are about and who writes them
+- a summary of each article is shown in a box, with accompanying image, article title and a link for the user to click on if they want to read the article. Once they are in the article pages, there are navigation arrows on the top and bottom of the page to bring to the next or previous artice. Or they can return to home page/any of the other pages via the fixed navigation menu at the top of the page.
+- there is text in the More Reading section also notifying the user that they can sign up to the regular newsletter to be informed on new articles
+![](docs/user-stories/home-page-more-reading.png)
+<br>
 
-    3. **Expectation:** As a visiting user, I want to check for any new articles on walking/mindfulness/meditation, so that I am informed on this area.
-    >**Result:** Pass
-    - the user enters the site as described above and is brought to the three options described above.
-    -  the user sees the "WHY? Find out more" button and clicks on this to bring them to the More Reading section.
-    - here they can see a brief introduction to this section explaining what the articles are about and who writes them
-    - a summary of each article is shown in a box, with accompanying image, article title and a link for the user to click on if they want to read the article. Once they are in the article pages, there are navigation arrows on the top and bottom of the page to bring to the next or previous artice. Or they can return to home page/any of the other pages via the fixed navigation menu at the top of the page.
-    - there is text in the More Reading section also notifying the user that they can sign up to the regular newsletter to be informed on new articles
-    ![](docs/user-stories/home-page-more-reading.png)
+- #### **Events page user stories test cases:**
+
+1. **Expectation:** *As a visiting user, I want to view the upcoming events and their dates, so that I can plan if I want to attend any events.*
+>**Result:** Pass
+- the user enters the site as described above and can see the link to the Events page in the header, clicking on this will bring them to the Events page.
+- once on the Events page they are greeted with an introductory paragraph explaining what is on this page and what kind of events to expect
+- below this is a table of events stating the name of each one, date and time, short description and price.
+![](docs/user-stories/events-page-events.png)
+
+2. **Expectation:** *As a visiting user, I want to register my interest for an upcoming event, so that I can be contacted with more information by the website owner.*
+>**Result:** Pass
+- the user goes to the Events page as described above.
+- above the Upcoming Events table there is a link directing the user to a form where they can register their interest in order to receive more information (visible on above screenprint)
+- clicking this link brings them to the Contact Us page. Here they can input their details and tick which Events they are interested in. *More details on contact form functionality in features section*
+![](docs/user-stories/events-contact.png)
+
+3. **Expectation:** *As a visiting user, I want to read the user reviews of previous events, so that I can make a decision on which event, if any, to attend.*
+>**Result:** Pass
+- the user goes to the Events page as described above.
+- the introductory paragraph at the top of the page, as mentioned above, informs the user that they can see photos and reviews from previous events on this page. It also provides a link to the TripAdvisor page where they can read further customer reviews
+- the user can scroll to the reviews which are directly below the table of upcoming events as stated earlier on the page
+- each review includes star rating, short snippet, name and date and review details, to help the user decide if this event if for them
+- photos below the reviews provide further context
+![](docs/user-stories/events-page-reviews.png)
 
 ### Fixed Bugs
 These bugs were encountered during development and during testing.
