@@ -75,7 +75,7 @@ html {
 	height: 100%;
 }
 
-/*body font styles*/
+/*body font styles and flex container*/
 body {
 	min-height: 100%;
 	font-family: 'Nunito Sans', sans-serif;
@@ -234,17 +234,6 @@ input[type="checkbox"]:focus {
 	border-bottom: 0.5rem solid var(--green);
 	color: var(--green);
 }
-
-/*wrapper for page content and footer centered, overflow-x hidden to stop horizontal scroll on mobile*/
-/*overflow-y auto so that content scrolls below page header*/
-/* .main-page-wrapper {
-	width: 100%;
-	margin: 0 auto;
-	overflow-x: hidden;
-	overflow-y: auto;
-	display: flex;
-	flex-direction: column;
-} */
 
 /*========================== hero image and landing page =================================*/
 /*parent container for hero-image so overflow hidden to stop horizontal scrolling on image*/

@@ -30,109 +30,108 @@
             </ul>
         </nav>
     </header>
-    <!--container for page content and footer-->
-    <!-- <div class="main-page-wrapper"> -->
-        <!--container for page content-->
-        <main>
-            <!--section containing intro text, and form-->
-            <section class="page-sections-flex-container contact-section">
-                <h2 class="page-heading">Get in touch</h2>
-                <p>Hello! Thank you for visiting our site!</p>
-                <p>Interested in joining one of our <a href="events.html">walks or attending one of our events</a>? Just
-                    fill in your details below and we'll be in touch with all the details you need!</p>
-                <p>We love to hear from our community and we value your input. If you've any questions or feeback for
-                    us, or there is a topic you'd like us to cover in our longer articles, just put the details in the
-                    form below. We'll get back to you as soon as we can!</p>
-                <!--required class used to highlight the asterisk for mandatory fields-->
-                <p><em>Fields marked with <span class="required">*</span> must be completed.</em></p>
-                <!--method not included because it is not a real form. Action links to a dummy success page-->
-                <form action="form-success.html">
-                    <!--firstname-->
-                    <label for="first-name">First name<span class="required">*</span></label>
-                    <input type="text" id="first-name" name="first-name" required>
-                    <!--surname-->
-                    <label for="surname">Surname<span class="required">*</span></label>
-                    <input type="text" id="surname" name="surname" required>
-                    <!--email address-->
-                    <label for="email">Email address<span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="name@email.com">
-                    <!--phone number-->
-                    <label for="phone-number">Mobile phone number (optional). <em>In the format: 08X
-                            1234567</em></label>
-                    <!--using pattern to partly validate phone number since 'tel' does not validate-->
-                    <input type="tel" id="phone-number" name="phone-number" placeholder="in the format 08X 1234567"
-                        maxlength="11" pattern="[0]{1}[8]{1}[0-8]{1} [0-9]{7}">
-                    <!--checkbox listing events-->
-                    <p>Event(s) you are interested in<span class="required">*</span>. Choose as many as you like.</p>
-                    <!--flex container for the checkbox groups - each group is label and input - for flexbox-->
-                    <div class="checkbox-container">
-                        <div class="checkbox-group">
-                            <label for="ticknock-walk">Guided walk - Ticknock</label>
-                            <input type="checkbox" id="ticknock-walk" name="events" value="ticknock-walk" checked>
-                        </div>
-                        <div class="checkbox-group">
-                            <label for="dodder-walk">Guided walk - Dodder</label>
-                            <input type="checkbox" id="dodder-walk" name="events" value="dodder-walk">
-                        </div>
-                        <div class="checkbox-group">
-                            <label for="forest-bathing">Forest Bathing</label>
-                            <input type="checkbox" id="forest-bathing" name="events" value="forest-bathing">
-                        </div>
-                        <div class="checkbox-group">
-                            <label for="mindful-morning">Mindful Mornings</label>
-                            <input type="checkbox" id="mindful-morning" name="events" value="mindful-morning">
-                        </div>
+    <!--container for page content-->
+    <main>
+        <!--section containing intro text, and form-->
+        <section class="page-sections-flex-container contact-section">
+            <h2 class="page-heading">Get in touch</h2>
+            <p>Hello! Thank you for visiting our site!</p>
+            <p>Interested in joining one of our <a href="events.html">walks or attending one of our events</a>? Just
+                fill in your details below and we'll be in touch with all the details you need!</p>
+            <p>We love to hear from our community and we value your input. If you've any questions or feeback for
+                us, or there is a topic you'd like us to cover in our longer articles, just put the details in the
+                form below. We'll get back to you as soon as we can!</p>
+            <!--required class used to highlight the asterisk for mandatory fields-->
+            <p><em>Fields marked with <span class="required">*</span> must be completed.</em></p>
+            <!--method not included because it is not a real form. Action links to a dummy success page-->
+            <form action="form-success.html">
+                <!--firstname-->
+                <label for="first-name">First name<span class="required">*</span></label>
+                <input type="text" id="first-name" name="first-name" required>
+                <!--surname-->
+                <label for="surname">Surname<span class="required">*</span></label>
+                <input type="text" id="surname" name="surname" required>
+                <!--email address-->
+                <label for="email">Email address<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="name@email.com">
+                <!--phone number-->
+                <label for="phone-number">Mobile phone number (optional). <em>In the format: 08X
+                        1234567</em></label>
+                <!--using pattern to partly validate phone number since 'tel' does not validate-->
+                <input type="tel" id="phone-number" name="phone-number" placeholder="in the format 08X 1234567"
+                    maxlength="11" pattern="[0]{1}[8]{1}[0-8]{1} [0-9]{7}">
+                <!--checkbox listing events-->
+                <p>Event(s) you are interested in<span class="required">*</span>. Choose as many as you like.</p>
+                <!--flex container for the checkbox groups - each group is label and input - for flexbox-->
+                <div class="checkbox-container">
+                    <div class="checkbox-group">
+                        <label for="ticknock-walk">Guided walk - Ticknock</label>
+                        <input type="checkbox" id="ticknock-walk" name="events" value="ticknock-walk" checked>
                     </div>
-                    <!--textarea message-->
-                    <label for="message">Any other thoughts or questions for us?</label>
-                    <textarea id="message" name="message" placeholder="Your message"></textarea>
-                    <!--submit button-->
-                    <input type="submit" value="Send Enquiry">
-                </form>
-            </section>
-        </main>
-        <!--footer for all pages. Contains 3 flex items, 3 rows in mobile and 3 cols in larger screen-->
-        <footer>
-            <!--flex item, box for social media links-->
-            <div class="footer-box">
-                <ul class="social-media-links">
-                    <li>
-                        <a href="https://instagram.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Instagram page (link opens in a new tab)"><i class="fab fa-instagram"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Facebook page (link opens in a new tab)"><i class="fab fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Twitter page (link opens in a new tab)"><i class="fab fa-twitter"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://tripadvisor.com" target="_blank" rel="noopener"
-                            aria-label="Visit our TripAdvisor page (link opens in a new tab)"><i
-                                class="fab fa-tripadvisor" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!--flex item, box for newsletter sign up-->
-            <div class="footer-box">
-                <p id="newsletter-sign-up">Sign up to our newsletter here:</p>
-                <!--no method set on form as no db in background, static form with link to success page only-->
-                <form action="sign-up-success.html">
-                    <input type="email" id="sign-up-email" name="sign-up-email" required aria-label="Email address" placeholder="Email address">
-                    <input type="submit" value="Sign Up">
-                </form>
-            </div>
-            <!--flex item, box for pdf guide download-->
-            <div class="footer-box">
-                <a href="assets/downloads/walk-well-mindful-guide.pdf">Download Mindful Walking Guide <i class="fas fa-download" aria-hidden="true"></i></a>
-            </div>
-        </footer>
-    <!-- </div> -->
+                    <div class="checkbox-group">
+                        <label for="dodder-walk">Guided walk - Dodder</label>
+                        <input type="checkbox" id="dodder-walk" name="events" value="dodder-walk">
+                    </div>
+                    <div class="checkbox-group">
+                        <label for="forest-bathing">Forest Bathing</label>
+                        <input type="checkbox" id="forest-bathing" name="events" value="forest-bathing">
+                    </div>
+                    <div class="checkbox-group">
+                        <label for="mindful-morning">Mindful Mornings</label>
+                        <input type="checkbox" id="mindful-morning" name="events" value="mindful-morning">
+                    </div>
+                </div>
+                <!--textarea message-->
+                <label for="message">Any other thoughts or questions for us?</label>
+                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                <!--submit button-->
+                <input type="submit" value="Send Enquiry">
+            </form>
+        </section>
+    </main>
+    <!--footer for all pages. Contains 3 flex items, 3 rows in mobile and 3 cols in larger screen-->
+    <footer>
+        <!--flex item, box for social media links-->
+        <div class="footer-box">
+            <ul class="social-media-links">
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (link opens in a new tab)"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (link opens in a new tab)"><i class="fab fa-facebook-f"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (link opens in a new tab)"><i class="fab fa-twitter"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://tripadvisor.com" target="_blank" rel="noopener"
+                        aria-label="Visit our TripAdvisor page (link opens in a new tab)"><i class="fab fa-tripadvisor"
+                            aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!--flex item, box for newsletter sign up-->
+        <div class="footer-box">
+            <p id="newsletter-sign-up">Sign up to our newsletter here:</p>
+            <!--no method set on form as no db in background, static form with link to success page only-->
+            <form action="sign-up-success.html">
+                <input type="email" id="sign-up-email" name="sign-up-email" required aria-label="Email address"
+                    placeholder="Email address">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+        <!--flex item, box for pdf guide download-->
+        <div class="footer-box">
+            <a href="assets/downloads/walk-well-mindful-guide.pdf">Download Mindful Walking Guide <i
+                    class="fas fa-download" aria-hidden="true"></i></a>
+        </div>
+    </footer>
     <!--script for the fontawesome icons-->
     <script src="https://kit.fontawesome.com/f92ca5e5ec.js" crossorigin="anonymous"></script>
     <!--script for the hamburger menu at mobile size, to open and close it-->
