@@ -227,6 +227,9 @@ And on the child (`li`) adding `min-width: 100%;`
     >Solution: removed the `grid` settings which had been set on the `body` (grid with two rows, one for header, one for wrapper containing content and footer) which had originally been implemented in order to create the fixed header, using [this tutorial on CSS Tricks](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/). Then amended the `header`to have `position: sticky` and this works along with the `min-height: 100%` on `body` to keep the header stuck to the top of the screen, even when scrolled, but also keeps the `header` in the document flow. There was one further issue described below:
 -   **Sub-issue: jumping to sections, initial content covered by fixed header:**
     >Solution: instead of using a padding with negative margin, use `scroll-margin-top` as [explained in this tutorial](https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/) which sets a margin to the top of the section when jumping to that section but is not visible on the page.
+-   **Sub-issue: footer not at bottom of screen on shorter pages:**
+    ![](docs/bugs/footer-shorter-page-bug.png)
+    >Solution: this was caused by removing the grid settings described above. On reviewing the code, the "main-page-wrapper" div, which contained the page content plus footer, was no longer required. It had been added as part of the grid set up. Removed this from all pages and set the body as a flex container as described in [this article by Philip Walton via CSS Tricks](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/).
 
 ### Supported Screens and Browsers
 
