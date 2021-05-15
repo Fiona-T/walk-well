@@ -68,9 +68,10 @@ table {
 	box-sizing: inherit;
 }
 
-/*border box set as the default, height*/
+/*border box set as the default, height, and smooth scrolling*/
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 	height: 100%;
 }
 
@@ -545,16 +546,19 @@ table thead {
 	overflow: hidden;
 }
 
+/*to display the table rows and cells as block elements at mobile size*/
 table tr,
 table td {
 	display: block;
 }
 
+/*so that event name cells have green background - table 'header' at mobile size*/
 td:first-child {
 	background-color: var(--green);
 	font-weight: bold;
 }
 
+/*cells containing cost details*/
 td:last-child {
 	background-color: var(--headings-grey);
 	color: var(--white);
@@ -920,9 +924,10 @@ footer input[type="submit"]:active {
 		display: table;
 		-webkit-clip-path: none;
 		clip-path: none;
+		font-weight: bold;
 	}
 
-	/*so that widths can be set*/
+	/*so that widths can be set on columns*/
 	table {
 		table-layout: fixed;
 	}
