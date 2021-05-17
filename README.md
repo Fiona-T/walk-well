@@ -5,7 +5,7 @@
 
 This website was created for educational purposes as a student of Code Institute, and the business described below is a fictional one.
 
-*Screenprint of website on devices to be added.*
+![](docs/readme-images/device-mockups.png)
 
 ## Purpose
 ---
