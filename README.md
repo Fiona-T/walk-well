@@ -350,6 +350,23 @@ And on the child (`li`) adding `min-width: 100%;`
 Verified that all links across the website work and that external links open in a new page so as not to direct the user away from the site. Verified on laptop and mobile device that the download pdf link works and the pdf downloads.
 
 ### Supported Screens and Browsers
+The project was developed using Chrome as the baseline browser.  
+
+The website has been tested on my personal mobile device Galaxy A40 and a 15 inch MacBook Pro.
+
+Using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) simulator, the website has been tested on the following screen sizes equating to the phone models listed. *Note these have been tested on the simulator only and not the actual devices*:
+-   Moto G4, Galaxy S5:  360 x 640
+-   Pixel 2: 411 x 731
+-   Pixel 2 XL: 411 x 823
+-   iPhone 5/SE: 320 x 568
+-   iPhone 6/7/8: 375 x 667
+-   iPhone 6/7/8 Plus: 414 x 736
+-   iPhone X: 375 x 812
+-   iPad: 768 x 1024
+-   iPad Pro: 1024 x 1366
+
+The website has been tested in Chrome as mentioned above, and also in Firefox and Safari. One issue noted in Safari was that `scroll-margin-top` (used on home page to jump to sections) did not work. However the version of Safari available to me for testing was slightly older version 13.1.2 and this property should work in the current version 14.1 according to the [Can I Use website](https://caniuse.com/mdn-css_properties_scroll-margin-top).
+
 
 ## Deployment
 ---
