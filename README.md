@@ -7,6 +7,39 @@ This website was created for educational purposes as a student of Code Institute
 
 ![](docs/readme-images/device-mockups.png)
 
+## Table of Contents
+- [Purpose](#purpose)
+- [User Experience (UX)](#user-experience--ux-)
+  * [User stories](#user-stories)
+  * [Design](#design)
+    + [Colour Scheme](#colour-scheme)
+    + [Typography](#typography)
+  * [Wireframes](#wireframes)
+  * [Changes to Wireframes Design as the Project Progressed](#changes-to-wireframes-design-as-the-project-progressed)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+  * [Future Features](#future-features)
+- [Technology](#technology)
+  * [Languages](#languages)
+  * [Frameworks, Libraries, Programmes and Tools](#frameworks--libraries--programmes-and-tools)
+- [Testing](#testing)
+  * [Code Validation](#code-validation)
+  * [Test Cases](#test-cases)
+  * [Features Testing](#features-testing)
+  * [Fixed Bugs](#fixed-bugs)
+  * [Other Testing](#other-testing)
+  * [Supported Screens and Browsers](#supported-screens-and-browsers)
+- [Deployment](#deployment)
+  * [Gitpod - during development](#gitpod---during-development)
+  * [GitHub Pages - Deployment](#github-pages---deployment)
+  * [Forking the GitHub Repository](#forking-the-github-repository)
+  * [Cloning the GitHub Repository](#cloning-the-github-repository)
+- [Credits](#credits)
+  * [Code](#code)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+
 ## Purpose
 ---
 Walk Well is a website dedicated to the practice of mindful walking and has two distinct purposes:
