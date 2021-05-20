@@ -608,6 +608,8 @@ input[type="submit"] {
 	background-color: var(--green);
 	color: var(--very-dark-grey);
 	border: none;
+	font-weight: 900;
+	letter-spacing: 0.05rem;
 }
 
 /* for form inputs (including submit buttons) and textarea. 
@@ -616,6 +618,12 @@ form input,
 textarea {
 	border-radius: 0.05rem;
 	font-family: inherit;
+}
+
+/*placeholder text style*/
+::placeholder {
+	color: var(--headings-grey);
+	opacity: 1;
 }
 
 /**============================ contact us page ===================================**/
@@ -990,6 +998,13 @@ footer input[type="submit"]:active {
 	/*images in gallery container - max width for 3 column layout at this size*/
 	.gallery img {
 		max-width: 30%;
+	}
+
+	/*================ contact page ===========================*/
+	/* submit button - reduce size on larger screen and center it under form */
+	.contact-section input[type="submit"] {
+		width: 30%;
+		margin: 1.5rem auto;
 	}
 }
 
