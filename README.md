@@ -404,7 +404,10 @@ The website has been tested in Chrome as mentioned above, and also in Firefox an
 ## Deployment
 ---
 ### Gitpod - during development
-The site was developed on Gitpod, using GitHub for version control and hosting the repository and final site. The repository for this project, and the associated workspace, was created from the [Code Institute tempate](https://github.com/Code-Institute-Org/gitpod-full-template). During development, code was written in the Gitpod workspace and previewed by opening the browser via the Terminal in Gitpod, using the command 'python3 -m http.server' and then selecting Port 8000. Files and code were added to the staging area in Gitpod using the command 'git add .' and commited using 'git commit -m "commit message"'. Commited changes were then pushed to GitHub using the "git push" command.
+The site was developed on Gitpod, using GitHub for version control and hosting the repository and final site. The repository for this project, and the associated workspace, was created from the [Code Institute tempate](https://github.com/Code-Institute-Org/gitpod-full-template). 
+-   During development, code was written in the Gitpod workspace and previewed by opening the browser via the Terminal in Gitpod, using the command `python3 -m http.server` and then selecting the Open Browser button when the following message appears: "a service is available on Port 8000". 
+-   Files and code were added to the staging area in Gitpod using the command `git add .` and commited using `git commit -m "commit message"`. 
+-   Commited changes were then pushed to GitHub using the `git push` command.
 
 ### GitHub Pages - Deployment
 The following steps were followed to deploy the project to a live website in GitHub, using Github Pages:
@@ -432,8 +435,8 @@ You can make a clone of the repository which will create a local copy on your ow
 3. Under HTTPS copy the link provided (in this case https://github.com/Fiona-T/walk-well.git) 
 4. Go to Gitpod or whichever IDE you are using and open the Terminal
 5. Change the current working directory to the location where you want the cloned directory to be made
-6. Type 'git clone' followed by the url you copied in step 3:
-git clone https://github.com/Fiona-T/walk-well.git
+6. Type `git clone` followed by the url you copied in step 3:
+`git clone https://github.com/Fiona-T/walk-well.git`
 7. Press Enter to create the local clone
 
 You can refer to the [GitHub documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more detailed information on the above process.
