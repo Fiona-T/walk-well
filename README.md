@@ -358,6 +358,9 @@ And on the child (`li`) adding `min-width: 100%;`
 -   **Issue: `thead` slightly misaligned with `tbody` on larger screen:**
 ![](docs/bugs/thead-misaligned-bug.png)
 >Solution: The issue arose because the mobile first design removes the `thead` from view and displays the rest of the table as block elements, so each event shows as its own mini one column table. At larger screen size I needed to reverse the hiding of the `thead` to display the full table. But for mid sized screens, the cells in `thead` were slightly misaligned with those in `tbody`. On advice from my mentor, I have treated this as an 'edge case' and set the media query to show the full table only at the screen size *after which* the mis-alignment does not occur. 
+-   **Issue: `tbody` misaligned with `thead` on above 1440px screen:**
+![](docs/bugs/tbody-misaligned-bug.png)
+>Solution: This issue was found later on in the project development. Solution, found through trial and error on dev tools, was to set the `tbody` to `display: table` and add `width: 100%` so that it took the full width of the `table` and therefore lined up with the `thead`.
 
 -   **Issue: image height stretched in Safari:**
 ![](docs/bugs/safari-images-stretched-bug.png)
@@ -372,7 +375,7 @@ And on the child (`li`) adding `min-width: 100%;`
 ![](docs/bugs/space-under-footer-issue.png)
 >Solution: After researching, it appeared this was because both `html `and `body` had a height of 100% set, as discussed [on this Stack Overflow thread](https://stackoverflow.com/questions/6654958/make-body-have-100-of-the-browser-height#:~:text=Body%20looks%20to%20its%20parent,its%20height%20set%20as%20well.&text=Setting%20min%2Dheight%20to%20100%25%20will%20accomplish%20this%20goal) Amended `html `to `height: 100%;` and `body` to `min-height:100%`. This fixed this issue but meant the page header was no longer fixed to top of the screen. 
 -   **Sub-issue: header not fixed to top in grid:**
-    >Solution: removed the `grid` settings which had been set on the `body` (grid with two rows, one for header, one for wrapper containing content and footer) which had originally been implemented in order to create the fixed header, using [this tutorial on CSS Tricks](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/). Then amended the `header`to have `position: sticky` and this works along with the `min-height: 100%` on `body` to keep the header stuck to the top of the screen, even when scrolled, but also keeps the `header` in the document flow. There was one further issue described below:
+    >Solution: removed the `grid` settings which had been set on the `body` (grid with two rows, one for header, one for wrapper containing content and footer) which had originally been implemented in order to create the fixed header, using [this tutorial on CSS Tricks](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/). Then amended the `header` to have `position: sticky` and this works along with the `min-height: 100%` on `body` to keep the header stuck to the top of the screen, even when scrolled, but also keeps the `header` in the document flow. There was one further issue described below:
 -   **Sub-issue: jumping to sections, initial content covered by fixed header:**
     >Solution: instead of using a padding with negative margin, use `scroll-margin-top` as [explained in this tutorial](https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/) which sets a margin to the top of the section when jumping to that section but is not visible on the page.
 -   **Sub-issue: footer not at bottom of screen on shorter pages:**
@@ -387,7 +390,7 @@ The project was developed using Chrome as the baseline browser.
 
 The website has been tested on my personal mobile device Galaxy A40 and a 15 inch MacBook Pro.
 
-Using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) simulator, the website has been tested on the following screen sizes equating to the phone models listed. *Note these have been tested on the simulator only and not the actual devices*:
+Using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) simulator, the website has been tested on the following screen sizes (px) equating to the phone models listed. *Note these have been tested on the simulator only and not the actual devices*:
 -   Moto G4, Galaxy S5:  360 x 640
 -   Pixel 2: 411 x 731
 -   Pixel 2 XL: 411 x 823
@@ -397,6 +400,7 @@ Using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) simula
 -   iPhone X: 375 x 812
 -   iPad: 768 x 1024
 -   iPad Pro: 1024 x 1366
+-   Galaxy Fold 280 x 653
 
 The website has been tested in Chrome as mentioned above, and also in Firefox and Safari. One issue noted in Safari was that `scroll-margin-top` (used on home page to jump to sections) did not work. However the version of Safari available to me for testing was slightly older version 13.1.2 and this property should work in the current version 14.1 according to the [Can I Use website](https://caniuse.com/mdn-css_properties_scroll-margin-top).
 
