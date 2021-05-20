@@ -926,6 +926,12 @@ footer input[type="submit"]:active {
 		font-weight: bold;
 	}
 
+	/*fix for tbody at larger size so that its width is full width of table*/
+	table tbody {
+		display: table;
+		width: 100%;
+	}
+
 	/*so that widths can be set on columns*/
 	table {
 		table-layout: fixed;
