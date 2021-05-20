@@ -224,6 +224,7 @@ input[type="checkbox"]:focus {
 	text-transform: uppercase;
 	color: var(--white);
 	font-size: 1.1rem;
+	letter-spacing: 0.05rem;
 }
 
 /*change colour, add underline on hover, tab (focus) or active, also if active class is set*/
@@ -559,7 +560,7 @@ td:last-child {
 /*box which contains the review details for each review*/
 .review-box {
 	border: 0.1rem solid var(--extra-light-grey);
-	margin: 1rem;
+	margin: 1rem 0;
 	padding: 1rem;
 	font-size: 0.9rem;
 	line-height: 0.9rem;
@@ -631,6 +632,7 @@ textarea {
 /*class used for asterisk to indicate fields on form that are mandatory*/
 .required {
 	color: var(--green);
+	font-weight: 900;
 }
 
 /*remove padding from bottom of p inside form*/
@@ -865,9 +867,10 @@ footer input[type="submit"]:active {
 		justify-content: center;
 	}
 
-	/*boxes holding review details - flex basis for larger screens*/
+	/*boxes holding review details - flex basis for larger screens, add side-margins*/
 	.review-box {
 		flex: 1 1 15rem;
+		margin: 1rem 0.5rem;
 	}
 
 	/*images in gallery container - max width for 2 column layout at this size*/
