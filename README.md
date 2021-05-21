@@ -207,6 +207,7 @@ The future features consist of adding more interactivty and personalisation whic
 -   [Am I Responsive](http://ami.responsivedesign.is/) to generate the mockup image showing the project on different devices
 -   [Eye Dropper](https://eyedropper.org/) extension for Chrome was used to pick and generate colours for the project
 -   [Color Space](https://mycolor.space/) to generate colour palettes when deciding on the colour scheme for the project
+-   [Formito](https://formito.com/tools/favicon) to make the favicon for the site
 
 ## Testing
 ---
