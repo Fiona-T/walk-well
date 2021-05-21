@@ -448,6 +448,33 @@ video {
 }
 
 /*========================== long article pages =================================*/
+/*breadcrumb link at top of page*/
+.article-page-breadcrumb {
+	padding: 1rem 0 0 2rem;
+}
+
+/*so they display beside each other on row*/
+.article-page-breadcrumb li {
+	display: inline;
+}
+
+/*font-styles*/
+.article-page-breadcrumb a {
+	color: var(--headings-grey);
+	font-style: italic;
+}
+
+/*fontawesome arrow styles*/
+.article-page-breadcrumb i {
+	font-weight: light;
+	padding: 0 0.4rem;
+	font-size: 0.8rem;
+}
+
+.article-page-breadcrumb a:focus, .article-page-breadcrumb a:hover {
+	color: var(--green);
+}
+
 /*container for arrows at top and bottom of long article pages */
 /*top of page: positioning to line up with page-sections (right and left) and add space on top*/
 .article-arrows-container:first-of-type {
@@ -468,9 +495,11 @@ video {
 }
 
 /*color for previous and next text and arrows*/
-.article-previous, .article-next {
+.article-previous, .article-next  {
 	color: var(--very-dark-grey);
 	border-bottom: 0.2rem solid var(--green);
+	font-size: 0.9rem;
+	text-transform: uppercase;
 }
 
 .article-previous:hover, .article-next:hover, .article-previous:focus, .article-next:focus {
