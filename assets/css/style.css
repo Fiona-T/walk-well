@@ -450,7 +450,7 @@ video {
 /*========================== long article pages =================================*/
 /*breadcrumb link at top of page*/
 .article-page-breadcrumb {
-	padding: 1rem 0 0 2rem;
+	padding: 1rem 2rem 0 2rem;
 }
 
 /*so they display beside each other on row*/
