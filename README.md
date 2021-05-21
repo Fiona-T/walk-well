@@ -1,9 +1,9 @@
 # Walk Well
 ---
 
-[View the live website here.](https://fiona-t.github.io/walk-well/)
+*Note: this website was created for educational purposes as a student of Code Institute, and the business described below is a fictional one.*
 
-This website was created for educational purposes as a student of Code Institute, and the business described below is a fictional one.
+[View the live website here.](https://fiona-t.github.io/walk-well/)
 
 ![](docs/readme-images/device-mockups.png)
 
@@ -89,7 +89,7 @@ Note: the website is static and as such does not have a login for registered use
 The look and feel of the website is modern, minimal clean design. This is in keeping with the purpose of the website which is to promote mindfulness and achieving a more calm mind. And in keeping with the wide target market. The design also references the colours of outdoors and nature.
 - #### Colour Scheme
     ![](docs/readme-images/colours.png)
-    - the brand colour is #04E5AE which is a bright shade of green, giving a modern clean look and reflecting the theme of nature and calm. This colour is used for the logo (wordmark), for links and form inputs that are active/hovered/in focus, and as a pop of colour throughout the site: on the underline to highlight links in the content, for icons, star reviews, and form buttons.
+    - the brand colour is #04E5AE which is a bright shade of green, giving a modern clean look and reflecting the theme of nature and calm. This colour is used for the logo (wordmark), for links and form inputs that are active/hovered/in focus, and as a pop of colour throughout the site: on the underline to highlight links in the content, for icons, star reviews, and form buttons. Note: due to low contrast this colour is mainly used against the dark background of footer and header. Its use against the white background is limited to incidental graphics such as hover, or the underline on the links, where these are already highlighted in a different way (e.g. bolder text).
     - the body text, header and footer backgrounds are #172120 which is almost black. During the earlier stages of development the header was white, to add to the minimal feel, however the contrast between the green (logo, active navigation item in the header) on white was not sufficient for accessibility. As a solution this dark grey/black was used for the header so that the text has sufficient contrast. This was checked using the [Web Aim Contrast Checker](https://webaim.org/resources/contrastchecker/). This colour also provides good contrast for body text against the white background.
     - a green-grey shade #334B49 is used for the headings (except hero image heading)
     - white (#ffffff) is used for text that needs to stand out against a dark background, e.g. in the page header, footer, hero image. 
